@@ -1,13 +1,13 @@
 import { Inter } from 'next/font/google'
-import { Home } from '@/components/Home'
+import { LandingPage } from '@/components/LandingPage'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function HomePage() {
+export default function Home() {
   return (
     <main>
-      <Home />
+      <LandingPage />
     </main>
   )
 }

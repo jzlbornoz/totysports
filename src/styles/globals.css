@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:ital@1&display=swap');
+
 :root {
   --background: #080808;
   --primary-color: #9BFD5C;
@@ -9,6 +11,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 html,
