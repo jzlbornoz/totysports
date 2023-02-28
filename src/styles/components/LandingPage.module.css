@@ -28,9 +28,11 @@
     color: var(--primary-color);
     width: 62vh;
 }
+
 .Home-Landing-Content div h3 {
     font-size: 38px;
 }
+
 .Home-Landing-Content div p {
     border: solid 1px var(--primary-color);
     width: min-content;
@@ -38,4 +40,33 @@
     margin-top: 3vh;
     padding: 7px;
     border-radius: 7px;
+}
+
+
+.Home-Envios {
+    height: 100vh;
+}
+
+.Home-Envios div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Home-Envios img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.Home-Envios p {
+    padding: 20px;
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.Home-Envios svg {
+    margin-top: 30px;
+    color: var(--secundary-color);
 }
