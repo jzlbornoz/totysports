@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import style from '../styles/components/LandingPage.module.css';
 import Messi from '../assets/messi-chest.jpg';
-import Cr7 from '../assets/cr7.jpg';
+import Cr7 from '../assets/cr7.jpeg';
 import Logo from '../assets/logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,9 +15,9 @@ const LandingPage = () => {
                 <div className={style['Home-Landing-Content']}>
                     <div>
                         <h3>Siéntete como <br /> un profesional</h3>
-                        <p>Adquiere tu Jersey</p>
+                        <button type='button'>Adquiere tu Jersey</button>
                     </div>
-                    <Image src={Logo} alt='Logo' />
+                    <Image src={Logo} alt='Logo' width={1000} />
                 </div>
             </section>
             <section className={style['Home-Envios']}>
@@ -27,6 +27,10 @@ const LandingPage = () => {
                         Unidos</p>
                     <FontAwesomeIcon icon={faTruckRampBox} width={230} />
                 </div>
+            </section>
+            <section className={style['Home-Frase']}>
+                <p>No necesitas ser un profesional para tener alta gama</p>
+                <button type='button'>Adquiere tu Jersey</button>
             </section>
         </section>
     )
