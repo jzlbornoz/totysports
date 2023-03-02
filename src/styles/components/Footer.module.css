@@ -1,0 +1,28 @@
+.Footer {
+    background-color: var(--secundary-color);
+    padding: 10px;
+    color: var(--background);
+}
+.Footer h3 {
+    font-size: 20px;
+}
+.Footer-Container{
+    display: flex;
+}
+
+.Footer-Contact{
+    width: 40vw;
+}
+.Footer-Contact div{
+    display: flex;
+    align-items: center;
+    padding: 7px 0px;
+}
+.Footer-Contact div p {
+    margin-left: 7px;
+    font-size: 15px;
+}
+.Footer-Address p{
+    padding: 7px 0px;
+    font-size: 15px;
+}
