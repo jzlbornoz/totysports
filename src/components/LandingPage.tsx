@@ -5,7 +5,7 @@ import Cr7 from '../assets/cr7.jpeg';
 import Logo from '../assets/logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTruckRampBox } from '@fortawesome/free-solid-svg-icons';
+import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
     return (
@@ -17,15 +17,17 @@ const LandingPage = () => {
                         <h3>Siéntete como <br /> un profesional</h3>
                         <button type='button'>Adquiere tu Jersey</button>
                     </div>
-                    <Image src={Logo} alt='Logo' width={1000} />
+                    <Image src={Logo} alt='Logo' width={1400} />
                 </div>
             </section>
             <section className={style['Home-Envios']}>
                 <Image src={Cr7} alt='Cr7 image' />
                 <div>
-                    <p>Envios a lo largo de Venezuela y Estados
-                        Unidos</p>
-                    <FontAwesomeIcon icon={faTruckRampBox} width={230} />
+                    <p>
+                        Nuestros Jerseys son traídos directamente de Estados Unidos y
+                        entregados en cualquier parte de Venezuela
+                    </p>
+                    <FontAwesomeIcon icon={faBoxesPacking} width={200} />
                 </div>
             </section>
             <section className={style['Home-Frase']}>

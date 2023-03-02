@@ -64,14 +64,14 @@
 }
 
 .Home-Envios p {
-    padding: 20px;
-    font-size: 42px;
+    padding: 25px;
+    font-size: 34px;
     font-weight: 900;
 }
 
 .Home-Envios svg {
     margin-top: 30px;
-    color: var(--secundary-color);
+    color: var(--primary-color);
 }
 
 
