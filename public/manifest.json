@@ -1,0 +1,32 @@
+{
+    "theme_color": "#9BFD5C",
+    "background_color": "#080808",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/https://totysports.vercel.app/",
+    "name": "TOTY Sports",
+    "short_name": "TOTY",
+    "description": "Sitio Web Oficial de TOTY Sports",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
