@@ -14,12 +14,15 @@ const LandingPage = () => {
             <section className={style['Home-Landing']}>
                 <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
                 <div className={style['Home-Landing-Content']}>
-                    <div>
+                   <section>
+                   <div>
                         <h2>Siéntete como <br /> un profesional</h2>
-                        <button type='button'>Adquiere tu Jersey</button>
                     </div>
                     <Image src={Logo} alt='Logo' width={1400} />
+                   </section>
+                    <button type='button'>Adquiere tu Jersey</button>
                 </div>
+                
             </section>
             <section className={style['Home-Envios']}>
                 <Image src={Cr7} alt='Cr7 image' />
@@ -28,7 +31,7 @@ const LandingPage = () => {
                         Nuestros Jerseys son traídos directamente de Estados Unidos y
                         entregados en cualquier parte de Venezuela
                     </p>
-                    <FontAwesomeIcon icon={faBoxesPacking} width={200} />
+                    <FontAwesomeIcon icon={faBoxesPacking} width={140} />
                 </div>
             </section>
             <section className={style['Home-Pedidos']}>
@@ -38,7 +41,7 @@ const LandingPage = () => {
                         Estamos capacitados para realizar pedidos por
                         encargo de cualquier Jersey que desees
                     </p>
-                    <FontAwesomeIcon icon={faFileCircleCheck} width={200} />
+                    <FontAwesomeIcon icon={faFileCircleCheck} width={140} />
                 </div>
             </section>
             <section className={style['Home-Frase']}>

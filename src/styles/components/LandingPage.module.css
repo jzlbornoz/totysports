@@ -16,12 +16,17 @@
 }
 
 .Home-Landing-Content {
-    height: 44vh;
+    min-height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 5px 0px 25px;
+    margin: 0px;
+}
+.Home-Landing-Content section {
     display: flex;
     justify-content: space-between;
-    padding: 0px 5px 0px 25px;
     align-items: center;
-    margin: 0px;
 }
 
 .Home-Landing-Content div {
@@ -30,7 +35,7 @@
 }
 
 .Home-Landing-Content div h2 {
-    font-size: 38px;
+    font-size: 35px;
 }
 
 .Home button {
@@ -39,16 +44,16 @@
     width: min-content;
     white-space: nowrap;
     margin-top: 3vh;
-    padding: 12px 7px;
+    padding: 10px 5px;
     border-radius: 7px;
     background: none;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 
 .Home-Envios,
 .Home-Pedidos {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .Home-Envios div,
@@ -69,7 +74,7 @@
 .Home-Envios p,
 .Home-Pedidos p {
     padding: 25px;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 900;
     color: var(--primary-color);
 }
@@ -82,7 +87,7 @@
 
 
 .Home-Frase {
-    height: 70vh;
+    min-height: 70vh;
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -91,7 +96,7 @@
 }
 
 .Home-Frase p {
-    font-size: 58px;
+    font-size: 50px;
     color: var(--background);
     font-weight: 900;
     padding: 25px;
@@ -100,24 +105,25 @@
 .Home-Frase button {
     border: solid 2px var(--background);
     color: var(--background);
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bolder;
     margin-top: 30px;
     margin-left: 80px;
 }
 
 .Home-About {
-    padding: 25px;
+    padding: 30px 25px;
     color: white;
 }
 
 .Home-About h2 {
-    font-size: 34px;
+    font-size: 30px;
     width: 50%;
+    color: var(--primary-color);
 }
 
 .Home-About p {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 22px;
     text-align: justify;
 }
