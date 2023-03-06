@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import style from '../styles/components/LandingPage.module.css';
 import Messi from '../assets/messi-chest.jpg';
-import Cr7 from '../assets/cr7.jpeg';
+import Cr7 from '../assets/cr7.jpg';
 import Modric from '../assets/modric.jpeg';
 import Logo from '../assets/logo.png'
 

@@ -1,9 +1,9 @@
 {
     "theme_color": "#9BFD5C",
     "background_color": "#080808",
-    "display": "fullscreen",
+    "display": "standalone",
     "scope": "/",
-    "start_url": "/https://totysports.vercel.app/",
+    "start_url": "/",
     "name": "TOTY Sports",
     "short_name": "TOTY",
     "description": "Sitio Web Oficial de TOTY Sports",
