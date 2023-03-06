@@ -9,20 +9,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
+
     return (
         <section className={style.Home}>
             <section className={style['Home-Landing']}>
                 <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
-                <div className={style['Home-Landing-Content']}>
-                   <section>
-                   <div>
-                        <h2>Siéntete como <br /> un profesional</h2>
-                    </div>
-                    <Image src={Logo} alt='Logo' width={1400} />
-                   </section>
-                    <button type='button'>Adquiere tu Jersey</button>
+                <div className={style['Home-Landing-Content']}
+                >
+                    <section>
+                        <div >
+                            <h2>Siéntete como <br /> un profesional</h2>
+                        </div>
+                        <Image src={Logo} alt='Logo' width={1400} />
+                    </section>
+                    <button type='button' >
+                        Adquiere tu Jersey
+                    </button>
                 </div>
-                
+
             </section>
             <section className={style['Home-Envios']}>
                 <Image src={Cr7} alt='Cr7 image' />
