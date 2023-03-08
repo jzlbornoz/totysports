@@ -36,7 +36,7 @@ const LandingPage = () => {
                         Nuestros Jerseys son traídos directamente de Estados Unidos y
                         entregados en cualquier parte de Venezuela
                     </p>
-                    <FontAwesomeIcon icon={faBoxesPacking} width={140} />
+                    <FontAwesomeIcon icon={faBoxesPacking} />
                 </div>
             </section>
             <section className={style['Home-Frase']}>
@@ -50,7 +50,7 @@ const LandingPage = () => {
                         Estamos capacitados para realizar pedidos por
                         encargo de cualquier Jersey que desees
                     </p>
-                    <FontAwesomeIcon icon={faFileCircleCheck} width={140} />
+                    <FontAwesomeIcon icon={faFileCircleCheck} />
                 </div>
             </section>
             <section className={style['Home-About']}>
