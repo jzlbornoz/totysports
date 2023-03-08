@@ -7,13 +7,15 @@ import styles from '../styles/components/Header.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Menu } from './Menu';
 
 
 const Header = () => {
   return (
     <header className={styles.Header}>
-        <Image src={Logo} alt='Logo' width={60} height={60}/>
+      <Menu />
         <FontAwesomeIcon icon={faBars} width={40} />
+        <Image src={Logo} alt='Logo' width={60} height={60}/>
     </header>
   )
 }
