@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { AppProvider } from '@/context/AppProvider'
+import { Header } from '../components/client/Header'
 import '../styles/globals.css'
 
 export const metadata = {
@@ -31,9 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AppProvider >
+          <Header />
+          <>
+            {children}
+          </>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   )
