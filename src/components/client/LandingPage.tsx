@@ -1,31 +1,42 @@
+'use client'
 import Image from 'next/image';
-import style from '../styles/components/LandingPage.module.css';
-import Messi from '../assets/messi-chest.jpg';
-import Cr7 from '../assets/cr7.jpg';
-import Modric from '../assets/modric.jpeg';
-import Italy from '../assets/italy.webp';
-import Logo from '../assets/logo.png'
+import style from '../../styles/components/LandingPage.module.css';
+import Messi from '../../assets/messi-chest.jpg';
+import Cr7 from '../../assets/cr7.jpg';
+import Modric from '../../assets/modric.jpeg';
+import Italy from '../../assets/italy.webp';
+import Logo from '../../assets/logo.png'
+
+import { motion, useScroll } from "framer-motion"
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
 
+    const { scrollYProgress } = useScroll();
+
     return (
         <section className={style.Home}>
             <section className={style['Home-Landing']}>
                 <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
-                <div className={style['Home-Landing-Content']}
-                >
-                    <section>
-                        <div >
+                <div className={style['Home-Landing-Content']}>
+                    <motion.section
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                    >
+                        <div>
                             <h2>Siéntete como <br /> un profesional</h2>
                         </div>
                         <Image src={Logo} alt='Logo' width={1400} />
-                    </section>
-                    <button type='button' >
+                    </motion.section>
+                    <motion.button type='button'
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                    >
                         Adquiere tu Jersey
-                    </button>
+                    </motion.button>
                 </div>
 
             </section>
