@@ -7,7 +7,7 @@ import Modric from '../../assets/modric.jpeg';
 import Italy from '../../assets/italy.webp';
 import Logo from '../../assets/logo.png'
 
-import { motion, useScroll } from "framer-motion"
+import { motion } from "framer-motion"
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +15,6 @@ import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-i
 
 const LandingPage = () => {
 
-    const { scrollYProgress } = useScroll();
 
     return (
         <section className={style.Home}>
@@ -40,7 +39,10 @@ const LandingPage = () => {
                 </div>
 
             </section>
-            <section className={style['Home-Envios']}>
+            <motion.section className={style['Home-Envios']}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            >
                 <Image src={Cr7} alt='Cr7 image' />
                 <div>
                     <p>
@@ -49,12 +51,15 @@ const LandingPage = () => {
                     </p>
                     <FontAwesomeIcon icon={faBoxesPacking} />
                 </div>
-            </section>
-            <section className={style['Home-Frase']}>
+            </motion.section>
+            <motion.section className={style['Home-Frase']}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            >
                 <p>No necesitas ser un profesional para tener alta gama</p>
                 <button type='button'>Adquiere tu Jersey</button>
-            </section>
-            <section className={style['Home-Pedidos']}>
+            </motion.section>
+            <motion.section className={style['Home-Pedidos']}>
                 <Image src={Modric} alt='Modric image' width={1200} />
                 <div>
                     <p>
@@ -63,8 +68,11 @@ const LandingPage = () => {
                     </p>
                     <FontAwesomeIcon icon={faFileCircleCheck} />
                 </div>
-            </section>
-            <section className={style['Home-About']}>
+            </motion.section>
+            <motion.section className={style['Home-About']}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            >
                 <Image src={Italy} alt='Italy image' width={2200} />
                 <div>
                     <h2>Acerca de
@@ -82,8 +90,8 @@ const LandingPage = () => {
                         hace que todo deporte tenga su “rinconcito”en nuestra tienda.
                     </p>
                 </div>
-            </section>
-        </section>
+            </motion.section>
+        </section >
     )
 }
 
