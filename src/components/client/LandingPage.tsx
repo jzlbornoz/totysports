@@ -14,16 +14,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
+    const item = {
+        hiddenLeft: {
+            opacity: 0,
+            x: -100
+        },
+        hiddenRight: {
+            opacity: 0,
+            x: 100
+        },
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5
+            }
+        },
+        hover: {
+            scale: 1.1,
+            transition: {
+                duration: 0.7
+            }
+        },
+        tap: {
+            scale: 1.1,
+            transition: {
+                type: "spring", stiffness: 400, damping: 17,
+            },
 
-
+            color: "#909090",
+            borderColor: "#909090"
+        }
+    }
     return (
         <section className={style.Home}>
             <section className={style['Home-Landing']}>
                 <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
                 <div className={style['Home-Landing-Content']}>
                     <motion.section
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial='hiddenLeft'
+                        whileInView='show'
+                        variants={item}
                     >
                         <div>
                             <h2>Siéntete como <br /> un profesional</h2>
@@ -31,53 +62,82 @@ const LandingPage = () => {
                         <Image src={Logo} alt='Logo' width={1400} />
                     </motion.section>
                     <motion.button type='button'
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial='hiddenLeft'
+                        whileInView='show'
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
                     >
                         Adquiere tu Jersey
                     </motion.button>
                 </div>
 
             </section>
-            <motion.section className={style['Home-Envios']}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            >
+
+            <section className={style['Home-Envios']}>
                 <Image src={Cr7} alt='Cr7 image' />
-                <div>
+                <motion.div
+                    initial='hiddenRight'
+                    whileInView='show'
+                    variants={item}>
                     <p>
                         Nuestros Jerseys son traídos directamente de Estados Unidos y
                         entregados en cualquier parte de Venezuela
                     </p>
                     <FontAwesomeIcon icon={faBoxesPacking} />
-                </div>
-            </motion.section>
-            <motion.section className={style['Home-Frase']}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            >
-                <p>No necesitas ser un profesional para tener alta gama</p>
-                <button type='button'>Adquiere tu Jersey</button>
-            </motion.section>
-            <motion.section className={style['Home-Pedidos']}>
+                </motion.div>
+            </section>
+
+            <section className={style['Home-Frase']}>
+                <motion.p
+                    initial='hiddenLeft'
+                    whileInView='show'
+                    variants={item}
+                >
+                    No necesitas ser un profesional para tener alta gama
+                </motion.p>
+                <motion.button type='button'
+                    initial='hiddenRight'
+                    whileInView='show'
+                    whileHover='hover'
+                    whileTap='tap'
+                    variants={item}
+                >
+                    Adquiere tu Jersey
+                </motion.button>
+            </section>
+
+            <section className={style['Home-Pedidos']}>
                 <Image src={Modric} alt='Modric image' width={1200} />
-                <div>
+                <motion.div
+                    initial='hiddenLeft'
+                    whileInView='show'
+                    variants={item}
+                >
                     <p>
                         Estamos capacitados para realizar pedidos por
                         encargo de cualquier Jersey que desees
                     </p>
                     <FontAwesomeIcon icon={faFileCircleCheck} />
-                </div>
-            </motion.section>
-            <motion.section className={style['Home-About']}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            >
+                </motion.div>
+            </section>
+
+            <section className={style['Home-About']}>
                 <Image src={Italy} alt='Italy image' width={2200} />
                 <div>
-                    <h2>Acerca de
-                        nosotros</h2>
-                    <p>
+                    <motion.h2
+                        initial='hiddenRight'
+                        whileInView='show'
+                        variants={item}
+                    >
+                        Acerca de
+                        nosotros
+                    </motion.h2>
+                    <motion.p
+                        initial='hiddenLeft'
+                        whileInView='show'
+                        variants={item}
+                    >
                         Toty sports es un proyecto único dedicado a la distribución legítima de nuestros productos enfocados
                         en el área deportiva. Nos basamos desde la inspiración de los protagonistas, hasta cada aspecto que
                         nos representa y une por la misma pasión que nos rodea a todos, cada símbolo, color y expresión han sido
@@ -88,9 +148,9 @@ const LandingPage = () => {
                         con marcas y modelos única y exclusivamente con el nombre de nuestra empresa. La diversidad
                         de productos de todo tipo de peculiaridades deportivas,
                         hace que todo deporte tenga su “rinconcito”en nuestra tienda.
-                    </p>
+                    </motion.p>
                 </div>
-            </motion.section>
+            </section>
         </section >
     )
 }
