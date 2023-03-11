@@ -12,6 +12,7 @@ import { Menu } from '../Menu';
 import { AppContext } from '@/context/AppContex'
 
 
+
 const Header = () => {
   const { appState, toggleMenu } = useContext(AppContext);
 

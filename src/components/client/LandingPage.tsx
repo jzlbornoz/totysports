@@ -12,8 +12,13 @@ import { motion } from "framer-motion"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { AppContext } from '@/context/AppContex';
 
 const LandingPage = () => {
+
+    const { appState } = useContext(AppContext);
+
     const item = {
         hiddenLeft: {
             opacity: 0,
@@ -44,7 +49,7 @@ const LandingPage = () => {
 
             color: "#909090",
             borderColor: "#909090"
-        }
+        },
     }
     return (
         <section className={style.Home}>
@@ -53,7 +58,7 @@ const LandingPage = () => {
                 <div className={style['Home-Landing-Content']}>
                     <motion.section
                         initial='hiddenLeft'
-                        whileInView='show'
+                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         variants={item}
                     >
                         <div>
@@ -63,7 +68,7 @@ const LandingPage = () => {
                     </motion.section>
                     <motion.button type='button'
                         initial='hiddenLeft'
-                        whileInView='show'
+                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         whileHover='hover'
                         whileTap='tap'
                         variants={item}
@@ -78,7 +83,7 @@ const LandingPage = () => {
                 <Image src={Cr7} alt='Cr7 image' />
                 <motion.div
                     initial='hiddenRight'
-                    whileInView='show'
+                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
                     variants={item}>
                     <p>
                         Nuestros Jerseys son traídos directamente de Estados Unidos y
@@ -91,14 +96,14 @@ const LandingPage = () => {
             <section className={style['Home-Frase']}>
                 <motion.p
                     initial='hiddenLeft'
-                    whileInView='show'
+                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
                     variants={item}
                 >
                     No necesitas ser un profesional para tener alta gama
                 </motion.p>
                 <motion.button type='button'
                     initial='hiddenRight'
-                    whileInView='show'
+                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
                     whileHover='hover'
                     whileTap='tap'
                     variants={item}
@@ -111,7 +116,7 @@ const LandingPage = () => {
                 <Image src={Modric} alt='Modric image' width={1200} />
                 <motion.div
                     initial='hiddenLeft'
-                    whileInView='show'
+                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
                     variants={item}
                 >
                     <p>
@@ -127,7 +132,7 @@ const LandingPage = () => {
                 <div>
                     <motion.h2
                         initial='hiddenRight'
-                        whileInView='show'
+                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         variants={item}
                     >
                         Acerca de
@@ -135,7 +140,7 @@ const LandingPage = () => {
                     </motion.h2>
                     <motion.p
                         initial='hiddenLeft'
-                        whileInView='show'
+                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         variants={item}
                     >
                         Toty sports es un proyecto único dedicado a la distribución legítima de nuestros productos enfocados
