@@ -10,6 +10,14 @@ const nextConfig = withPWA({
   experimental: {
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'static.nike.com',
+      },
+    ],
+  },
 })
 
 module.exports = nextConfig

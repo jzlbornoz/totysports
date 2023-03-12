@@ -1,16 +1,14 @@
-type Sizes = "S" | "M" | "L" | "XL";
-type Seasons = "22/23" | "23/24" | "Actual";
-
 export interface JerseyModel {
   id: number;
   name: string;
-  size: Sizes | Sizes[];
+  size: string | string[];
   price: number;
   sale: number;
   team: string;
   players?: string | string[];
-  season: Seasons;
+  season: string | string[];
   stock: number;
   technology: string;
-  link: string
+  link: string,
+  img?: string
 }
