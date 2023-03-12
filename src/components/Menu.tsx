@@ -1,16 +1,20 @@
 'use client'
-import React from 'react'
-import styles from '../styles/components/Menu.module.css'
+import React, { useContext } from 'react'
+import { AppContext } from '@/context/AppContex';
+import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartCircleCheck, faStore, faPiggyBank, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-
+import styles from '../styles/components/Menu.module.css'
 
 import { motion } from "framer-motion";
-import Link from 'next/link';
+
 
 const Menu = () => {
+
+    const { appState , toggleMenu } = useContext(AppContext);
+
     const item = {
         hiddenLeft: {
             opacity: 0,
@@ -29,6 +33,7 @@ const Menu = () => {
         },
     }
 
+    // ---
     return (
         <motion.section className={styles.Menu}
             initial='hiddenLeft'
@@ -43,7 +48,7 @@ const Menu = () => {
 
                 <ul>
                     <li>
-                        <Link href='/store'>
+                        <Link href='/store' onClick={() => toggleMenu()}>
                             <FontAwesomeIcon icon={faStore} />
                             <p>Store</p>
                         </Link>

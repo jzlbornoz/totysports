@@ -13,7 +13,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 {
                     jersey.img
                         ? <Image src={jersey.img} alt="f" width={250} height={250} />
-                        : <Image src={Logo} alt="e" width={250} height={250} />
+                        : <Image src={Logo} alt="e" width={1200} height={1200} />
                 }
             </section>
             <section className={style["JerseyCard-ContentSection"]}>
