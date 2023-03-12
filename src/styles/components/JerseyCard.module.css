@@ -3,6 +3,7 @@
     height: 30vh;
     border: 1px solid var(--primary-color);
     overflow: hidden;
+    color: white;
 }
 .JerseyCard-ImageSection {
     height: 75%;

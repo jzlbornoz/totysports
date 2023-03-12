@@ -4,6 +4,7 @@
 .Store h2 {
     text-align: center;
     font-size: 38px;
+    color: white;
 }
 .Store-Wrapped{
     display: grid;

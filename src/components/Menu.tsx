@@ -48,9 +48,9 @@ const Menu = () => {
 
                 <ul>
                     <li>
-                        <Link href='/store' onClick={() => toggleMenu()}>
+                        <Link href='/store'>
                             <FontAwesomeIcon icon={faStore} />
-                            <p>Store</p>
+                            <p onClick={() => toggleMenu()}>Store</p>
                         </Link>
                     </li>
                     <li>

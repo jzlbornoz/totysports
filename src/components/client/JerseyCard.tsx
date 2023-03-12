@@ -17,9 +17,9 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 }
             </section>
             <section className={style["JerseyCard-ContentSection"]}>
-                <p>  {jersey.name}</p>
-                <p>{jersey.price}</p>
-                <p>{jersey.arrive}</p>
+                <p>{jersey.name}</p>
+                <p>{jersey.price}$</p>
+                <p>{jersey.arrive ? "here" : "Arrive in 30 days"}</p>
 
             </section>
         </div>
