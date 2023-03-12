@@ -8,6 +8,7 @@ import { faHeartCircleCheck, faStore, faPiggyBank, faCartShopping } from '@forta
 
 
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 const Menu = () => {
     const item = {
@@ -42,12 +43,14 @@ const Menu = () => {
 
                 <ul>
                     <li>
-                        <FontAwesomeIcon icon={faCartShopping} />
-                        <p>Cart</p>
+                        <Link href='/store'>
+                            <FontAwesomeIcon icon={faStore} />
+                            <p>Store</p>
+                        </Link>
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faStore} />
-                        <p>Store</p>
+                        <FontAwesomeIcon icon={faCartShopping} />
+                        <p>Cart</p>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faHeartCircleCheck} />

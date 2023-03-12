@@ -7,20 +7,29 @@
     background-color: var(--background);
     z-index: 10;
 }
+
 .Menu-Wrapped {
     margin-top: 12vh;
 }
+
 .Menu-Wrapped ul li {
     display: flex;
     align-items: center;
     font-size: 28px;
     padding: 15px 20px;
 }
+
+.Menu-Wrapped ul li a {
+    display: flex;
+    align-items: center;
+}
+
 .Menu-Wrapped ul li svg {
     width: 40px;
     margin-right: 15px;
 }
-.Menu-Wrapped h3{
+
+.Menu-Wrapped h3 {
     border-top: 1px solid var(--primary-color);
     padding: 10px 20px;
     font-size: 28px;
