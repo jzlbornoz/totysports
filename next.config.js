@@ -16,6 +16,10 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'static.nike.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.adidas.com',
+      },
     ],
   },
 })

@@ -10,6 +10,7 @@
             ],
             "price": 120,
             "sale": 75,
+            "arrive": false,
             "team": "Brazil",
             "season": "22/23",
             "stock": 3,
@@ -27,11 +28,13 @@
             ],
             "price": 150,
             "sale": 75,
+            "arrive": false,
             "team": "Italy",
             "season": "23/24",
             "stock": 5,
             "technology": "HEAT.RDY",
-            "link": "https://www.adidas.com/us/italy-2023-home-authentic-jersey/HS9891.html"
+            "link": "https://www.adidas.com/us/italy-2023-home-authentic-jersey/HS9891.html",
+            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/050a8ad7859946f3ad4eaf1f00f5c50d_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_01_laydown.jpg"
         },
         {
             "id": 3,
@@ -42,11 +45,13 @@
             ],
             "price": 150,
             "sale": 75,
+            "arrive": false,
             "team": "Italy",
             "season": "23/24",
             "stock": 4,
             "technology": "HEAT.RDY",
-            "link": "https://www.adidas.com/us/italy-2023-away-authentic-jersey/HS9894.html?pr=product_rr&slot=1&rec=mt"
+            "link": "https://www.adidas.com/us/italy-2023-away-authentic-jersey/HS9894.html?pr=product_rr&slot=1&rec=mt",
+            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4a93a6eca9e14343970caf7f0113532f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_01_laydown.jpg"
         },
         {
             "id": 4,
@@ -57,6 +62,7 @@
             ],
             "price": 120,
             "sale": 80,
+            "arrive": false,
             "team": "Paris Saint-Germain",
             "season": "22/23",
             "stock": 5,
@@ -65,7 +71,8 @@
                 "Mbappe"
             ],
             "technology": "Dri-FIT ADV",
-            "link": "https://www.nike.com/gb/t/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ/DN2709-102#Builder"
+            "link": "https://www.nike.com/gb/t/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ/DN2709-102#Builder",
+            "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/692780be-1eda-4965-922e-b6e14f65139a/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png"
         },
         {
             "id": 5,
@@ -76,12 +83,14 @@
             ],
             "price": 150,
             "sale": 80,
+            "arrive": false,
             "team": "Argentina",
             "season": "22/23",
             "stock": 5,
             "players": "Messi",
             "technology": "HEAT.RDY",
-            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html"
+            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
+            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d9eda58f85474889d3aefc00a7a8a2_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM30.jpg"
         },
         {
             "id": 6,
@@ -92,12 +101,14 @@
             ],
             "price": 150,
             "sale": 80,
+            "arrive": false,
             "team": "Argentina",
             "season": "22/23",
             "stock": 5,
             "players": "Messi",
             "technology": "HEAT.RDY",
-            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html"
+            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
+            "img":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/278a6a0efa974bcbb645ae83010aa966_9366/Argentina_22_Away_Jersey_Blue_HF2159_01_laydown.jpg"
         }
     ]
 }

@@ -1,0 +1,15 @@
+.Store{
+    margin-top: 10vh;
+}
+.Store h2 {
+    text-align: center;
+    font-size: 38px;
+}
+.Store-Wrapped{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    place-content: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 4vh 0px;
+}

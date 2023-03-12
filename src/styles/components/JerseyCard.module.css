@@ -1,0 +1,14 @@
+.JerseyCard {
+    width: 40vw;
+    height: 30vh;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+}
+.JerseyCard-ImageSection {
+    height: 75%;
+}
+.JerseyCard-ImageSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

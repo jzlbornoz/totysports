@@ -1,20 +1,21 @@
 import { JerseyModel } from '@/models/jersey.model'
-import Image from 'next/image'
 import React from 'react'
+
+import styles from '../../styles/components/Store.module.css'
+import { JerseyCard } from './JerseyCard'
 
 const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
     return (
-        <>
-            {jerseys.map(item => (
-                <>
-                    <p>  {item.name}</p>
-                    <p>{item.sale}</p>
-                    <p>{item.technology}</p>
-                    <p>{item.img}</p>
-                    {item.img ? <Image src={item.img} alt="f" width={50} height={50} /> : null}
-                </>
-            ))}
-        </>
+        <main className={styles.Store}>
+            <h2>Oficial Jerseys</h2>
+            <section className={styles['Store-Wrapped']}>
+                {jerseys.map(item => (
+                    <div key={item.id}>
+                        <JerseyCard jersey={item}/>
+                    </div>
+                ))}
+            </section>
+        </main>
     )
 }
 
