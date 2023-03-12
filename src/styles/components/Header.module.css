@@ -10,6 +10,7 @@
     color: white;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(4,0,8,0.8379726890756303) 100%);
+    z-index: 30;
 }
 .Header svg {
     z-index: 20;

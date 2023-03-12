@@ -4,6 +4,8 @@
     border: 1px solid var(--primary-color);
     overflow: hidden;
     color: white;
+    position: relative;
+    border-radius: 5px;
 }
 .JerseyCard-ImageSection {
     height: 75%;
@@ -12,4 +14,30 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.JerseyCard-ContentSection{
+    font-size: 16px;
+    padding: 5px;
+}
+.JerseyCard-ContentSection div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--secundary-color);
+    padding-right: 5px;
+}
+.JerseyCard-ContentSection svg{ 
+    width: 15px;
+    height: 15px;
+}
+
+.JerseyCard-SaleTag{
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 15px;
+    color: var(--background);
+    padding: 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
