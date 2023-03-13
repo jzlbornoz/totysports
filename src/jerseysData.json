@@ -16,7 +16,12 @@
             "stock": 3,
             "technology": "Dri-FIT ADV",
             "link": "https://www.nike.com/sa/t/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC/DN0618-740",
-            "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/af8e82f4-0e52-477d-be0c-5183b448ff7a/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png"
+            "img": [
+                "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/af8e82f4-0e52-477d-be0c-5183b448ff7a/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png",
+                "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f8b5c02f-ed7d-4f81-8e88-d78ef2469f5e/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png",
+                "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0effc870-bbc3-4b1e-a684-74730bb723f8/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png",
+                "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7cd2bbd2-86ff-4050-8505-fcbe1cb027f6/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png"
+            ]
         },
         {
             "id": 2,
@@ -34,7 +39,13 @@
             "stock": 5,
             "technology": "HEAT.RDY",
             "link": "https://www.adidas.com/us/italy-2023-home-authentic-jersey/HS9891.html",
-            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/050a8ad7859946f3ad4eaf1f00f5c50d_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_01_laydown.jpg"
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/050a8ad7859946f3ad4eaf1f00f5c50d_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/805b3002a2c949688cbbaf8d009d73b1_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/15c6ed66f54d44a8ad9daf560100c4d6_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3d931175001844e7b666af560100d0cc_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_43_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5d6c5789140b47918750af8900d54d54_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_HM3.jpg"
+            ]
         },
         {
             "id": 3,
@@ -51,7 +62,13 @@
             "stock": 4,
             "technology": "HEAT.RDY",
             "link": "https://www.adidas.com/us/italy-2023-away-authentic-jersey/HS9894.html?pr=product_rr&slot=1&rec=mt",
-            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4a93a6eca9e14343970caf7f0113532f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_01_laydown.jpg"
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4a93a6eca9e14343970caf7f0113532f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5981eaafea224e0994caaf7f01135a7f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b0def84a87d64c41a608af7f011333a8_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e872bc7506734f8e9f6daf7f01133ff4_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/41165f517ed64af5b0e6af8900d54ae5_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_HM3.jpg"
+            ]
         },
         {
             "id": 4,
@@ -65,14 +82,17 @@
             "arrive": false,
             "team": "Paris Saint-Germain",
             "season": "22/23",
-            "stock": 5,
+            "stock": 4,
             "players": [
                 "Messi",
                 "Mbappe"
             ],
             "technology": "Dri-FIT ADV",
             "link": "https://www.nike.com/gb/t/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ/DN2709-102#Builder",
-            "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/692780be-1eda-4965-922e-b6e14f65139a/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png"
+            "img": [
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/692780be-1eda-4965-922e-b6e14f65139a/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png",
+                "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/061dc6dc-78c7-4163-bbdf-9f951666aee1/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png"
+            ]
         },
         {
             "id": 5,
@@ -86,11 +106,16 @@
             "arrive": false,
             "team": "Argentina",
             "season": "22/23",
-            "stock": 5,
+            "stock": 2,
             "players": "Messi",
             "technology": "HEAT.RDY",
             "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
-            "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d9eda58f85474889d3aefc00a7a8a2_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM30.jpg"
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d9eda58f85474889d3aefc00a7a8a2_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM30.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aede62a81e474c21816faefc00a7b33c_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM31.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7948e85fa74a4850a7e8aefd00e2dd0b_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM8.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bfcdddfa29cc49ee8023aefd00e2e4e7_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM9.jpg"
+            ]
         },
         {
             "id": 6,
@@ -104,11 +129,38 @@
             "arrive": false,
             "team": "Argentina",
             "season": "22/23",
-            "stock": 5,
-            "players": "Messi",
+            "stock": 2,
+            "players": [
+                "Messi"
+            ],
             "technology": "HEAT.RDY",
-            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
-            "img":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/278a6a0efa974bcbb645ae83010aa966_9366/Argentina_22_Away_Jersey_Blue_HF2159_01_laydown.jpg"
+            "link": "https://www.adidas.com/us/argentina-22-away-jersey/HF2159.html",
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/278a6a0efa974bcbb645ae83010aa966_9366/Argentina_22_Away_Jersey_Blue_HF2159_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f108decdd25f4c8f93d4ae83010aafb2_9366/Argentina_22_Away_Jersey_Blue_HF2159_02_laydown.jpg"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Real Madrid 21/22 Home Authentic Jersey",
+            "size": [
+                "L"
+            ],
+            "price": 130,
+            "sale": 75,
+            "arrive": false,
+            "team": "Real Madrid",
+            "season": "21/22",
+            "stock": 1,
+            "players": [
+                "Vinicius Jr"
+            ],
+            "technology": "HEAT.RDY",
+            "link": "https://www.adidas.com/us/real-madrid-21-22-home-authentic-jersey/GQ1360.html",
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8706654fa4c2405f9868acda00f275e5_9366/Real_Madrid_21-22_Home_Authentic_Jersey_White_GQ1360_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4c921b52d6af4b8aafacad2d0113642c_9366/Real_Madrid_21-22_Home_Authentic_Jersey_White_GQ1360_02_laydown_hover.jpg"
+            ]
         }
     ]
 }
