@@ -22,10 +22,18 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 }
             </section>
             <section className={style["JerseyCard-ContentSection"]}>
-                <p>{jersey.name.toUpperCase()}</p>
+                <p>
+                    {jersey.name.length > 37
+                        ? `${jersey.name.slice(0, 36).trimEnd().toUpperCase()}...`
+                        : jersey.name.toUpperCase()}
+                </p>
                 <div>
                     <p>{jersey.price}$</p>
-                    <p>{jersey.arrive ? <FontAwesomeIcon icon={faPlaneCircleCheck} /> : <FontAwesomeIcon icon={faPlane} />}</p>
+                    <p>
+                        {jersey.arrive
+                            ? <FontAwesomeIcon icon={faPlaneCircleCheck} />
+                            : <FontAwesomeIcon icon={faPlane} />}
+                    </p>
                 </div>
             </section>
             <div className={style["JerseyCard-SaleTag"]}>

@@ -8,9 +8,32 @@
 }
 .Store-Wrapped{
     display: grid;
-    grid-template-columns: 40vw 40vw;
+    grid-template-columns: 180px 180px;
     place-content: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     margin: 4vh 0px;
 }
+
+@media (max-width: 400px) {
+    .Store-Wrapped {
+        grid-template-columns: 170px 170px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .Store-Wrapped {
+        grid-template-columns: 150px 150px;
+    }
+    @media (max-width: 336px) {
+        .Store-Wrapped {
+            grid-template-columns: 180px;
+        }
+      }
+  }
+  @media (min-width: 820px) {
+    .Store-Wrapped {
+        grid-template-columns: 180px 180px 180px;
+    }
+  }
+  

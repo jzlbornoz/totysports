@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import { AppContext } from '@/context/AppContex';
+import Link from 'next/link';
 
 const LandingPage = () => {
 
@@ -66,15 +67,18 @@ const LandingPage = () => {
                         </div>
                         <Image src={Logo} alt='Logo' width={1400} />
                     </motion.section>
-                    <motion.button type='button'
-                        initial='hiddenLeft'
-                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                        whileHover='hover'
-                        whileTap='tap'
-                        variants={item}
-                    >
-                        Adquiere tu Jersey
-                    </motion.button>
+                    <Link href="/store">
+                        <motion.button type='button'
+                            initial='hiddenLeft'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            whileHover='hover'
+                            whileTap='tap'
+                            variants={item}
+                        >
+                            Adquiere tu Jersey
+                        </motion.button>
+                    </Link>
+
                 </div>
 
             </section>
@@ -101,15 +105,17 @@ const LandingPage = () => {
                 >
                     No necesitas ser un profesional para tener alta gama
                 </motion.p>
-                <motion.button type='button'
-                    initial='hiddenRight'
-                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                    whileHover='hover'
-                    whileTap='tap'
-                    variants={item}
-                >
-                    Adquiere tu Jersey
-                </motion.button>
+                <Link href="/store">
+                    <motion.button type='button'
+                        initial='hiddenRight'
+                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
+                    >
+                        Adquiere tu Jersey
+                    </motion.button>
+                </Link>
             </section>
 
             <section className={style['Home-Pedidos']}>

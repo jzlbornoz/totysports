@@ -1,20 +1,44 @@
+'use client'
+
 import { JerseyModel } from '@/models/jersey.model'
 import React from 'react'
 
 import styles from '../../styles/components/Store.module.css'
 import { JerseyCard } from './JerseyCard'
 
+import { motion } from 'framer-motion';
+
 const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+            }
+        }
+    }
+
+    const itemMotion = {
+        hidden: { opacity: 0, scale: 0 },
+        show: { opacity: 1, scale: 1, },
+    }
     return (
         <main className={styles.Store}>
             <h2>Oficial Jerseys</h2>
-            <section className={styles['Store-Wrapped']}>
+            <motion.section className={styles['Store-Wrapped']}
+                variants={container}
+                initial="hidden"
+                animate="show"
+            >
                 {jerseys.map(item => (
-                    <div key={item.id}>
-                        <JerseyCard jersey={item}/>
-                    </div>
+                    <motion.div key={item.id}
+                        variants={itemMotion}
+                    >
+                        <JerseyCard jersey={item} />
+                    </motion.div>
                 ))}
-            </section>
+            </motion.section>
         </main>
     )
 }
