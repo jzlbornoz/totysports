@@ -3,6 +3,7 @@ import styles from '../styles/components/Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -13,11 +14,13 @@ const Footer = () => {
                     <h3>Contactanos</h3>
                     <div>
                         <FontAwesomeIcon icon={faInstagram} width={26} />
-                        <p>Username</p>
+                        <Link href='https://instagram.com/totysports?igshid=YmMyMTA2M2Y='>
+                            <p>totysports</p>
+                        </Link>
                     </div>
                     <div>
                         <FontAwesomeIcon icon={faWhatsapp} width={26} />
-                        <p>phone</p>
+                        <p>+1(407) 952-6875</p>
                     </div>
                     <div>
                         <FontAwesomeIcon icon={faEnvelopeOpen} width={26} />

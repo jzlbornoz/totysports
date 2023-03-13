@@ -22,7 +22,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 }
             </section>
             <section className={style["JerseyCard-ContentSection"]}>
-                <p>{jersey.name}</p>
+                <p>{jersey.name.toUpperCase()}</p>
                 <div>
                     <p>{jersey.price}$</p>
                     <p>{jersey.arrive ? <FontAwesomeIcon icon={faPlaneCircleCheck} /> : <FontAwesomeIcon icon={faPlane} />}</p>

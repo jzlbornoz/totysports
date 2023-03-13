@@ -3,26 +3,36 @@
     padding: 10px;
     color: var(--background);
 }
-.Footer h3 {
-    font-size: 20px;
+
+.Footer p {
+    font-size: 12px;
 }
-.Footer-Container{
+
+.Footer h3 {
+    font-size: 16px;
+}
+
+.Footer-Container {
     display: flex;
 }
 
-.Footer-Contact{
+
+.Footer-Contact {
     width: 40vw;
 }
-.Footer-Contact div{
+
+.Footer-Contact div {
     display: flex;
     align-items: center;
     padding: 7px 0px;
 }
+
 .Footer-Contact div p {
-    margin-left: 7px;
-    font-size: 15px;
+    margin-left: 5px;
+    font-size: 13px;
 }
-.Footer-Address p{
+
+.Footer-Address p {
     padding: 7px 0px;
-    font-size: 15px;
+    font-size: 13px;
 }
