@@ -96,7 +96,13 @@ const LandingPage = () => {
                         Nuestros Jerseys son traídos directamente de Estados Unidos y
                         entregados en cualquier parte de Venezuela
                     </p>
-                    <FontAwesomeIcon icon={faBoxesPacking} />
+                    <motion.div
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
+                    >
+                        <FontAwesomeIcon icon={faBoxesPacking} />
+                    </motion.div>
                 </motion.div>
             </section>
 
@@ -132,7 +138,13 @@ const LandingPage = () => {
                         Estamos capacitados para realizar pedidos por
                         encargo de cualquier Jersey que desees
                     </p>
-                    <FontAwesomeIcon icon={faFileCircleCheck} />
+                    <motion.div
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
+                    >
+                        <FontAwesomeIcon icon={faFileCircleCheck} />
+                    </motion.div>
                 </motion.div>
             </section>
             <section className={style['Home-Mayor']}>
@@ -146,7 +158,13 @@ const LandingPage = () => {
                         del deporte a tu negocio
                         con nuestras opciones al por mayor, de alta calidad y precios competitivos.
                     </p>
-                    <FontAwesomeIcon icon={faMedal} />
+                    <motion.div
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
+                    >
+                        <FontAwesomeIcon icon={faMedal} />
+                    </motion.div>
                 </motion.div>
             </section>
             <section className={style['Home-About']}>
