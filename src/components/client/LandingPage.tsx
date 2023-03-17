@@ -3,6 +3,7 @@ import Image from 'next/image';
 import style from '../../styles/components/LandingPage.module.css';
 import Messi from '../../assets/messi-chest.jpg';
 import Cr7 from '../../assets/cr7.jpg';
+import Pedri from '../../assets/pedri.jpg';
 import Modric from '../../assets/modric.jpeg';
 import Italy from '../../assets/italy.webp';
 import Logo from '../../assets/logo.png'
@@ -132,7 +133,20 @@ const LandingPage = () => {
                     <FontAwesomeIcon icon={faFileCircleCheck} />
                 </motion.div>
             </section>
-
+            <section className={style['Home-Envios']}>
+                <Image src={Pedri} alt='pedri image' />
+                <motion.div
+                    initial='hiddenRight'
+                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                    variants={item}>
+                    <p>
+                    Únete a la familia TOTY Sports y lleva lo mejor 
+                    del deporte a tu negocio
+                     con nuestras opciones al por mayor de alta calidad y precios competitivos.
+                    </p>
+                    <FontAwesomeIcon icon={faBoxesPacking} />
+                </motion.div>
+            </section>
             <section className={style['Home-About']}>
                 <Image src={Italy} alt='Italy image' width={2200} />
                 <div>
