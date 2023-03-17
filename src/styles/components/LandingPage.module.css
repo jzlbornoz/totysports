@@ -233,7 +233,7 @@
         font-size: 48px;
     }
     .Home-About p{
-        font-size: 38px;
+        font-size: 45px;
     }
 
     .Home-Envios img,
@@ -251,7 +251,7 @@
 
 
 
-@media (max-width: 800px) {
+@media (min-width: 400px) {
     .Home-About h2{
         font-size: 48px;
     }
