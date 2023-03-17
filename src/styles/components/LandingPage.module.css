@@ -2,6 +2,7 @@
     height: 100vh;
     padding: 0px;
 }
+
 .Home-Landing svg {
     width: 140px;
     width: 140px;
@@ -27,6 +28,7 @@
     padding: 0px 5px 0px 25px;
     margin: 0px;
 }
+
 .Home-Landing-Content section {
     display: flex;
     justify-content: space-between;
@@ -72,14 +74,14 @@
 .Home-Envios img,
 .Home-Pedidos img,
 .Home-About img,
-.Home-Mayor img  {
+.Home-Mayor img {
     width: 100%;
     height: 40vh;
     object-fit: cover;
 }
 
 .Home-Envios p,
-.Home-Pedidos p{
+.Home-Pedidos p {
     padding: 25px;
     font-size: 30px;
     font-weight: 900;
@@ -125,8 +127,9 @@
     padding: 25px;
     font-size: 30px;
     font-weight: 900;
-    color:white;
+    color: white;
 }
+
 .Home-Mayor p span {
     color: var(--primary-color);
 }
@@ -138,7 +141,7 @@
     height: 140px;
 }
 
-.Home-About div{
+.Home-About div {
     padding: 30px 25px;
     color: white;
 }
@@ -153,4 +156,115 @@
     margin-top: 15px;
     font-size: 22px;
     text-align: justify;
+}
+
+@media (min-width: 800px) {
+    .Home-Landing {
+        position: relative;
+    }
+
+    .Home-Landing-Image {
+        height: 100vh;
+        filter: brightness(0.4);
+    }
+
+    .Home-Landing-Content {
+        position: absolute;
+        top: 10px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .Home-Landing-Content section h2 {
+        font-size: 72px;
+    }
+
+    .Home-Landing-Content section {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Home-Landing-Content section img {
+        width: 300px;
+    }
+
+    .Home-Landing-Content div {
+        width: auto;
+    }
+
+    .Home-Landing button {
+        font-size: 44px;
+        padding: 20px 10px;
+    }
+
+    .Home-Envios,
+    .Home-Pedidos,
+    .Home-Mayor {
+        display: flex;
+        align-items: center;
+
+    }
+    .Home-Envios p,
+    .Home-Pedidos p,
+    .Home-Mayor p {
+        font-size: 60px;
+    }
+    .Home-Envios div,
+    .Home-Pedidos div,
+    .Home-Mayor div {
+    justify-content: space-evenly;
+       height: 90vh;
+    }
+    .Home-Envios svg,
+    .Home-Pedidos svg,
+    .Home-Mayor svg{
+        width: 200px;
+        height: 200px;
+    }
+    .Home-Pedidos, .Home-About {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:row-reverse;
+    }
+
+
+    .Home-About h2{
+        font-size: 48px;
+    }
+    .Home-About p{
+        font-size: 38px;
+    }
+
+    .Home-Envios img,
+    .Home-Pedidos img,
+    .Home-About img,
+    .Home-Mayor img {
+        width: 50vw;
+        min-height: 100vh;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+
+}
+
+
+
+@media (max-width: 800px) {
+    .Home-About h2{
+        font-size: 48px;
+    }
+    .Home-About p{
+        font-size: 28px;
+    }
+    .Home-Landing button {
+        font-size: 44px;
+        padding: 20px 10px;
+    }
+    .Home-Envios p,
+    .Home-Pedidos p,
+    .Home-Mayor p {
+        font-size: 50px;
+    }
 }

@@ -55,6 +55,7 @@ const LandingPage = () => {
     }
     return (
         <section className={style.Home}>
+
             <section className={style['Home-Landing']}>
                 <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
                 <div className={style['Home-Landing-Content']}>
@@ -68,6 +69,7 @@ const LandingPage = () => {
                         </div>
                         <Image src={Logo} alt='Logo' width={1400} />
                     </motion.section>
+
                     <Link href="/store">
                         <motion.button type='button'
                             initial='hiddenLeft'
