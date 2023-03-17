@@ -12,7 +12,7 @@ import { motion } from "framer-motion"
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBoxesPacking, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBoxesPacking, faFileCircleCheck, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import { AppContext } from '@/context/AppContex';
 import Link from 'next/link';
@@ -133,25 +133,25 @@ const LandingPage = () => {
                     <FontAwesomeIcon icon={faFileCircleCheck} />
                 </motion.div>
             </section>
-            <section className={style['Home-Envios']}>
+            <section className={style['Home-Mayor']}>
                 <Image src={Pedri} alt='pedri image' />
                 <motion.div
                     initial='hiddenRight'
                     whileInView={appState.menuIsOpen ? ' ' : 'show'}
                     variants={item}>
                     <p>
-                    Únete a la familia TOTY Sports y lleva lo mejor 
-                    del deporte a tu negocio
-                     con nuestras opciones al por mayor de alta calidad y precios competitivos.
+                        <span>Únete a la familia TOTY Sports</span> y lleva lo mejor
+                        del deporte a tu negocio
+                        con nuestras opciones al por mayor, de alta calidad y precios competitivos.
                     </p>
-                    <FontAwesomeIcon icon={faBoxesPacking} />
+                    <FontAwesomeIcon icon={faMedal} />
                 </motion.div>
             </section>
             <section className={style['Home-About']}>
                 <Image src={Italy} alt='Italy image' width={2200} />
                 <div>
                     <motion.h2
-                        initial='hiddenRight'
+                        initial='hiddenLeft'
                         whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         variants={item}
                     >
@@ -159,7 +159,7 @@ const LandingPage = () => {
                         nosotros
                     </motion.h2>
                     <motion.p
-                        initial='hiddenLeft'
+                        initial='hiddenRight'
                         whileInView={appState.menuIsOpen ? ' ' : 'show'}
                         variants={item}
                     >
