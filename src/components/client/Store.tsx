@@ -7,6 +7,7 @@ import styles from '../../styles/components/Store.module.css'
 import { JerseyCard } from './JerseyCard'
 
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
     const container = {
@@ -35,7 +36,9 @@ const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
                     <motion.div key={item.id}
                         variants={itemMotion}
                     >
+                        <Link href={`/store/${item.id}`}>
                         <JerseyCard jersey={item} />
+                        </Link>    
                     </motion.div>
                 ))}
             </motion.section>

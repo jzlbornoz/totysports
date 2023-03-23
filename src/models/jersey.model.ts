@@ -1,7 +1,7 @@
 export interface JerseyModel {
   id: number;
   name: string;
-  size: string | string[];
+  size: string[];
   price: number;
   sale: number;
   team: string;
@@ -9,7 +9,8 @@ export interface JerseyModel {
   season: string | string[];
   stock: number;
   technology: string;
-  link: string,
-  img?: string | string[],
-  arrive: boolean,
+  link: string;
+  img: string | string[];
+  arrive: boolean;
+  brand: string;
 }
