@@ -4,7 +4,7 @@
 }
 .ProductPage-ImgDiv{
     width: 100%;
-    height: 60vh;
+    height: 55vh;
 }
 .ProductPage-ImgDiv img{
     width: 100%;
@@ -13,11 +13,11 @@
 }
 .ProductPage-Content {
    padding: 10px;
-   font-size: 28px;
-   height: 40vh;
+   font-size: 16px;
+   min-height: 45vh;
 }
 .ProductPage-Content h2{
-    font-size: 36px;
+    font-size: 34px;
 }
 .ProductPage-Content div {
     padding: 10px 0px;
@@ -25,6 +25,7 @@
 .ProductPage-Content-Info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .ProductPage-Content-Info ul {
     list-style: none;
@@ -33,6 +34,7 @@
 .ProductPage-Content-Info li {
     display: flex;
     padding: 5px 0px;
+    flex-wrap: wrap;
 }
 .ProductPage-Content-Info li span {
     color: var(--secundary-color);
@@ -49,17 +51,18 @@
 .ProductPage-Content-Buy {
     background-color: var(--primary-color);
     width: 100%;
-    font-size: 36px;
-    margin-top: 20px;
-    padding: 15px 0px;
+    font-size: 26px;
+    margin-top: 5px;
+    padding: 10px 0px;
     border-radius: 10px;
     color: var(--background);
+    margin-top: 15px;
 }
 .ProductPage-Content section button {
     color: white;
     background-color: var(--secundary-color);
     padding: 5px 15px;
-    font-size: 28px;
+    font-size: 22px;
     margin-top: 5px;
     border: none;
     border-radius: 5px;
