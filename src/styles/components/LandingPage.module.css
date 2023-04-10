@@ -53,6 +53,7 @@
     border-radius: 7px;
     background: none;
     font-size: 22px;
+    margin-top: 20px;
 }
 
 
@@ -135,7 +136,7 @@
 }
 
 .Home-Mayor svg {
-    margin-top: 30px;
+    margin-top: 20px;
     color: white;
     width: 140px;
     height: 140px;
@@ -204,35 +205,42 @@
         align-items: center;
 
     }
+
     .Home-Envios p,
     .Home-Pedidos p,
     .Home-Mayor p {
         font-size: 60px;
     }
+
     .Home-Envios div,
     .Home-Pedidos div,
     .Home-Mayor div {
-    justify-content: space-evenly;
-       height: 90vh;
+        justify-content: space-evenly;
+        height: 90vh;
     }
+
     .Home-Envios svg,
     .Home-Pedidos svg,
-    .Home-Mayor svg{
+    .Home-Mayor svg {
         width: 200px;
         height: 200px;
+
     }
-    .Home-Pedidos, .Home-About {
+
+    .Home-Pedidos,
+    .Home-About {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction:row-reverse;
+        flex-direction: row-reverse;
     }
 
 
-    .Home-About h2{
+    .Home-About h2 {
         font-size: 48px;
     }
-    .Home-About p{
+
+    .Home-About p {
         font-size: 45px;
     }
 
@@ -252,19 +260,30 @@
 
 
 @media (min-width: 416px) {
-    .Home-About h2{
+    .Home-About h2 {
         font-size: 48px;
     }
-    .Home-About p{
+
+    .Home-About p {
         font-size: 28px;
     }
+
     .Home-Landing button {
         font-size: 44px;
         padding: 20px 10px;
     }
+
     .Home-Envios p,
     .Home-Pedidos p,
     .Home-Mayor p {
         font-size: 50px;
+    }
+}
+
+@media (max-height: 800px) {
+    .Home-Mayor svg {
+        width: 130px;
+        height: 130px;
+        padding: 12px;
     }
 }
