@@ -10,7 +10,7 @@ export interface JerseyModel {
   stock: number;
   technology: string;
   link: string;
-  img: string | string[];
+  img: string[];
   arrive: boolean;
   brand: string;
 }

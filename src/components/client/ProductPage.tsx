@@ -5,6 +5,7 @@ import React from 'react'
 
 import style from "../../styles/components/ProductPage.module.css";
 
+
 const ProductPage = ({ product }: { product: JerseyModel }) => {
     return (
         <section className={style.ProductPage}>
@@ -41,15 +42,17 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                 </section>
                 <button className={style['ProductPage-Content-Buy']}>Agregar al Carrito</button>
             </section>
-            <div className={style['ProductPage-ImgDiv']}>
-                <Image src={product.img[1]} alt={product.name} width={1200} height={1200} />
-            </div>
-            <div className={style['ProductPage-ImgDiv']}>
-                <Image src={product.img[2]} alt={product.name} width={1200} height={1200} />
-            </div>
-            <div className={style['ProductPage-ImgDiv']}>
-                <Image src={product.img[3]} alt={product.name} width={1200} height={1200} />
-            </div>
+            {product.img.map(item => (
+                <>
+                    {
+                        product.img[0] == item
+                            ? null
+                            : <div className={style['ProductPage-ImgDiv']} key={item + '1'}>
+                                <Image src={item} alt={product.name} width={1200} height={1200} />
+                            </div>
+                    }
+                </>
+            ))}
         </section>
     )
 }
