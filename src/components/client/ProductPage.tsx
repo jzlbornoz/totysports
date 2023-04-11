@@ -16,22 +16,21 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                 <h2>{product.name}</h2>
                 <div className={style['ProductPage-Content-Info']}>
                     <ul>
-                        <li><span>Tallas:</span><p>{product.size.toString()}</p></li>
+                        <li><span>Tallas:</span><p>{product.size.join(', ')}</p></li>
                         <li><span>Stock:</span><p>{product.stock}</p></li>
                         <li><span>Temporada:</span><p>{product.season}</p></li>
                         <li><span>Technology:</span>
                             <p className={style['ProductPage-Content-Info-p']}>
                                 {product.technology}
-                            </p></li>
-
-                    </ul>
-                    <ul>
-                        {product.players ? <li><span>Dorsal:</span><p>{product.players.toString()}</p></li> : null}
+                            </p>
+                        </li>
+                        {product.players ? <li><span>Dorsal:</span><p>{product.players.join(', ')}</p></li> : null}
                         <li><span>Precio:</span><p>{product.price}$</p></li>
                         <li><span>Oferta:</span>
                             <p className={style['ProductPage-Content-Info-p']}>
                                 {product.sale}$
                             </p></li>
+
                     </ul>
                 </div>
                 <section>

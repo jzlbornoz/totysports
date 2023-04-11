@@ -12,12 +12,13 @@
     object-fit: cover;
 }
 .ProductPage-Content {
-   padding: 10px;
+   padding: 12px;
    font-size: 16px;
-   min-height: 45vh;
+   height: 45vh;
 }
 .ProductPage-Content h2{
-    font-size: 34px;
+    font-size: 30px;
+    color: var(--primary-color);
 }
 .ProductPage-Content div {
     padding: 10px 0px;
@@ -29,12 +30,18 @@
 }
 .ProductPage-Content-Info ul {
     list-style: none;
-    color: white
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-gap: 10px;
 }
 .ProductPage-Content-Info li {
     display: flex;
     padding: 5px 0px;
+    margin-right: 20px;
     flex-wrap: wrap;
+    border: solid 1px red;
 }
 .ProductPage-Content-Info li span {
     color: var(--secundary-color);

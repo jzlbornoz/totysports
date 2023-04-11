@@ -5,7 +5,7 @@ export interface JerseyModel {
   price: number;
   sale: number;
   team: string;
-  players?: string | string[];
+  players?: string[];
   season: string | string[];
   stock: number;
   technology: string;
