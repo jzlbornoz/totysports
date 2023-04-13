@@ -33,7 +33,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
             },
 
             color: "#FFFFFF",
-            backgroundColor:'#468220' 
+            backgroundColor: '#468220'
         },
     }
 
@@ -58,10 +58,12 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         <li>
                             <span>Precio:</span>
                             <p>{product.price}$</p>
-                            <span>Oferta:</span>
-                            <p className={style['ProductPage-Content-Info-p']}>
-                                {product.sale}$
-                            </p>
+                            {product.sale > 0
+                                ? <> <span>Oferta:</span>
+                                    <p className={style['ProductPage-Content-Info-p']}>
+                                        {product.sale}$
+                                    </p> </>
+                                : <> </>}
                         </li>
 
                     </ul>

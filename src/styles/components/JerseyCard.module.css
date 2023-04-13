@@ -31,10 +31,6 @@
     padding-right: 5px;
 }
 
-.JerseyCard-ContentSection div{
-    text-decoration: line-through;
-}
-
 .JerseyCard-ContentSection svg {
     width: 15px;
     height: 15px;

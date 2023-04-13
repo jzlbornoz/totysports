@@ -28,7 +28,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                         : jersey.name.toUpperCase()}
                 </p>
                 <div>
-                    <p>{jersey.price}$</p>
+                    <p style={jersey.sale > 0 ? { "textDecoration": 'line-through' } : { "color": '#9BFD5C' }}>{jersey.price}$</p>
                     <p>
                         {jersey.arrive
                             ? <FontAwesomeIcon icon={faPlaneCircleCheck} />
@@ -36,9 +36,11 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                     </p>
                 </div>
             </section>
-            <div className={style["JerseyCard-SaleTag"]}>
-                <p>{jersey.sale}$</p>
-            </div>
+            {jersey.sale > 0
+                ? <div className={style["JerseyCard-SaleTag"]}>
+                    <p>{jersey.sale}$</p>
+                </div>
+                : <></>}
         </div>
     )
 }
