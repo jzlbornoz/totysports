@@ -1,3 +1,4 @@
+'use client'
 import { JerseyModel } from '@/models/jersey.model'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -6,7 +7,36 @@ import React from 'react'
 import style from "../../styles/components/ProductPage.module.css";
 
 
+import { motion } from "framer-motion"
+
+
 const ProductPage = ({ product }: { product: JerseyModel }) => {
+
+    const item = {
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5
+            }
+        },
+        hover: {
+            scale: 1.1,
+            transition: {
+                duration: 0.7
+            }
+        },
+        tap: {
+            scale: 1.128,
+            transition: {
+                type: "spring", stiffness: 400, damping: 17,
+            },
+
+            color: "#FFFFFF",
+            backgroundColor:'#468220' 
+        },
+    }
+
     return (
         <section className={style.ProductPage}>
             <div className={style['ProductPage-ImgDiv']}>
@@ -41,7 +71,16 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         <p>Ver Jersey</p>
                         <button>{product.brand}</button>
                     </Link>
-                    <button className={style['ProductPageCTO-Buy']}>Agregar al Carrito</button>
+
+                    <motion.button type='button'
+                        initial='show'
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={item}
+                        className={style['ProductPageCTO-Buy']}
+                    >
+                        Agregar al Carrito
+                    </motion.button>
                 </section>
 
             </section>
