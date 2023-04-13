@@ -25,21 +25,25 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                             </p>
                         </li>
                         {product.players ? <li><span>Dorsal:</span><p>{product.players.join(', ')}</p></li> : null}
-                        <li><span>Precio:</span><p>{product.price}$</p></li>
-                        <li><span>Oferta:</span>
+                        <li>
+                            <span>Precio:</span>
+                            <p>{product.price}$</p>
+                            <span>Oferta:</span>
                             <p className={style['ProductPage-Content-Info-p']}>
                                 {product.sale}$
-                            </p></li>
+                            </p>
+                        </li>
 
                     </ul>
                 </div>
-                <section>
-                    <p>Ver Jersey</p>
+                <section className={style.ProductPageCTO}>
                     <Link href={product.link}>
+                        <p>Ver Jersey</p>
                         <button>{product.brand}</button>
                     </Link>
+                    <button className={style['ProductPageCTO-Buy']}>Agregar al Carrito</button>
                 </section>
-                <button className={style['ProductPage-Content-Buy']}>Agregar al Carrito</button>
+
             </section>
             {product.img.map(item => (
                 <>

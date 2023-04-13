@@ -23,25 +23,27 @@
 .ProductPage-Content div {
     padding: 10px 0px;
 }
+
 .ProductPage-Content-Info {
+    height: 20vh;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .ProductPage-Content-Info ul {
     list-style: none;
     color: white;
     display: grid;
-    grid-template-columns: repeat(3, 0.8fr);
-    grid-template-rows: repeat(3, 0.5fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2px;
 }
 .ProductPage-Content-Info li {
     display: flex;
     padding: 5px 0px;
     margin-right: 20px;
     flex-wrap: wrap;
-    border: solid 1px red;
+
 }
 .ProductPage-Content-Info li span {
     color: var(--secundary-color);
@@ -55,22 +57,29 @@
     color:var(--primary-color);
 }
 
-.ProductPage-Content-Buy {
+.ProductPageCTO {
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+.ProductPageCTO a p {
+    font-size: 14px;
+}
+.ProductPageCTO a button{
+   width: 20vw;
+   padding: 5px 0px;
+   border-radius: 7px;
+   margin-top: 5px;
+   font-size: 16px;
+   border: none;
+}
+.ProductPageCTO-Buy {
     background-color: var(--primary-color);
-    width: 100%;
     font-size: 26px;
-    margin-top: 5px;
     padding: 10px 0px;
     border-radius: 10px;
     color: var(--background);
-    margin-top: 15px;
-}
-.ProductPage-Content section button {
-    color: white;
-    background-color: var(--secundary-color);
-    padding: 5px 15px;
-    font-size: 22px;
-    margin-top: 5px;
+    width: 65%;
     border: none;
-    border-radius: 5px;
 }
