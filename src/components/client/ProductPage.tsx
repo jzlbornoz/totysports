@@ -47,9 +47,13 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                 <div className={style['ProductPage-Content-Info']}>
                     <ul>
                         <li><span>Tallas:</span><p>{product.size.join(', ')}</p></li>
-                        <li><span>Stock:</span><p>{product.stock}</p></li>
+                        <li>
+                            {product.stock > 0 ? <><span>Stock:</span><p>{product.stock}</p></>
+                                : <><span>Disponibilidad:</span><p>Encargala ya!</p></>}
+
+                        </li>
                         <li><span>Temporada:</span><p>{product.season}</p></li>
-                        <li><span>Technology:</span>
+                        <li><span>Tecnología:</span>
                             <p className={style['ProductPage-Content-Info-p']}>
                                 {product.technology}
                             </p>
@@ -87,15 +91,15 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
 
             </section>
             {product.img.map(item => (
-                <>
+                <div key={item + Math.random().toString()}>
                     {
                         product.img[0] == item
                             ? null
-                            : <div className={style['ProductPage-ImgDiv']} key={item + '1'}>
+                            : <div className={style['ProductPage-ImgDiv']}>
                                 <Image src={item} alt={product.name} width={1200} height={1200} />
                             </div>
                     }
-                </>
+                </div>
             ))}
         </section>
     )
