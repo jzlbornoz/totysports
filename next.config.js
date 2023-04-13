@@ -20,8 +20,12 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'assets.adidas.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.puma.com',
+      },
     ],
   },
 })
 
-module.exports = nextConfig
+module.exports = nextConfig 
