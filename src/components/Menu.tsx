@@ -4,7 +4,7 @@ import { AppContext } from '@/context/AppContex';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeartCircleCheck, faStore, faPiggyBank, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faHouseCircleCheck, faStore, faPiggyBank, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '../styles/components/Menu.module.css'
 
@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const Menu = () => {
 
-    const { appState , toggleMenu } = useContext(AppContext);
+    const { appState, toggleMenu } = useContext(AppContext);
 
     const item = {
         hiddenLeft: {
@@ -58,8 +58,10 @@ const Menu = () => {
                         <p>Cart</p>
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faHeartCircleCheck} />
-                        <p> Wish List</p>
+                        <Link href='/stock'>
+                            <FontAwesomeIcon icon={faHouseCircleCheck} />
+                            <p onClick={() => toggleMenu()}>In Stock</p>
+                        </Link>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faPiggyBank} />
