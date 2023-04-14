@@ -1,0 +1,14 @@
+.Cart {
+    margin-top: 10vh;
+    padding:0vh 10vw;
+    min-height: 90vh;
+}
+.Cart h2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--primary-color);
+}
+
+.Cart ul {
+    list-style: none;
+}
