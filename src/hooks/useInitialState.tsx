@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react';
 import { InitialStateModel } from '@/models/InitialState.model';
+import { JerseyModel } from '@/models/jersey.model';
 
 const initialState: InitialStateModel = {
     menuIsOpen: false,
+    cart: [],
 };
 
 const useInitialState = () => {
@@ -16,9 +18,23 @@ const useInitialState = () => {
         });
     };
 
+    const addToCart = (payload: JerseyModel) => {
+        appState.cart.push(payload);
+       // console.log("Producto agregado", appState.cart);
+    };
+
+    const removeFromCart = (payload: JerseyModel) => {
+        setAppState({
+            ...appState,
+            cart: appState.cart.filter((items) => items.id !== payload.id),
+        });
+    };
+
     return {
         appState,
         toggleMenu,
+        addToCart,
+        removeFromCart
     };
 };
 

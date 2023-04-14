@@ -54,21 +54,23 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faCartShopping} />
-                        <p>Cart</p>
-                    </li>
-                    <li>
                         <Link href='/stock'>
                             <FontAwesomeIcon icon={faHouseCircleCheck} />
                             <p onClick={() => toggleMenu()}>In Stock</p>
                         </Link>
                     </li>
                     <li>
+                        <Link href='/cart'>
+                            <FontAwesomeIcon icon={faCartShopping} />
+                            <p onClick={() => toggleMenu()}>Cart</p>
+                        </Link>
+                    </li>
+                    <li>
                         <FontAwesomeIcon icon={faPiggyBank} />
-                        <p>Sale</p>
+                        <p onClick={() => toggleMenu()}>Sale</p>
                     </li>
                 </ul>
-                <h3>Contact</h3>
+                <h3 onClick={() => toggleMenu()}>Contact</h3>
 
             </div>
 

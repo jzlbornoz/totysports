@@ -2,15 +2,18 @@
 import { JerseyModel } from '@/models/jersey.model'
 import Image from 'next/image'
 import Link from 'next/link';
-import React from 'react'
+import React, { useContext } from 'react'
 
 import style from "../../styles/components/ProductPage.module.css";
 
 
 import { motion } from "framer-motion"
+import { AppContext } from '@/context/AppContex';
 
 
 const ProductPage = ({ product }: { product: JerseyModel }) => {
+
+    const { addToCart } = useContext(AppContext);
 
     const item = {
         show: {
@@ -84,6 +87,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         whileTap='tap'
                         variants={item}
                         className={style['ProductPageCTO-Buy']}
+                        onClick={() => addToCart(product)}
                     >
                         Agregar al Carrito
                     </motion.button>
