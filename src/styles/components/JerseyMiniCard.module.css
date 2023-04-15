@@ -1,8 +1,10 @@
 .JerseyMiniCard {
     display: flex;
     border: solid 1px var(--primary-color);
-    height: 10vh;
+    height: 8vh;
     margin-bottom: 25px;
+    border-radius: 7px;
+    background-color: white;
 }
 
 .JerseyMiniCard-Img-Container {
@@ -12,11 +14,17 @@
 
 .JerseyMiniCard img {
     width: 100%;
-    height: 10vh;
+    height: 100%;
     object-fit: cover;
 }
 
 .JerseyMiniCard-Content {
     width: 70%;
     font-size: 14px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }

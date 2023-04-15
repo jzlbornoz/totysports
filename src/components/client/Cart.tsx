@@ -1,22 +1,28 @@
 'use client'
 import { AppContext } from '@/context/AppContex';
+import { JerseyModel } from '@/models/jersey.model';
 import React, { useContext } from 'react'
 import styles from '../../styles/components/Cart.module.css';
 import { JerseyMiniCard } from './JerseyMiniCard';
 
 const Cart = () => {
     const { appState } = useContext(AppContext);
-    const cartItems = appState.cart;
+    const cartItems: (JerseyModel[] | number) = appState.cart;
+    const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
+    const discount = cartItems.length <= 3 ? cartItems.length * 10 : cartItems.length * 15;
     return (
         <section className={styles.Cart}>
             <h2>Cart</h2>
             <ul>
                 <li>{cartItems.map(item => <JerseyMiniCard jersey={item} key={item.id} />)}</li>
             </ul>
-            <p> <span>Items: </span> 10</p>
-            <p> <span>Monto Total: </span> 1022$</p>
-            <p> <span>Descuento: </span> 20</p>
-            <p> <span>Monto Final: </span> 888$</p>
+            <div className={styles.CartContent}>
+                <p> <span>Items:  </span> {cartItems.length}</p>
+                <p> <span>Monto Total:  </span> {finalPrice} $</p>
+                <p> <span>Descuento:  </span> {discount} $</p>
+                <p> <span>Monto Final:  </span> {finalPrice - discount} $</p>
+            </div>
+
         </section>
 
     )

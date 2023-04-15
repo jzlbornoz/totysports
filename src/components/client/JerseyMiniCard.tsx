@@ -13,7 +13,7 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                 {jersey.name.length > 24
                     ? `${jersey.name.slice(0, 24).trimEnd().toUpperCase()}...`
                     : jersey.name.toUpperCase()}
-                <p>{jersey.sale}</p>
+                <p>{jersey.sale}$</p>
             </div>
         </div>
     )
