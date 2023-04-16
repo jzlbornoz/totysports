@@ -19,7 +19,11 @@ const useInitialState = () => {
     };
 
     const addToCart = (payload: JerseyModel) => {
-        appState.cart.push(payload);
+        setAppState({
+            ...appState,
+            cart: [...appState.cart , payload],
+        })
+        //appState.cart.push(payload);
        // console.log("Producto agregado", appState.cart);
     };
 

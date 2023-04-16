@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { Menu } from '../Menu';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 import Logo from '../../assets/logo.png'
@@ -22,6 +22,12 @@ const Header = () => {
       <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} />
       <Link href='/'>
         <Image src={Logo} alt='Logo' width={60} height={60} />
+      </Link>
+      <Link href='/cart'>
+        <div className={styles.HeaderCart}>
+          {appState.cart.length > 0 ? <p>{appState.cart.length}</p> : null}
+          <FontAwesomeIcon icon={faCartShopping} />
+        </div>
       </Link>
     </header>
   )
