@@ -74,12 +74,16 @@
    font-size: 16px;
    border: none;
 }
+
 .ProductPageCTO-Buy {
     background-color: var(--primary-color);
-    font-size: 26px;
+    font-size: 24px;
     padding: 10px 0px;
     border-radius: 10px;
     color: var(--background);
     width: 65%;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

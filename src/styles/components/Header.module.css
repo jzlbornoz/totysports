@@ -19,11 +19,12 @@
 .HeaderCart p {
     position: absolute;
     top: -10px;
-    right: -5px;
+    right: -6px;
     background-color: var(--primary-color);
-    padding: 2px 4px;
+    padding: 2px 5px;
     color: var(--background);
-    border-radius: 45%;
+    border-radius: 48%;
+    font-size: 14px;
 }
 .Header svg {
     z-index: 20;

@@ -50,19 +50,19 @@ const Menu = () => {
                     <li>
                         <Link href='/store'>
                             <FontAwesomeIcon icon={faStore} />
-                            <p onClick={() => toggleMenu()}>Store</p>
+                            <p onClick={() => toggleMenu()}>Tienda</p>
                         </Link>
                     </li>
                     <li>
                         <Link href='/stock'>
                             <FontAwesomeIcon icon={faHouseCircleCheck} />
-                            <p onClick={() => toggleMenu()}>In Stock</p>
+                            <p onClick={() => toggleMenu()}>Stock</p>
                         </Link>
                     </li>
                     <li>
                         <Link href='/cart'>
                             <FontAwesomeIcon icon={faCartShopping} />
-                            <p onClick={() => toggleMenu()}>Cart</p>
+                            <p onClick={() => toggleMenu()}>Carro de compras</p>
                         </Link>
                     </li>
                     <li>

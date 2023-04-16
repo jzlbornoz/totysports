@@ -4,11 +4,13 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React, { useContext } from 'react'
 
-import style from "../../styles/components/ProductPage.module.css";
-
-
 import { motion } from "framer-motion"
 import { AppContext } from '@/context/AppContex';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
+import style from "../../styles/components/ProductPage.module.css";
 
 
 const ProductPage = ({ product }: { product: JerseyModel }) => {
@@ -89,7 +91,8 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         className={style['ProductPageCTO-Buy']}
                         onClick={() => addToCart(product)}
                     >
-                        Agregar al Carrito
+                        Agregar al carrito
+                        <FontAwesomeIcon icon={faCartShopping} style={{ marginLeft: "5px", width: "26px" }} />
                     </motion.button>
                 </section>
 
