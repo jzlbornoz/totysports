@@ -10,13 +10,18 @@ import { AppContext } from '@/context/AppContex';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
+
+
 import style from "../../styles/components/ProductPage.module.css";
+import ZoomableImage from './ZoomeableImg';
 
 
 const ProductPage = ({ product }: { product: JerseyModel }) => {
 
     const { addToCart } = useContext(AppContext);
 
+
+    // Framer Motion
     const item = {
         show: {
             opacity: 1,
@@ -42,10 +47,13 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
         },
     }
 
+
+    // Image Zoom
+  
     return (
         <section className={style.ProductPage}>
             <div className={style['ProductPage-ImgDiv']}>
-                <Image src={product.img[0]} alt={product.name} width={1200} height={1200} />
+                <ZoomableImage src={product.img[0]} />
             </div>
             <section className={style['ProductPage-Content']}>
                 <h2>{product.name}</h2>
@@ -103,7 +111,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         product.img[0] == item
                             ? null
                             : <div className={style['ProductPage-ImgDiv']}>
-                                <Image src={item} alt={product.name} width={1200} height={1200} />
+                               <ZoomableImage src={item} />
                             </div>
                     }
                 </div>
