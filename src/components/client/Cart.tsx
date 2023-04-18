@@ -13,6 +13,7 @@ const Cart = () => {
     const cartItems: (JerseyModel[] | number) = appState.cart;
     const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
     const discount = cartItems.length <= 3 ? cartItems.length * 10 : cartItems.length * 15;
+
     if (appState.cart.length > 0) {
         return (
             <section className={styles.Cart}>
@@ -26,7 +27,7 @@ const Cart = () => {
                     <p> <span>Descuento:  </span> {discount} $</p>
                     <p> <span>Monto Final:  </span> {finalPrice - discount} $</p>
                 </div>
-
+                <button>Procesar Compra</button>
             </section>
 
         )

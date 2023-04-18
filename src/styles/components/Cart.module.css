@@ -29,6 +29,17 @@
     margin-bottom: 5px;
 }
 
+.Cart button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    margin-top: 20px;
+    border-radius: 7px;
+    color: var(--background);
+    font-size: 26px;
+}
+
 .EmptyCart {
     display: flex;
     flex-direction: column;
