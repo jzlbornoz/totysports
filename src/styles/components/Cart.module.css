@@ -1,7 +1,8 @@
 .Cart {
-    padding:11vh 10vw;
+    padding: 11vh 10vw;
     min-height: 100vh;
 }
+
 .Cart h2 {
     text-align: center;
     font-size: 36px;
@@ -20,10 +21,11 @@
     margin-top: 20px;
 }
 
-.CartContent span{
+.CartContent span {
     color: white;
     font-weight: bold;
 }
+
 .CartContent p {
     color: var(--primary-color);
     margin-bottom: 5px;
@@ -53,7 +55,9 @@
     height: 200px;
     color: var(--secundary-color);
 }
+
 .EmptyCart p {
     margin-top: 25px;
     font-size: 1.8rem;
+    color: white;
 }
