@@ -59,5 +59,9 @@
 .EmptyCart p {
     margin-top: 25px;
     font-size: 1.8rem;
+    color: var(--secundary-color);
+}
+.EmptyCart a p{
+    text-decoration: underline;
     color: white;
 }

@@ -9,6 +9,7 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
 import styles from '../../styles/components/Cart.module.css';
+import Link from 'next/link';
 
 const Cart = () => {
     const { appState } = useContext(AppContext);
@@ -91,6 +92,7 @@ const Cart = () => {
                 <div className={styles.EmptyCart}>
                     <FontAwesomeIcon icon={faCartArrowDown} />
                     <p>Carrito de Compras vacio</p>
+                    <Link href='/store'><p>Agrega tu primer producto!</p></Link>
                 </div>
             </section>
 

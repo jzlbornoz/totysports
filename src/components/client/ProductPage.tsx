@@ -1,16 +1,13 @@
 'use client'
-import { JerseyModel } from '@/models/jersey.model'
-import Image from 'next/image'
+import React, { useContext, useState } from 'react'
 import Link from 'next/link';
-import React, { useContext } from 'react'
+import { AppContext } from '@/context/AppContex';
+import { JerseyModel } from '@/models/jersey.model'
 
 import { motion } from "framer-motion"
-import { AppContext } from '@/context/AppContex';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
-
 
 import style from "../../styles/components/ProductPage.module.css";
 import ZoomableImage from './ZoomeableImg';
@@ -19,7 +16,7 @@ import ZoomableImage from './ZoomeableImg';
 const ProductPage = ({ product }: { product: JerseyModel }) => {
 
     const { addToCart } = useContext(AppContext);
-
+    const [productToAdd, setProductToAdd] = useState(product);
 
     // Framer Motion
     const item = {
@@ -48,8 +45,17 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
     }
 
 
-    // Image Zoom
-  
+    // select events
+    const [selectedOption, setSelectedOption] = useState<string>(product.size[0]);
+
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedOption(event.target.value);
+        setProductToAdd({
+            ...productToAdd,
+            size: [selectedOption]
+        })
+    };
+
     return (
         <section className={style.ProductPage}>
             <div className={style['ProductPage-ImgDiv']}>
@@ -59,7 +65,14 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                 <h2>{product.name}</h2>
                 <div className={style['ProductPage-Content-Info']}>
                     <ul>
-                        <li><span>Tallas:</span><p>{product.size.join(', ')}</p></li>
+                        <li>
+                            <span>Tallas:</span>
+                            <select value={selectedOption} onChange={handleSelectChange}>
+                                {product.size.map(char => (
+                                    <option key={char}>{char}</option>
+                                ))}
+                            </select>
+                        </li>
                         <li>
                             {product.stock > 0 ? <><span>Stock:</span><p>{product.stock}</p></>
                                 : <><span>Disponibilidad:</span><p>Encargala ya!</p></>}
@@ -97,7 +110,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         whileTap='tap'
                         variants={item}
                         className={style['ProductPageCTO-Buy']}
-                        onClick={() => addToCart(product)}
+                        onClick={() => addToCart(productToAdd)}
                     >
                         Agregar al carrito
                         <FontAwesomeIcon icon={faCartShopping} style={{ marginLeft: "5px", width: "26px" }} />
@@ -111,7 +124,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         product.img[0] == item
                             ? null
                             : <div className={style['ProductPage-ImgDiv']}>
-                               <ZoomableImage src={item} />
+                                <ZoomableImage src={item} />
                             </div>
                     }
                 </div>

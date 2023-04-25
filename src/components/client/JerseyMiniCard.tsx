@@ -1,9 +1,17 @@
 import { JerseyModel } from '@/models/jersey.model'
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from '../../styles/components/JerseyMiniCard.module.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { AppContext } from '@/context/AppContex';
+
+
 const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
+
+    const { removeFromCart } = useContext(AppContext);
+
     return (
         <div className={styles.JerseyMiniCard}>
             <div className={styles['JerseyMiniCard-Img-Container']}>
@@ -13,8 +21,12 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                 {jersey.name.length > 24
                     ? `${jersey.name.slice(0, 24).trimEnd().toUpperCase()}...`
                     : jersey.name.toUpperCase()}
-                <p>{jersey.sale}$</p>
+                <div>
+                    <p>{jersey.sale}$</p>
+                    <p>Talla: {jersey.size}</p>
+                </div>
             </div>
+            <FontAwesomeIcon icon={faTrashCan} onClick={() => removeFromCart(jersey)} />
         </div>
     )
 }

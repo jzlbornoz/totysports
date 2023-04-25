@@ -21,16 +21,16 @@ const useInitialState = () => {
     const addToCart = (payload: JerseyModel) => {
         setAppState({
             ...appState,
-            cart: [...appState.cart , payload],
+            cart: [...appState.cart, payload],
         })
         //appState.cart.push(payload);
-       // console.log("Producto agregado", appState.cart);
+        // console.log("Producto agregado", appState.cart);
     };
 
     const removeFromCart = (payload: JerseyModel) => {
         setAppState({
             ...appState,
-            cart: appState.cart.filter((items) => items.id !== payload.id),
+            cart: appState.cart.filter((items) => (items.id && items.size) !== (payload.id && payload.size)),
         });
     };
 
