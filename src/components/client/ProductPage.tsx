@@ -46,13 +46,15 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
 
 
     // select events
-    const [selectedOption, setSelectedOption] = useState<string>(product.size[0]);
+    const [selectedSizeOption, setSelectedSizeOption] = useState<string>(product.size[0]);
+    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedOption(event.target.value);
+        setSelectedSizeOption(event.target.value);
         setProductToAdd({
             ...productToAdd,
-            size: [selectedOption]
+            size: [selectedSizeOption],
+            players: [selectedDorsalOption]
         })
     };
 
@@ -67,7 +69,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                     <ul>
                         <li>
                             <span>Tallas:</span>
-                            <select value={selectedOption} onChange={handleSelectChange}>
+                            <select value={selectedSizeOption} onChange={handleSelectChange}>
                                 {product.size.map(char => (
                                     <option key={char}>{char}</option>
                                 ))}
@@ -84,7 +86,16 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                                 {product.technology}
                             </p>
                         </li>
-                        {product.players ? <li><span>Dorsal:</span><p>{product.players.join(', ')}</p></li> : null}
+                        {product.players
+                            ? <li>
+                                <span>Dorsal:</span>
+                                <select value={selectedDorsalOption} onChange={handleSelectChange}>
+                                    {product.players.map(player => (
+                                        <option key={player}>{player}</option>
+                                    ))}
+                                </select>
+                            </li>
+                            : null}
                         <li>
                             <span>Precio:</span>
                             <p>{product.price}$</p>
