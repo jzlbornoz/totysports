@@ -15,7 +15,7 @@ import ZoomableImage from './ZoomeableImg';
 
 const ProductPage = ({ product }: { product: JerseyModel }) => {
 
-    const { addToCart } = useContext(AppContext);
+    const { addToCart, appState } = useContext(AppContext);
     const [productToAdd, setProductToAdd] = useState(product);
 
     // Framer Motion
@@ -47,15 +47,19 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
 
     // select events
     const [selectedSizeOption, setSelectedSizeOption] = useState<string>(product.size[0]);
-    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
-
-    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSelectSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedSizeOption(event.target.value);
-        setSelectedDorsalOption(event.target.value);
         setProductToAdd({
             ...productToAdd,
             size: [selectedSizeOption],
-            players: [selectedDorsalOption]
+        })
+    };
+    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
+    const handleSelectDorsalChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedDorsalOption(event.target.value);
+        setProductToAdd({
+            ...productToAdd,
+            players: [selectedDorsalOption],
         })
     };
 
@@ -70,7 +74,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                     <ul>
                         <li>
                             <span>Tallas:</span>
-                            <select value={selectedSizeOption} onChange={handleSelectChange}>
+                            <select value={selectedSizeOption} onChange={handleSelectSizeChange}>
                                 {product.size.map(char => (
                                     <option key={char}>{char}</option>
                                 ))}
@@ -90,7 +94,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                         {product.players
                             ? <li>
                                 <span>Dorsal:</span>
-                                <select value={selectedDorsalOption} onChange={handleSelectChange}>
+                                <select value={selectedDorsalOption} onChange={handleSelectDorsalChange}>
                                     {product.players.map(player => (
                                         <option key={player}>{player}</option>
                                     ))}
