@@ -2,7 +2,6 @@
     display: flex;
     border: solid 1px var(--primary-color);
     height: 8vh;
-    margin-bottom: 25px;
     border-radius: 7px;
     background-color: white;
     position: relative;

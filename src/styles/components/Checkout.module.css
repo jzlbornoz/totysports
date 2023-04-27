@@ -15,6 +15,10 @@
     padding: 20px;
 }
 
+.Checkout-Card ul li {
+    margin-bottom: 5px;
+}
+
 .Checkout-Card h2 {
     color: var(--background);
     text-align: center;

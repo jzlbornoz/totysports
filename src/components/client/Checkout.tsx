@@ -20,10 +20,13 @@ const Checkout = () => {
         <section className={styles.Checkout}>
             <div className={styles['Checkout-Card']}>
                 <h2>Orden</h2>
-                {cartItems.map(product => (
-                    <JerseyMiniCard jersey={product} key={product.id} />
-                ))}
-
+                <ul>
+                    {cartItems.map(product => (
+                        <li key={product.id} >
+                            <JerseyMiniCard jersey={product} />
+                        </li>
+                    ))}
+                </ul>
                 <div className={styles['Checkout-Card-Content']}>
                     <p> <span>Items:  </span> {cartItems.length}</p>
                     <p> <span>Monto Total:  </span> {finalPrice} $</p>
