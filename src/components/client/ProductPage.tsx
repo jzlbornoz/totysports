@@ -51,6 +51,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedSizeOption(event.target.value);
+        setSelectedDorsalOption(event.target.value);
         setProductToAdd({
             ...productToAdd,
             size: [selectedSizeOption],
