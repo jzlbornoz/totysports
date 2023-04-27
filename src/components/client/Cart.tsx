@@ -77,12 +77,15 @@ const Cart = () => {
                     <p> <span>Descuento:  </span> {discount} $</p>
                     <p> <span>Monto Final:  </span> {finalPrice - discount} $</p>
                 </div>
-                <motion.button
-                    initial='show'
-                    whileHover='hover'
-                    whileTap='tap'
-                    variants={buttonMotion}
-                >Procesar Compra</motion.button>
+                <Link href='/checkout'>
+                    <motion.button
+                        initial='show'
+                        whileHover='hover'
+                        whileTap='tap'
+                        variants={buttonMotion}
+                    >Procesar Compra</motion.button>
+                </Link>
+
             </section>
 
         )
