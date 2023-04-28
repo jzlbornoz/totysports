@@ -2,7 +2,7 @@
     min-height: 100vh;
     max-height: auto;
     background-color: var(--primary-color);
-    padding: 12vh 5vw 7vh 5vw;
+    padding: 13vh 5vw 7vh 5vw;
 }
 
 .Checkout-Card {
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    box-shadow: 10px 10px 22px 10px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .Checkout-Card ul li {
@@ -44,4 +45,5 @@
 
 .Checkout-Card-Content {
     color: var(--background);
+    margin-top: 30px;
 }
