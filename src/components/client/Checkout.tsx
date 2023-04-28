@@ -45,7 +45,7 @@ const Checkout = () => {
                     <p> <span>Tasa:  </span> 25bs</p>
 
                 </div>
-                <Link href={`https://wa.me/584247401208?text=${generateMessage()}`}>
+                <Link href={`https://wa.me/14079526875?text=${generateMessage()}`}>
                     <button>
                         <p>Confirmar</p>
                         <FontAwesomeIcon icon={faWhatsapp} />

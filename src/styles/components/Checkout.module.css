@@ -18,6 +18,7 @@
 
 .Checkout-Card ul li {
     margin-bottom: 5px;
+    list-style: none;
 }
 
 .Checkout-Card h2 {
