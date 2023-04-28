@@ -19,8 +19,8 @@ const Checkout = () => {
     const priceWithDiscount = finalPrice - discount;
    
     const generateMessage = (): string => {
-        const items = cartItems.map(item => `-${item.name} (Talla: ${item.size}): ${item.sale}$`).join('ㅤㅤㅤ');
-        const message = `¡Hola! Gracias por su compra en Toty Sports. A continuación se detallan los productos que ha ordenado y su respectivo precio: ㅤㅤㅤ${items}. ㅤㅤㅤㅤㅤTotal a pagar: ${priceWithDiscount}$. ㅤㅤㅤㅤPor favor, realice el pago en la cuenta bancaria siguiente: Banco: "Y", Número de cuenta: XXXXXXXXXXXX, Nombre del titular: "Y", Monto: ${priceWithDiscount}$. ㅤㅤㅤㅤㅤㅤUna vez hecho el pago, envíe el comprobante a este número de Whatsapp para procesar su orden. Gracias por su preferencia y quedamos atentos a cualquier consulta.`
+        const items = cartItems.map(item => `${item.name} (Talla: ${item.size}): ${item.sale}$`).join('/');
+        const message = `¡Hola! Gracias por su compra en Toty Sports. A continuación se detallan los productos que ha ordenado y su respectivo precio: ${items}. Total a pagar: ${priceWithDiscount}$. Por favor, realice el pago en la cuenta bancaria siguiente: Banco: "Y", Número de cuenta: XXXXXXXXXXXX, Nombre del titular: "Y", Monto: ${priceWithDiscount}$. Una vez hecho el pago, envíe el comprobante a este número de Whatsapp para procesar su orden. Gracias por su preferencia y quedamos atentos a cualquier consulta.`
         return message;
     };
 
