@@ -24,6 +24,7 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                 <div>
                     <p>{jersey.sale}$</p>
                     <p>Talla: {jersey.size}</p>
+                    {jersey.players && <p>Player: {jersey.players[0]}</p>}
                 </div>
             </div>
             <FontAwesomeIcon icon={faTrashCan} onClick={() => removeFromCart(jersey)} />
