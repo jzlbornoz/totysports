@@ -15,8 +15,10 @@ import ZoomableImage from './ZoomeableImg';
 
 const ProductPage = ({ product }: { product: JerseyModel }) => {
 
-    const { addToCart, appState } = useContext(AppContext);
-    const [productToAdd, setProductToAdd] = useState(product);
+    const { addToCart } = useContext(AppContext);
+    const [productToAdd, setProductToAdd] = useState<JerseyModel>({ ...product, size: [product.size[0]] });
+    const [selectedSizeOption, setSelectedSizeOption] = useState<string>(product.size[0]);
+    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
 
     // Framer Motion
     const item = {
@@ -46,22 +48,26 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
 
 
     // select events
-    const [selectedSizeOption, setSelectedSizeOption] = useState<string>(product.size[0]);
+
     const handleSelectSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedSizeOption(event.target.value);
         setProductToAdd({
             ...productToAdd,
-            size: [selectedSizeOption],
+            size: [event.target.value],
         })
     };
-    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
+
     const handleSelectDorsalChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedDorsalOption(event.target.value);
         setProductToAdd({
             ...productToAdd,
-            players: [selectedDorsalOption],
+            players: [event.target.value],
         })
     };
+
+
+
+    // ---
 
     return (
         <section className={style.ProductPage}>
@@ -74,7 +80,7 @@ const ProductPage = ({ product }: { product: JerseyModel }) => {
                     <ul>
                         <li>
                             <span>Tallas:</span>
-                            <select value={selectedSizeOption} onChange={handleSelectSizeChange}>
+                            <select value={selectedSizeOption} onChange={handleSelectSizeChange} >
                                 {product.size.map(char => (
                                     <option key={char}>{char}</option>
                                 ))}

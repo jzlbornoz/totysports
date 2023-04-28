@@ -10,6 +10,7 @@ const initialState: InitialStateModel = {
 
 const useInitialState = () => {
     const [appState, setAppState] = useState(initialState);
+    // const [repeatedProduct , setRepeatedProduct] = useState({});
 
     const toggleMenu = () => {
         setAppState({
@@ -18,27 +19,44 @@ const useInitialState = () => {
         });
     };
 
+    const findIndex = (payload: JerseyModel): number => {
+        const res = appState.cart.findIndex((item) => item.id = payload.id);
+        return res;
+    }
+
     const addToCart = (payload: JerseyModel) => {
-        setAppState({
-            ...appState,
-            cart: [...appState.cart, payload ],
-        })
-        //appState.cart.push(payload);
-        console.log(appState.cart);
+        const payloadIndex = findIndex(payload);
+        if (payloadIndex !== -1) {
+
+            const newId = Math.floor(Math.random() * 1000000);
+            const modifiedPayload = { ...payload, id: newId };
+            setAppState({
+                ...appState,
+                cart: [...appState.cart, modifiedPayload],
+            })
+        } else {
+            setAppState({
+                ...appState,
+                cart: [...appState.cart, payload],
+            })
+        }
     };
 
     const removeFromCart = (payload: JerseyModel) => {
         setAppState({
             ...appState,
-            cart: appState.cart.filter((items) => (items.id && items.size) !== (payload.id && payload.size)),
+            cart: appState.cart.filter((items) => items.id !== payload.id || items.size !== payload.size)
         });
     };
+
+    
 
     return {
         appState,
         toggleMenu,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        findIndex
     };
 };
 

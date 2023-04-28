@@ -8,8 +8,9 @@ export type AppContextProps = {
     menuIsOpen: boolean;
   };
   toggleMenu: () => void;
-  addToCart: (payload : JerseyModel) => void;
-  removeFromCart: (payload : JerseyModel) => void;
+  addToCart: (payload: JerseyModel) => void;
+  findIndex: (product: JerseyModel) => number;
+  removeFromCart: (payload: JerseyModel) => void;
 };
 
 export const AppContext = createContext<AppContextProps>({} as AppContextProps);
