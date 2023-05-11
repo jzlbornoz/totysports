@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import Image from 'next/image'
 import { JerseyModel } from '@/models/jersey.model'

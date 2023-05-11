@@ -8,8 +8,7 @@
     width: 100vw;
     top: 0px;
     color: white;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(4,0,8,0.8379726890756303) 100%);
+    background: var(--background);
     z-index: 30;
 }
 .HeaderCart {
