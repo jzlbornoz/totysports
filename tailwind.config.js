@@ -5,14 +5,22 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
       },
-    },
+      colors: {
+        'primary': '#006b04',
+        'secondary': '#909090',
+        'third': '#080808',
+        'success': '#00a216',
+        'danger': '#dc3545',
+        'warning': '#ffc107',
+      },
+    }
   },
-  plugins: [],
 }

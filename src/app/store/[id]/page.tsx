@@ -12,7 +12,7 @@ const page = ({ params }: { params: { id: string } }) => {
         const jersey = jerseyArray[0];
 
     return (
-        <ProductPage product={jersey}/>
+        <ProductPage productItem={jersey}/>
     )
     }
 
