@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer'
 import { AppProvider } from '@/context/AppProvider'
 import { Header } from '../components/client/Header'
-import '../styles/globals.css'
+import './globals.css'
 
 export const metadata = {
   description: 'Web Site oficial de TOTY Sports',
