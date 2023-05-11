@@ -41,7 +41,8 @@ const LandingPage = () => {
             scale: 1.1,
             transition: {
                 duration: 0.7
-            }
+            },
+            color: "#ffffff"
         },
         tap: {
             scale: 1.1,
@@ -54,149 +55,31 @@ const LandingPage = () => {
         },
     }
     return (
-        <section className={style.Home}>
-
-            <section className={style['Home-Landing']}>
-                <Image src={Messi} alt='messi image' width={1200} className={style['Home-Landing-Image']} />
-                <div className={style['Home-Landing-Content']}>
-                    <motion.section
-                        initial='hiddenLeft'
-                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                        variants={item}
-                    >
-                        <div>
-                            <h2>Siéntete como <br /> un profesional</h2>
-                        </div>
-                        <Image src={Logo} alt='Logo' width={1400} />
-                    </motion.section>
-
-                    <Link href="/store">
-                        <motion.button type='button'
-                            initial='hiddenLeft'
-                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                            whileHover='hover'
-                            whileTap='tap'
-                            variants={item}
-                        >
-                            Adquiere tu Jersey
-                        </motion.button>
-                    </Link>
-
+        <section className="text-gray-600 body-font mt-[11vh] h-[90vh]">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 className="title-font sm:text-6xl text-5xl mb-4 font-medium text-original font-extrabold">Siéntete como
+                        <br className="hidden lg:inline-block" />un profesional
+                    </h1>
+                    <div className="flex justify-center mt-[7vh]">
+                        <Link href="/store">
+                            <motion.button
+                                initial='hiddenLeft'
+                                whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                                whileHover='hover'
+                                whileTap='tap'
+                                variants={item}
+                                className="inline-flex text-third bg-original border-0 py-3 px-8 focus:outline-none hover:bg-primary hover:text-original rounded text-2xl">
+                                Adquiere tu jersey
+                            </motion.button>
+                        </Link>
+                    </div>
                 </div>
-
-            </section>
-
-            <section className={style['Home-Envios']}>
-                <Image src={Cr7} alt='Cr7 image' />
-                <motion.div
-                    initial='hiddenRight'
-                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                    variants={item}>
-                    <p>
-                        Nuestros Jerseys son traídos directamente de Estados Unidos y
-                        entregados en cualquier parte de Venezuela
-                    </p>
-                    <motion.div
-                        whileHover='hover'
-                        whileTap='tap'
-                        variants={item}
-                    >
-                        <FontAwesomeIcon icon={faBoxesPacking} />
-                    </motion.div>
-                </motion.div>
-            </section>
-
-            <section className={style['Home-Frase']}>
-                <motion.p
-                    initial='hiddenLeft'
-                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                    variants={item}
-                >
-                    No necesitas ser un profesional para tener alta gama
-                </motion.p>
-                <Link href="/store">
-                    <motion.button type='button'
-                        initial='hiddenRight'
-                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                        whileHover='hover'
-                        whileTap='tap'
-                        variants={item}
-                    >
-                        Adquiere tu Jersey
-                    </motion.button>
-                </Link>
-            </section>
-
-            <section className={style['Home-Pedidos']}>
-                <Image src={Modric} alt='Modric image' width={1200} />
-                <motion.div
-                    initial='hiddenLeft'
-                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                    variants={item}
-                >
-                    <p>
-                        Estamos capacitados para realizar pedidos por
-                        encargo de cualquier Jersey que desees
-                    </p>
-                    <motion.div
-                        whileHover='hover'
-                        whileTap='tap'
-                        variants={item}
-                    >
-                        <FontAwesomeIcon icon={faFileCircleCheck} />
-                    </motion.div>
-                </motion.div>
-            </section>
-            <section className={style['Home-Mayor']}>
-                <Image src={Pedri} alt='pedri image' />
-                <motion.div
-                    initial='hiddenRight'
-                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                    variants={item}>
-                    <p>
-                        <span>Únete a la familia TOTY Sports</span> y lleva lo mejor
-                        del deporte a tu negocio
-                        con nuestras opciones al por mayor, de alta calidad y precios competitivos.
-                    </p>
-                    <motion.div
-                        whileHover='hover'
-                        whileTap='tap'
-                        variants={item}
-                    >
-                        <FontAwesomeIcon icon={faMedal} />
-                    </motion.div>
-                </motion.div>
-            </section>
-            <section className={style['Home-About']}>
-                <Image src={Italy} alt='Italy image' width={2200} />
-                <div>
-                    <motion.h2
-                        initial='hiddenLeft'
-                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                        variants={item}
-                    >
-                        Acerca de
-                        nosotros
-                    </motion.h2>
-                    <motion.p
-                        initial='hiddenRight'
-                        whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                        variants={item}
-                    >
-                        Toty sports es un proyecto único dedicado a la distribución legítima de nuestros productos enfocados
-                        en el área deportiva. Nos basamos desde la inspiración de los protagonistas, hasta cada aspecto que
-                        nos representa y une por la misma pasión que nos rodea a todos, cada símbolo, color y expresión han sido
-                        significativos desde nuestras raíces. Toty sports promoverá  ropa deportiva
-                        de alta calidad y gusto para jóvenes
-                        y adultos. La tienda es de tipo unipersonal y contamos con una firma propia de alta calidad que
-                        queremos que penetre fuertemente en el mercado con el nombre de marcas prestigiosas, así mismo,
-                        con marcas y modelos única y exclusivamente con el nombre de nuestra empresa. La diversidad
-                        de productos de todo tipo de peculiaridades deportivas,
-                        hace que todo deporte tenga su “rinconcito”en nuestra tienda.
-                    </motion.p>
+                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <Image className="object-cover object-center rounded" alt="hero" src={Logo} width={400} height={400} />
                 </div>
-            </section>
-        </section >
+            </div>
+        </section>
     )
 }
 

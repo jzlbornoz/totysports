@@ -14,6 +14,7 @@ module.exports = {
         '[auto,auto,1fr]': 'auto auto 1fr',
       },
       colors: {
+        'original': '#9BFD5C',
         'primary': '#006b04',
         'secondary': '#909090',
         'third': '#080808',
