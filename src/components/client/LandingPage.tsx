@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image';
-import style from '../../styles/components/LandingPage.module.css';
 import Messi from '../../assets/messi-chest.jpg';
 import Cr7 from '../../assets/cr7.jpg';
 import Pedri from '../../assets/pedri.jpg';
@@ -10,9 +9,6 @@ import Logo from '../../assets/logo.png'
 
 import { motion } from "framer-motion"
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBoxesPacking, faFileCircleCheck, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import { AppContext } from '@/context/AppContex';
 import Link from 'next/link';
@@ -59,9 +55,9 @@ const LandingPage = () => {
             <section className="text-gray-600 body-font mt-[11vh] min-h-[90vh]">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font sm:text-6xl text-5xl mb-4 font-medium text-original font-extrabold">Siéntete como
+                        <h2 className="title-font sm:text-6xl text-5xl mb-4 text-original font-extrabold">Siéntete como
                             <br className="hidden lg:inline-block" /> un profesional
-                        </h1>
+                        </h2>
                         <div className="flex justify-center mt-[7vh]">
                             <Link href="/store">
                                 <motion.button
@@ -70,7 +66,7 @@ const LandingPage = () => {
                                     whileHover='hover'
                                     whileTap='tap'
                                     variants={item}
-                                    className="inline-flex text-third bg-original border-0 py-3 px-8 focus:outline-none hover:bg-primary hover:text-original rounded-full text-2xl">
+                                    className="inline-flex text-third bg-original border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-2xl">
                                     Adquiere tu jersey
                                 </motion.button>
                             </Link>
@@ -81,19 +77,130 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-white dark:bg-white min-h-[70vh]">
-                <div className="gap-16 items-center justify-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                    <div className="font-light text-gray-500 sm:text-lg dark:text-third">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-third">Contamos con la mejor calidad</h2>
-                        <p className="mb-4"> Nuestros Jerseys son traídos directamente de Estados Unidos y
-                            entregados en cualquier parte de Venezuela</p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 mt-8">
-                        <Image className="w-full rounded-lg" src={Modric} alt="Messi" width={1200} height={1200} />
-                        <Image className="mt-4 w-full lg:mt-10 rounded-lg" src={Cr7} alt="Cr7" width={1200} height={1200} />
+            <section
+                className="relative bg-[url(https://a.espncdn.com/combiner/i?img=/photo/2022/1221/r1109241_2_1296x729_16-9.jpg)] bg-cover bg-center bg-no-repeat"
+            >
+                <div
+                    className="absolute inset-0 bg-black/75 sm:from-black/95 sm:to-black/25 ltr:sm:bg-gradient-to-r"
+                ></div>
+
+                <div
+                    className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+                >
+                    <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+                        <h2 className="text-3xl sm:text-5xl md:text-left font-extrabold text-original">
+                            Contamos con la
+
+                            <strong className="block font-extrabold">
+                                mejor calidad
+                            </strong>
+                        </h2>
+
+                        <p className="mt-4 max-w-lg sm:text-xl/relaxed text-secundary md:text-left">
+                            Nuestros Jerseys son traídos directamente de Estados Unidos y
+                            entregados en cualquier parte de Venezuela
+                        </p>
+
+                        <div className="mt-8 flex flex-wrap gap-4 text-center">
+                        </div>
                     </div>
                 </div>
             </section>
+            <section>
+                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 bg-white dark:bg-third">
+                    <header className="text-center">
+                        <h2 className="text-3xl sm:text-5xl font-bold text-third dark:text-white">
+                            Nueva temporada
+                        </h2>
+
+                        <p className="max-w-md mx-auto mt-4 text-third dark:text-gray-500">
+                            La espera ha terminado! Las camisetas de la nueva temporada de las principales ligas europeas
+                            ya están aquí.¡No te quedes sin la tuya y presume los colores de tu equipo con estilo y pasión!
+                        </p>
+                    </header>
+
+                    <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+                        <motion.li
+                            initial='hiddenLeft'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                        >
+                            <a href="#" className="relative block group">
+                                <Image
+                                    src={Modric}
+                                    alt=""
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Casual Trainers</h3>
+
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Shop Now
+                                    </span>
+                                </div>
+                            </a>
+                        </motion.li>
+
+                        <motion.li
+                            initial='hiddenRight'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                        >
+                            <a href="#" className="relative block group">
+                                <Image
+                                    src={Pedri}
+                                    alt=""
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Winter Jumpers</h3>
+
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Shop Now
+                                    </span>
+                                </div>
+                            </a>
+                        </motion.li>
+
+                        <motion.li
+                            initial='hiddenLeft'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                            className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+                            <a href="#" className="relative block group">
+                                <Image
+                                    src={Italy}
+                                    alt=""
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Shop Now
+                                    </span>
+                                </div>
+                            </a>
+                        </motion.li>
+                    </ul>
+                </div>
+            </section>
+
             <section
                 className="overflow-hidden bg-third sm:grid sm:grid-cols-2 sm:items-center"
             >
@@ -106,11 +213,16 @@ const LandingPage = () => {
                         </h2>
 
                         <div className="mt-4 md:mt-8">
-                            <a
-                                href="#"
-                                className="inline-flex text-third bg-original border-0 py-1.5 px-4 focus:outline-none hover:bg-primary hover:text-original rounded-full text-xl">
+                            <motion.button
+                                initial='hiddenRight'
+                                whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                                whileHover='hover'
+                                whileTap='tap'
+                                variants={item}
+                                className="inline-flex text-third bg-original border-0 px-12 py-3 
+                                focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
                                 Ir a la tienda
-                            </a>
+                            </motion.button>
                         </div>
                     </div>
                 </div>
@@ -125,52 +237,55 @@ const LandingPage = () => {
             <section className="text-gray-600 body-font bg-white">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font font-extrabold  text-4xl sm:text-4xl text-3xl mb-4 text-secundary">Se parte
+                        <h2 className="title-font font-extrabold  text-3xl sm:text-5xl mb-4 text-secundary">Se parte
                             <br className="hidden lg:inline-block" /> de nuestro equipo
-                        </h1>
+                        </h2>
                         <p className="mb-8 leading-relaxed text-third">
                             <span>Únete a la familia TOTY Sports</span> y lleva lo mejor
                             del deporte a tu negocio
                             con nuestras opciones al por mayor, de alta calidad y precios competitivos.
                         </p>
                         <div className="flex justify-center">
-                            <button
-                                className="inline-flex text-white bg-success border-0 py-1.5 px-4 focus:outline-none hover:bg-primary hover:text-original rounded-full text-xl">
+                            <motion.button
+                                initial='hiddenRight'
+                                whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                                whileHover='hover'
+                                whileTap='tap'
+                                variants={item}
+                                className="inline-flex text-white bg-success border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
                                 Contactanos
-                            </button>
+                            </motion.button>
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <Image className="object-cover object-center rounded" alt="hero" src={Pedri} />
+                        <Image className="object-cover object-center rounded" alt="hero" src={Cr7} />
                     </div>
                 </div>
             </section>
 
-
-            <section
-                className="overflow-hidden bg-[url(https://media.npr.org/assets/img/2022/12/18/gettyimages-1450109553_wide-67012065e2d8be481f82550a2a0e5257dcd90168-s1400-c100.jpg)] bg-cover bg-top bg-no-repeat"
-            >
-                <div className="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
-                    <div className="text-center ltr:sm:text-left rtl:sm:text-right">
-                        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-5xl">
-                            Latest Shirts
-                        </h2>
-
-                        <p
-                            className="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed"
-                        >
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-                            officia corporis quasi doloribus iure architecto quae voluptatum beatae
-                            excepturi dolores.
-                        </p>
-
-                        <div className="mt-4 sm:mt-8">
-                            <a
-                                href="#"
-                                className="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                            >
-                                Get Yours Today
-                            </a>
+            <section className="text-third body-font bg-white dark:bg-third">
+                <div className="container px-5 py-24 mx-auto">
+                    <h2 className="font-extrabold  text-3xl sm:text-5xl title-font text-third mb-12 text-center dark:text-white">Acerca de
+                        nosotros</h2>
+                    <div className="flex flex-wrap -m-4">
+                        <div className="p-4 w-full drop-shadow-xl">
+                            <div className="h-full bg-gray-100 p-8 rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h245.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                </svg>
+                                <p className="leading-relaxed mb-6">
+                                    Toty sports es un proyecto único dedicado a la distribución legítima de nuestros productos enfocados
+                                    en el área deportiva. Nos basamos desde la inspiración de los protagonistas, hasta cada aspecto que
+                                    nos representa y une por la misma pasión que nos rodea a todos, cada símbolo, color y expresión han sido
+                                    significativos desde nuestras raíces. Toty sports promoverá  ropa deportiva
+                                    de alta calidad y gusto para jóvenes
+                                    y adultos. La tienda es de tipo unipersonal y contamos con una firma propia de alta calidad que
+                                    queremos que penetre fuertemente en el mercado con el nombre de marcas prestigiosas, así mismo,
+                                    con marcas y modelos única y exclusivamente con el nombre de nuestra empresa. La diversidad
+                                    de productos de todo tipo de peculiaridades deportivas,
+                                    hace que todo deporte tenga su “rinconcito”en nuestra tienda.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
