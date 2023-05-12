@@ -1,5 +1,9 @@
 'use client'
+import { useContext } from 'react';
+import { AppContext } from '@/context/AppContex';
+import Link from 'next/link';
 import Image from 'next/image';
+
 import LFC from '../../assets/liverpool.jpeg';
 import Cr7 from '../../assets/cr7.jpg';
 import Juve from '../../assets/juventus.jpg';
@@ -9,12 +13,7 @@ import Logo from '../../assets/logo.png'
 
 import { motion } from "framer-motion"
 
-import { useContext } from 'react';
-import { AppContext } from '@/context/AppContex';
-import Link from 'next/link';
-
 const LandingPage = () => {
-
     const { appState } = useContext(AppContext);
 
     const item = {
@@ -50,6 +49,7 @@ const LandingPage = () => {
             borderColor: "#909090"
         },
     }
+    //--
     return (
         <>
             <section className="text-gray-600 body-font mt-[11vh] min-h-[90vh]">
