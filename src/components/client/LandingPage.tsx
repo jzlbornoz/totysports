@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image';
-import Messi from '../../assets/messi-chest.jpg';
+import LFC from '../../assets/liverpool.jpeg';
 import Cr7 from '../../assets/cr7.jpg';
-import Pedri from '../../assets/pedri.jpg';
+import Juve from '../../assets/juventus.jpg';
 import Modric from '../../assets/modric.jpeg';
 import Italy from '../../assets/italy.webp';
 import Logo from '../../assets/logo.png'
@@ -96,7 +96,7 @@ const LandingPage = () => {
                             </strong>
                         </h2>
 
-                        <p className="mt-4 max-w-lg sm:text-xl/relaxed text-secundary md:text-left">
+                        <p className="mt-4 max-w-lg sm:text-xl/relaxed text-secundary md:text-left text-white">
                             Nuestros Jerseys son traídos directamente de Estados Unidos y
                             entregados en cualquier parte de Venezuela
                         </p>
@@ -125,9 +125,9 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                         >
-                            <a href="#" className="relative block group">
+                            <Link href="#" className="relative block group">
                                 <Image
-                                    src={Modric}
+                                    src={LFC}
                                     alt=""
                                     className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
                                 />
@@ -135,15 +135,15 @@ const LandingPage = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-start justify-end p-6"
                                 >
-                                    <h3 className="text-xl font-medium text-white">Casual Trainers</h3>
+                                    <h3 className="text-xl font-medium text-white">Liverpool FC 23/24</h3>
 
                                     <span
                                         className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                                     >
-                                        Shop Now
+                                        Comprar
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </motion.li>
 
                         <motion.li
@@ -151,9 +151,9 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                         >
-                            <a href="#" className="relative block group">
+                            <Link href="#" className="relative block group">
                                 <Image
-                                    src={Pedri}
+                                    src={Juve}
                                     alt=""
                                     className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
                                 />
@@ -161,15 +161,15 @@ const LandingPage = () => {
                                 <div
                                     className="absolute inset-0 flex flex-col items-start justify-end p-6"
                                 >
-                                    <h3 className="text-xl font-medium text-white">Winter Jumpers</h3>
+                                    <h3 className="text-xl font-medium text-white">Juventus FC 23/24</h3>
 
                                     <span
                                         className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                                     >
-                                        Shop Now
+                                        Comprar
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </motion.li>
 
                         <motion.li
@@ -177,25 +177,25 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                             className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-                            <a href="#" className="relative block group">
+                            <Link href="#" className="relative block group">
                                 <Image
                                     src={Italy}
-                                    alt=""
+                                    alt="Italy"
                                     className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
                                 />
 
                                 <div
                                     className="absolute inset-0 flex flex-col items-start justify-end p-6"
                                 >
-                                    <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+                                    <h3 className="text-xl font-medium text-white">Italia Local 23/24</h3>
 
                                     <span
                                         className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                                     >
-                                        Shop Now
+                                        Comprar
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </motion.li>
                     </ul>
                 </div>
@@ -228,9 +228,12 @@ const LandingPage = () => {
                 </div>
 
                 <Image
-                    alt="Violin"
-                    src={Italy}
-                    className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+                    alt="Modric"
+                    src={Modric}
+                    width={1200}
+                    height={1200}
+                    className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] 
+                    sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
                 />
             </section>
 
