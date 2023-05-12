@@ -107,7 +107,7 @@ const LandingPage = () => {
                 </div>
             </section>
             <section>
-                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 bg-white dark:bg-third">
+                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 bg-third">
                     <header className="text-center">
                         <h2 className="text-3xl sm:text-5xl font-bold text-third dark:text-white">
                             Nueva temporada
