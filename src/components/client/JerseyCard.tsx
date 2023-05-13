@@ -9,7 +9,7 @@ import { AppContext } from '@/context/AppContex'
 const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
     const { addToCart } = useContext(AppContext)
     return (
-        <div className="group relative block overflow-hidden">
+        <section className="group relative block overflow-hidden">
             <button
                 className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
             >
@@ -36,7 +36,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                     alt=""
                     width={1200}
                     height={1200}
-                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96"
                 />
             </Link>
 
@@ -48,7 +48,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                     {jersey.season}
                 </span>
 
-                <h3 className="mt-4 text-lg font-medium text-gray-900 truncate">{jersey.name}</h3>
+                <h3 className="mt-4 text-lg font-medium text-gray-900 md:truncate">{jersey.name}</h3>
 
                 <p className="mt-1.5 text-sm text-gray-700">{jersey.sale}$</p>
 
@@ -62,7 +62,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                     </button>
                 </form>
             </div>
-        </div>
+        </section>
 
     )
 }
