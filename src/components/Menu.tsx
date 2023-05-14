@@ -71,7 +71,7 @@ const Menu = () => {
                             />
                         </svg>
 
-                        <span className="text-sm font-medium"> General </span>
+                        <span className="text-sm font-medium"> Tienda </span>
                     </a>
 
                     <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -94,7 +94,7 @@ const Menu = () => {
                                     />
                                 </svg>
 
-                                <span className="text-sm font-medium"> Teams </span>
+                                <span className="text-sm font-medium">Stock</span>
                             </div>
 
                             <span className="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -133,7 +133,7 @@ const Menu = () => {
                                     />
                                 </svg>
 
-                                <span className="text-sm font-medium"> Banned Users </span>
+                                <span className="text-sm font-medium"> Naciones </span>
                             </a>
 
                             <a
@@ -155,7 +155,7 @@ const Menu = () => {
                                     />
                                 </svg>
 
-                                <span className="text-sm font-medium"> Calendar </span>
+                                <span className="text-sm font-medium"> Equipos </span>
                             </a>
                         </nav>
                     </details>
@@ -179,7 +179,7 @@ const Menu = () => {
                             />
                         </svg>
 
-                        <span className="text-sm font-medium"> Billing </span>
+                        <span className="text-sm font-medium"> Carro de compras </span>
                     </a>
 
                     <a
@@ -201,7 +201,7 @@ const Menu = () => {
                             />
                         </svg>
 
-                        <span className="text-sm font-medium"> Invoices </span>
+                        <span className="text-sm font-medium"> Favoritos </span>
                     </a>
 
                     <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -314,24 +314,6 @@ const Menu = () => {
                         </nav>
                     </details>
                 </nav>
-            </div>
-
-            <div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
-                <a href="#" className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
-                    <img
-                        alt="Man"
-                        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                        className="h-10 w-10 rounded-full object-cover"
-                    />
-
-                    <div>
-                        <p className="text-xs">
-                            <strong className="block font-medium">Eric Frusciante</strong>
-
-                            <span> eric@frusciante.com </span>
-                        </p>
-                    </div>
-                </a>
             </div>
         </motion.div>
 
