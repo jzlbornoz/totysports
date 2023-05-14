@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { JerseyModel } from '@/models/jersey.model'
 import { AppContext } from '@/context/AppContex'
+import { LazyImage } from './LazyImage'
 
 const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
     const { addToCart } = useContext(AppContext)
@@ -31,12 +32,12 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 </svg>
             </button>
             <Link href={`/store/${jersey.id}`}>
-                <Image
+                <LazyImage
                     src={jersey.img[0]}
                     alt=""
                     width={1200}
                     height={1200}
-                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96"
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96 bg-slate-500"
                 />
             </Link>
 
