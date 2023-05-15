@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import { InitialStateModel } from '@/models/InitialState.model';
 import { JerseyModel } from '@/models/jersey.model';
 
@@ -49,7 +49,7 @@ const useInitialState = () => {
         });
     };
 
-    
+
 
     return {
         appState,
