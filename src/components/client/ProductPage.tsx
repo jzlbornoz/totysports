@@ -41,181 +41,284 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
 
     // ---
     return (
-        <div className="bg-white pt-[11vh]" >
-            <div className="pt-6">
-                <nav aria-label="Breadcrumb">
-                    <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                        {product.breadcrumbs.map((breadcrumb) => (
-                            <li key={breadcrumb.id}>
-                                <div className="flex items-center">
-                                    <a href={breadcrumb.href} className="mr-2 text-sm font-medium text-gray-900">
-                                        {breadcrumb.name}
-                                    </a>
+        <section className='mt-[11vh] bg-white text-third'>
+            <div className="relative mx-auto max-w-screen-xl px-4 py-8 ">
+                <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
+                    <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:h-[100vh] overflow-y-scroll">
+                        <Image
+                            alt="Les Paul"
+                            src={productItem.img[0]}
+                            width={1200}
+                            height={1200}
+                            className="aspect-square w-full rounded-xl object-cover"
+                        />
+
+                        <div className="grid grid-cols-2 gap-4 lg:mt-4 ">
+                            {productItem.img.map((item, index) => {
+                                if (index === 0) {
+                                    return;
+                                } else {
+                                    return (
+                                        <Image
+                                            key={index}
+                                            alt="Les Paul"
+                                            src={item}
+                                            width={1200}
+                                            height={1200}
+                                            className="aspect-square w-full rounded-xl object-cover"
+                                        />)
+                                }
+                            })}
+                        </div>
+                    </div>
+
+                    <div className="sticky top-0">
+                        <strong
+                            className="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
+                        >
+                            Pre Order
+                        </strong>
+
+                        <div className="mt-8 flex justify-between">
+                            <div className="max-w-[35ch] space-y-2">
+                                <h1 className="text-xl font-bold sm:text-2xl text-third">
+                                    {productItem.name}
+                                </h1>
+
+                                <p className="text-sm text-third">Highest Rated Product</p>
+
+                                <div className="-ms-0.5 flex">
                                     <svg
-                                        width={16}
-                                        height={20}
-                                        viewBox="0 0 16 20"
+                                        className="h-5 w-5 text-yellow-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
                                         fill="currentColor"
-                                        aria-hidden="true"
-                                        className="h-5 w-4 text-gray-300"
                                     >
-                                        <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+
+                                    <svg
+                                        className="h-5 w-5 text-yellow-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+
+                                    <svg
+                                        className="h-5 w-5 text-yellow-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+
+                                    <svg
+                                        className="h-5 w-5 text-yellow-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+
+                                    <svg
+                                        className="h-5 w-5 text-gray-200"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
                                     </svg>
                                 </div>
-                            </li>
-                        ))}
-                        <li className="text-sm">
-                            <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                                {product.name}
-                            </a>
-                        </li>
-                    </ol>
-                </nav>
-
-                {/* Image gallery */}
-                <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-                    <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-                        <Image
-                            width={1200}
-                            height={1200}
-                            src={product.images[0]}
-                            alt={product.name}
-                            className="h-full w-full object-cover object-center"
-                        />
-                    </div>
-                    <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-                        <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                            <Image
-                                width={1200}
-                                height={1200}
-                                src={product.images[1]}
-                                alt={product.name}
-                                className="h-full w-full object-cover object-center"
-                            />
-                        </div>
-                        <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                            <Image
-                                width={1200}
-                                height={1200}
-                                src={product.images[2]}
-                                alt={product.name}
-                                className="h-full w-full object-cover object-center"
-                            />
-                        </div>
-                    </div>
-                    <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-                        <Image
-                            width={1200}
-                            height={1200}
-                            src={product.images[3]}
-                            alt={product.name}
-                            className="h-full w-full object-cover object-center"
-                        />
-                    </div>
-                </div>
-
-                {/* Product info */}
-                <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
-                    <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-5xl">{product.name}</h1>
-                    </div>
-
-                    {/* Options */}
-                    <div className="mt-4 lg:row-span-3 lg:mt-0">
-                        <h2 className="sr-only">Product information</h2>
-                        <p className="text-3xl tracking-tight text-gray-500 line-through">{productItem.price}$</p>
-                        <p className="text-3xl tracking-tight text-primary">{product.price}$</p>
-                        <form className="mt-10">
-                            {/* Sizes */}
-                            <div className="mt-10">
-                                <div className="flex items-center justify-between">
-                                    <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                                    <a href="#" className="text-sm font-medium text-primary hover:text-success">
-                                        Size guide
-                                    </a>
-                                </div>
-
-                                <RadioGroup value={selectedSizeOption} onChange={setSelectedSizeOption} className="mt-4">
-                                    <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
-                                    <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                                        {product.sizes.map((size) => (
-                                            <RadioGroup.Option
-                                                key={size.name}
-                                                value={size.name}
-                                                disabled={!size.inStock}
-                                                className={({ active }) =>
-                                                    classNames(
-                                                        size.inStock
-                                                            ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
-                                                            : 'cursor-not-allowed bg-gray-50 text-gray-200',
-                                                        active ? 'ring-2 ring-success' : '',
-                                                        'group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'
-                                                    )
-                                                }
-                                            >
-                                                {({ active, checked }) => (
-                                                    <>
-                                                        <RadioGroup.Label as="span">{size.name}</RadioGroup.Label>
-                                                        {size.inStock ? (
-                                                            <span
-                                                                className={classNames(
-                                                                    active ? 'border' : 'border-2',
-                                                                    checked ? 'border-primary' : 'border-transparent',
-                                                                    'pointer-events-none absolute -inset-px rounded-md'
-                                                                )}
-                                                                aria-hidden="true"
-                                                            />
-                                                        ) : (
-                                                            <span
-                                                                aria-hidden="true"
-                                                                className="pointer-events-none absolute -inset-px rounded-md border-2 border-gray-200"
-                                                            >
-                                                                <svg
-                                                                    className="absolute inset-0 h-full w-full stroke-2 text-gray-200"
-                                                                    viewBox="0 0 100 100"
-                                                                    preserveAspectRatio="none"
-                                                                    stroke="currentColor"
-                                                                >
-                                                                    <line x1={0} y1={100} x2={100} y2={0} vectorEffect="non-scaling-stroke" />
-                                                                </svg>
-                                                            </span>
-                                                        )}
-                                                    </>
-                                                )}
-                                            </RadioGroup.Option>
-                                        ))}
-                                    </div>
-                                </RadioGroup>
                             </div>
 
-                            <button
-                                onClick={() => addToCart(productToAdd)}
-                                type='button'
-                                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-success focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            >
-                                Add to bag
-                            </button>
+                            <p className="text-lg font-bold">$119.99</p>
+                        </div>
+
+                        <div className="mt-4">
+                            <div className="prose max-w-none">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                                    veniam dicta beatae eos ex error culpa delectus rem tenetur,
+                                    architecto quam nesciunt, dolor veritatis nisi minus inventore,
+                                    rerum at recusandae?
+                                </p>
+                            </div>
+
+                            <button className="mt-2 text-sm font-medium underline">Read More</button>
+                        </div>
+
+                        <form className="mt-8">
+                            <fieldset>
+                                <legend className="mb-1 text-sm font-medium">Color</legend>
+
+                                <div className="flex flex-wrap gap-1">
+                                    <label htmlFor="color_tt" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="color"
+                                            id="color_tt"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            Texas Tea
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="color_fr" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="color"
+                                            id="color_fr"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            Fiesta Red
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="color_cb" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="color"
+                                            id="color_cb"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            Cobalt Blue
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset className="mt-4">
+                                <legend className="mb-1 text-sm font-medium">Size</legend>
+
+                                <div className="flex flex-wrap gap-1">
+                                    <label htmlFor="size_xs" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="size_xs"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            XS
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="size_s" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="size_s"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            S
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="size_m" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="size_m"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            M
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="size_l" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="size_l"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            L
+                                        </span>
+                                    </label>
+
+                                    <label htmlFor="size_xl" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="size_xl"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            XL
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div className="mt-8 flex gap-4">
+                                <div>
+                                    <label htmlFor="quantity" className="sr-only">Qty</label>
+
+                                    <input
+                                        type="number"
+                                        id="quantity"
+                                        min="1"
+                                        value="1"
+                                        className="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                                    />
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500"
+                                >
+                                    Add to Cart
+                                </button>
+                            </div>
                         </form>
-                    </div>
-
-                    <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-                        {/* Description and details */}
-                        <div>
-                            <h3 className="sr-only">Description</h3>
-
-                            <div className="space-y-12">
-                                <div className="grid grid-cols-2 grid-rows-2 gap-12">
-                                    <p className="text-xl tracking-tight text-gray-900">Tecnologia: {productItem.technology}</p>
-                                    <p className="text-xl tracking-tight text-gray-900">Marca: {productItem.brand}</p>
-                                    <p className="text-xl tracking-tight text-gray-900">Temporada: {productItem.season}</p>
-                                    <p className="text-xl tracking-tight text-gray-900">{productItem.players ? `Dorsal: ${productItem.players}` : null}</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 
 }
