@@ -4,8 +4,6 @@ import { JerseyModel } from '@/models/jersey.model';
 import React, { useContext } from 'react'
 import { JerseyMiniCard } from './JerseyMiniCard';
 import empty from '../../assets/emptyCart.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import { motion } from 'framer-motion';
 

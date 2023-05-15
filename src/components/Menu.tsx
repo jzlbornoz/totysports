@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseCircleCheck, faStore, faPiggyBank, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-import styles from '../styles/components/Menu.module.css'
-
 import { motion } from "framer-motion";
 
 

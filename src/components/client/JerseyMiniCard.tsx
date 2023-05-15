@@ -1,10 +1,6 @@
 import { JerseyModel } from '@/models/jersey.model'
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import styles from '../../styles/components/JerseyMiniCard.module.css'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '@/context/AppContex';
 
 
