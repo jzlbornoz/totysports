@@ -100,6 +100,7 @@ const Cart = () => {
                                     </div>
                                 </dl>
                                 <div className="flex justify-end">
+                                    <Link href="/checkout">
                                     <motion.button
                                         initial='show'
                                         whileHover='hover'
@@ -108,9 +109,12 @@ const Cart = () => {
                                         className="block rounded
                                          bg-third px-5 py-3 text-sm text-gray-100 
                                          transition hover:bg-gray-600"
+                                         type='button'
                                     >
                                         Checkout
                                     </motion.button>
+                                    </Link>
+                                   
                                 </div>
                             </div>
                         </div>
