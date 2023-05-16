@@ -1,38 +1,14 @@
 'use client'
 import { useContext, useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
 import Image from 'next/image'
 import { JerseyModel } from '@/models/jersey.model'
 import { AppContext } from '@/context/AppContex'
 
 
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
-};
-
 const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
 
 
-    const product = {
-        name: productItem.name,
-        price: productItem.sale,
-        href: '#',
-        breadcrumbs: [
-            { id: 1, name: 'Home', href: '#' },
-            { id: 2, name: 'Store', href: '#' },
-        ],
-        images: productItem.img,
-        sizes: [
-            { name: 'XXS', inStock: false },
-            { name: 'XS', inStock: true },
-            { name: 'S', inStock: true },
-            { name: 'M', inStock: true },
-            { name: 'L', inStock: true },
-            { name: 'XL', inStock: true },
-            { name: '2XL', inStock: true },
-            { name: '3XL', inStock: false },
-        ],
-    }
+    const sizes: string[] = ["XS", "S", "M", "L", "XL", "XXL"];
 
     const { addToCart } = useContext(AppContext);
     const [selectedSizeOption, setSelectedSizeOption] = useState(productItem.size[0]);
@@ -61,7 +37,7 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                     return (
                                         <Image
                                             key={index}
-                                            alt="Les Paul"
+                                            alt={item + index}
                                             src={item}
                                             width={1200}
                                             height={1200}
@@ -73,11 +49,17 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                     </div>
 
                     <div className="sticky top-0">
-                        <strong
-                            className="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
+                        {productItem.stock > 0 ? <strong
+                            className="rounded-full border border-blue-600 bg-gray-100 
+                            px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
+                        >
+                            Disponibilidad inmediata
+                        </strong> : <strong
+                            className="rounded-full border border-blue-600 bg-gray-100 
+                            px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
                         >
                             Pre Order
-                        </strong>
+                        </strong>}
 
                         <div className="mt-8 flex justify-between">
                             <div className="max-w-[35ch] space-y-2">
@@ -95,7 +77,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         fill="currentColor"
                                     >
                                         <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 
+                                            1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 
+                                            0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-
+                                            .57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                         />
                                     </svg>
 
@@ -106,7 +91,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         fill="currentColor"
                                     >
                                         <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588
+                                             1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 
+                                             0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 
+                                             00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                         />
                                     </svg>
 
@@ -117,7 +105,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         fill="currentColor"
                                     >
                                         <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 
+                                            2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 
+                                            00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 
+                                            8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                         />
                                     </svg>
 
@@ -128,7 +119,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         fill="currentColor"
                                     >
                                         <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 
+                                            2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 
+                                            00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 
+                                            8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                         />
                                     </svg>
 
@@ -139,31 +133,24 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         fill="currentColor"
                                     >
                                         <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 
+                                            1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 
+                                            00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 
+                                            8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                         />
                                     </svg>
                                 </div>
                             </div>
-
-                            <p className="text-lg font-bold">$119.99</p>
+                            {productItem.sale ? <span>
+                                <p className="text-lg font-bold line-through">{productItem.price}$</p>
+                                <p className="text-lg font-bold text-primary">{productItem.sale}$</p>
+                            </span> : <span>
+                                <p className="text-lg font-bold">{productItem.price}$</p>
+                            </span>}
                         </div>
-
-                        <div className="mt-4">
-                            <div className="prose max-w-none">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                                    veniam dicta beatae eos ex error culpa delectus rem tenetur,
-                                    architecto quam nesciunt, dolor veritatis nisi minus inventore,
-                                    rerum at recusandae?
-                                </p>
-                            </div>
-
-                            <button className="mt-2 text-sm font-medium underline">Read More</button>
-                        </div>
-
                         <form className="mt-8">
-                            <fieldset>
-                                <legend className="mb-1 text-sm font-medium">Color</legend>
+                            <fieldset className="mb-3">
+                                <legend className="mb-1 text-sm font-medium">Equipo y Marca</legend>
 
                                 <div className="flex flex-wrap gap-1">
                                     <label htmlFor="color_tt" className="cursor-pointer">
@@ -175,122 +162,94 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         />
 
                                         <span
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                             peer-checked:bg-black peer-checked:text-white"
                                         >
-                                            Texas Tea
+                                            {productItem.team}
                                         </span>
                                     </label>
-
-                                    <label htmlFor="color_fr" className="cursor-pointer">
+                                    <label htmlFor="color_tt" className="cursor-pointer">
                                         <input
                                             type="radio"
                                             name="color"
-                                            id="color_fr"
+                                            id="color_tt"
                                             className="peer sr-only"
                                         />
 
                                         <span
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                             peer-checked:bg-black peer-checked:text-white"
                                         >
-                                            Fiesta Red
-                                        </span>
-                                    </label>
-
-                                    <label htmlFor="color_cb" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="color"
-                                            id="color_cb"
-                                            className="peer sr-only"
-                                        />
-
-                                        <span
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            Cobalt Blue
+                                            {productItem.brand}
                                         </span>
                                     </label>
                                 </div>
                             </fieldset>
+                            <fieldset className="mb-3">
+                                <legend className="mb-1 text-sm font-medium">Tecnologia</legend>
 
+                                <div className="flex flex-wrap gap-1">
+                                    <label htmlFor="color_tt" className="cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="color"
+                                            id="color_tt"
+                                            className="peer sr-only"
+                                        />
+
+                                        <span
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                             peer-checked:bg-black peer-checked:text-white"
+                                        >
+                                            {productItem.technology}
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            {productItem.players ? <fieldset className="mb-3">
+                                <legend className="mb-1 text-sm font-medium">Dorsal</legend>
+
+                                <div className="flex flex-wrap gap-1">
+                                    {productItem.players?.map((player) => (
+                                        <label htmlFor="color_tt" className="cursor-pointer" key={player}>
+                                            <input
+                                                type="radio"
+                                                name="color"
+                                                id="color_tt"
+                                                className="peer sr-only"
+                                            />
+
+                                            <span
+                                                className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                                 peer-checked:bg-black peer-checked:text-white"
+                                            >
+                                                {player}
+                                            </span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </fieldset> : null}
                             <fieldset className="mt-4">
                                 <legend className="mb-1 text-sm font-medium">Size</legend>
 
                                 <div className="flex flex-wrap gap-1">
-                                    <label htmlFor="size_xs" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="size"
-                                            id="size_xs"
-                                            className="peer sr-only"
-                                        />
+                                    {sizes.map((size) => (
+                                        <label htmlFor={`size_${size}`} className="cursor-pointer" key={size}>
+                                            <input
+                                                type="radio"
+                                                name="size"
+                                                id={`size_${size}`}
+                                                className="peer sr-only"
+                                            />
 
-                                        <span
-                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            XS
-                                        </span>
-                                    </label>
-
-                                    <label htmlFor="size_s" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="size"
-                                            id="size_s"
-                                            className="peer sr-only"
-                                        />
-
-                                        <span
-                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            S
-                                        </span>
-                                    </label>
-
-                                    <label htmlFor="size_m" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="size"
-                                            id="size_m"
-                                            className="peer sr-only"
-                                        />
-
-                                        <span
-                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            M
-                                        </span>
-                                    </label>
-
-                                    <label htmlFor="size_l" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="size"
-                                            id="size_l"
-                                            className="peer sr-only"
-                                        />
-
-                                        <span
-                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            L
-                                        </span>
-                                    </label>
-
-                                    <label htmlFor="size_xl" className="cursor-pointer">
-                                        <input
-                                            type="radio"
-                                            name="size"
-                                            id="size_xl"
-                                            className="peer sr-only"
-                                        />
-
-                                        <span
-                                            className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                                        >
-                                            XL
-                                        </span>
-                                    </label>
+                                            <span
+                                                className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs
+                                                 font-medium peer-checked:bg-black peer-checked:text-white"
+                                            >
+                                                {size}
+                                            </span>
+                                        </label>
+                                    ))}
                                 </div>
                             </fieldset>
 
@@ -302,8 +261,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         type="number"
                                         id="quantity"
                                         min="1"
-                                        value="1"
-                                        className="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                                        value="2"
+                                        className="w-12 rounded border-gray-200 py-3 text-center text-xs 
+                                        [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none 
+                                        [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
                                     />
                                 </div>
 
