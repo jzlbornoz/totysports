@@ -24,7 +24,7 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                 <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                     <div>
                         <dt className="inline">Size:</dt>
-                        <dd className="inline">{jersey.size}</dd>
+                        <dd className="inline text-third">{jersey.size[0]}</dd>
                     </div>
 
                     <div>
@@ -47,10 +47,10 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                     />
                 </form>
 
-                <button 
-                className="text-gray-600 transition hover:text-red-600" 
-                type='button'
-                onClick={() => removeFromCart(jersey)}
+                <button
+                    className="text-gray-600 transition hover:text-red-600"
+                    type='button'
+                    onClick={() => removeFromCart(jersey)}
                 >
                     <span className="sr-only">Remove item</span>
 

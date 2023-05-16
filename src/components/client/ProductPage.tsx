@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useState } from 'react'
+import { ChangeEvent, MouseEventHandler, useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { JerseyModel } from '@/models/jersey.model'
 import { AppContext } from '@/context/AppContex'
@@ -11,9 +11,24 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
     const sizes: string[] = ["XS", "S", "M", "L", "XL", "XXL"];
 
     const { addToCart } = useContext(AppContext);
-    const [selectedSizeOption, setSelectedSizeOption] = useState(productItem.size[0]);
-    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
-    const [productToAdd, setProductToAdd] = useState<JerseyModel>({ ...productItem, size: [selectedSizeOption] });
+    const [selectedSizeOption, setSelectedSizeOption] = useState<string>(productItem.size[0]);
+    // const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
+    const [productToAdd, setProductToAdd] = useState<JerseyModel>({ ...productItem, size: [] });
+
+    const handleSizeChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        setSelectedSizeOption((prevSize => (prevSize === value ? '' : value)));
+    }
+
+    //Actualiza el producto a agregar
+    useEffect(() => {
+        setProductToAdd((prev) => ({
+            ...prev,
+            size: [selectedSizeOption]
+        }));
+
+    }, [selectedSizeOption])
+
 
     // ---
     return (
@@ -22,7 +37,7 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                 <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
                     <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:h-[100vh] overflow-y-scroll">
                         <Image
-                            alt="Les Paul"
+                            alt="Principal product Image"
                             src={productItem.img[0]}
                             width={1200}
                             height={1200}
@@ -233,18 +248,22 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                 <legend className="mb-1 text-sm font-medium">Size</legend>
 
                                 <div className="flex flex-wrap gap-1">
-                                    {sizes.map((size) => (
-                                        <label htmlFor={`size_${size}`} className="cursor-pointer" key={size}>
+                                    {productItem.size.map((size) => (
+                                        <label htmlFor={`size_${size}`} className="cursor-pointer" key={size} >
                                             <input
                                                 type="radio"
                                                 name="size"
                                                 id={`size_${size}`}
                                                 className="peer sr-only"
+                                                value={size}
+                                                checked={selectedSizeOption === size}
+                                                onChange={handleSizeChange}
                                             />
 
                                             <span
-                                                className="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs
-                                                 font-medium peer-checked:bg-black peer-checked:text-white"
+                                                className={`group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium 
+                                                ${selectedSizeOption === size ? 'peer-checked:bg-black peer-checked:text-white' : ''
+                                                    }`}
                                             >
                                                 {size}
                                             </span>
@@ -269,8 +288,11 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                 </div>
 
                                 <button
-                                    type="submit"
+                                    type="button"
                                     className="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500"
+                                    onClick={() => {
+                                        addToCart(productToAdd);
+                                    }}
                                 >
                                     Add to Cart
                                 </button>
