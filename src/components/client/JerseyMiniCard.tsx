@@ -26,11 +26,11 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                         <dt className="inline">Size:</dt>
                         <dd className="inline text-third">{jersey.size[0]}</dd>
                     </div>
-
-                    <div>
-                        <dt className="inline">Dorsal:</dt>
-                        <dd className="inline">{jersey.players}</dd>
-                    </div>
+                    {(jersey.players && jersey.players[0] != "S") &&
+                        <div>
+                            <dt className="inline">Dorsal:</dt>
+                            <dd className="inline">{jersey.players[0]}</dd>
+                        </div>}
                 </dl>
             </div>
 

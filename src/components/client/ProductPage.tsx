@@ -12,22 +12,35 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
 
     const { addToCart } = useContext(AppContext);
     const [selectedSizeOption, setSelectedSizeOption] = useState<string>(productItem.size[0]);
-    // const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>('');
-    const [productToAdd, setProductToAdd] = useState<JerseyModel>({ ...productItem, size: [] });
+    const [selectedDorsalOption, setSelectedDorsalOption] = useState<string>("S");
+    const [productToAdd, setProductToAdd] = useState<JerseyModel>({ ...productItem, size: [], players: [""] });
 
     const handleSizeChange = (event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
         setSelectedSizeOption((prevSize => (prevSize === value ? '' : value)));
     }
 
+    const handleDorsalChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        console.log("...")
+        setSelectedDorsalOption((prevSize => (prevSize === value ? '' : value)));
+    }
+
+
     //Actualiza el producto a agregar
     useEffect(() => {
         setProductToAdd((prev) => ({
             ...prev,
-            size: [selectedSizeOption]
+            size: [selectedSizeOption],
         }));
-
     }, [selectedSizeOption])
+    useEffect(() => {
+        setProductToAdd((prev) => ({
+            ...prev,
+            players: [selectedDorsalOption],
+        }));
+        console.log(selectedDorsalOption)
+    }, [selectedDorsalOption])
 
 
     // ---
@@ -53,10 +66,10 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         <Image
                                             key={index}
                                             alt={item + index}
-                                            src={item}
+                                            src={item ? item : "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="}
                                             width={1200}
                                             height={1200}
-                                            className="aspect-square w-full rounded-xl object-cover"
+                                            className="aspect-square w-full rounded-xl object-cover bg-slate-500"
                                         />)
                                 }
                             })}
@@ -177,8 +190,7 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         />
 
                                         <span
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
-                                             peer-checked:bg-black peer-checked:text-white"
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium"
                                         >
                                             {productItem.team}
                                         </span>
@@ -192,8 +204,7 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         />
 
                                         <span
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
-                                             peer-checked:bg-black peer-checked:text-white"
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium"
                                         >
                                             {productItem.brand}
                                         </span>
@@ -221,34 +232,58 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                     </label>
                                 </div>
                             </fieldset>
-                            {productItem.players ? <fieldset className="mb-3">
-                                <legend className="mb-1 text-sm font-medium">Dorsal</legend>
+                            {productItem.players ?
+                                <fieldset className="mb-3">
+                                    <legend className="mb-1 text-sm font-medium">Dorsal</legend>
 
-                                <div className="flex flex-wrap gap-1">
-                                    {productItem.players?.map((player) => (
-                                        <label htmlFor="color_tt" className="cursor-pointer" key={player}>
+                                    <div className="flex flex-wrap gap-1">
+                                        <label htmlFor="SinDorsal" className="cursor-pointer">
                                             <input
                                                 type="radio"
                                                 name="color"
-                                                id="color_tt"
+                                                id="SinDorsal"
                                                 className="peer sr-only"
+                                                value={"S"}
+                                                checked={selectedDorsalOption === "S"}
+                                                onChange={handleDorsalChange}
                                             />
 
                                             <span
-                                                className="group inline-block rounded-full border px-3 py-1 text-xs font-medium
-                                                 peer-checked:bg-black peer-checked:text-white"
+                                                className={`group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                          ${selectedDorsalOption === "S" ? 'peer-checked:bg-black peer-checked:text-white' : ''
+                                                    }`}
                                             >
-                                                {player}
+                                                Sin dorsal
                                             </span>
                                         </label>
-                                    ))}
-                                </div>
-                            </fieldset> : null}
+                                        {productItem.players?.map((player, index) => (
+                                            <label htmlFor={`dorsar_${index}`} className="cursor-pointer" key={player}>
+                                                <input
+                                                    type="radio"
+                                                    name="color"
+                                                    id={`dorsar_${index}`}
+                                                    className="peer sr-only"
+                                                    value={player}
+                                                    checked={selectedDorsalOption === player}
+                                                    onChange={handleDorsalChange}
+                                                />
+
+                                                <span
+                                                    className={`group inline-block rounded-full border px-3 py-1 text-xs font-medium
+                                                ${selectedDorsalOption === player ? 'peer-checked:bg-black peer-checked:text-white' : ''
+                                                        }`}
+                                                >
+                                                    {player}
+                                                </span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </fieldset> : null}
                             <fieldset className="mt-4">
                                 <legend className="mb-1 text-sm font-medium">Size</legend>
 
                                 <div className="flex flex-wrap gap-1">
-                                    {productItem.size.map((size) => (
+                                    {sizes.map((size) => (
                                         <label htmlFor={`size_${size}`} className="cursor-pointer" key={size} >
                                             <input
                                                 type="radio"
@@ -273,20 +308,6 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                             </fieldset>
 
                             <div className="mt-8 flex gap-4">
-                                <div>
-                                    <label htmlFor="quantity" className="sr-only">Qty</label>
-
-                                    <input
-                                        type="number"
-                                        id="quantity"
-                                        min="1"
-                                        value="2"
-                                        className="w-12 rounded border-gray-200 py-3 text-center text-xs 
-                                        [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none 
-                                        [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
-                                    />
-                                </div>
-
                                 <button
                                     type="button"
                                     className="block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500"
