@@ -5,6 +5,7 @@ import { createContext } from "react";
 export type AppContextProps = {
   appState: {
     cart: JerseyModel[];
+    favorites: JerseyModel[];
     menuIsOpen: boolean;
   };
   toggleMenu: () => void;

@@ -7,6 +7,7 @@ import useLocalStorage from './useLocalStorage';
 const initialState: InitialStateModel = {
     menuIsOpen: false,
     cart: [],
+    favorites: []
 };
 
 const useInitialState = () => {
