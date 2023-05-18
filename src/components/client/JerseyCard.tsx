@@ -44,7 +44,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
 
             <div className="relative border border-gray-100 bg-white p-6">
                 <span
-                    className="whitespace-nowrap bg-primary px-3 py-1.5 text-xs font-medium"
+                    className="whitespace-nowrap bg-primary px-3 py-1.5 text-xs font-medium text-white"
                 >
                     {jersey.season}
                 </span>
@@ -55,7 +55,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
 
                 <form className="mt-4">
                     <button
-                        className="block w-full rounded bg-primary p-4 text-sm font-medium transition hover:scale-105"
+                        className="block w-full rounded bg-primary text-white p-4 text-sm font-medium transition hover:scale-105"
                         onClick={() => addToCart(jersey)}
                         type='button'
                     >

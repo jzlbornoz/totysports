@@ -109,11 +109,11 @@ const LandingPage = () => {
             <section>
                 <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 bg-third">
                     <header className="text-center">
-                        <h2 className="text-3xl sm:text-5xl font-bold text-third dark:text-white">
+                        <h2 className="text-3xl sm:text-5xl font-bold text-white">
                             Nueva temporada
                         </h2>
 
-                        <p className="max-w-md mx-auto mt-4 text-third dark:text-gray-500">
+                        <p className="max-w-md mx-auto mt-4 text-gray-500">
                             La espera ha terminado! Las camisetas de la nueva temporada de las principales ligas europeas
                             ya están aquí.¡No te quedes sin la tuya y presume los colores de tu equipo con estilo y pasión!
                         </p>
@@ -188,12 +188,14 @@ const LandingPage = () => {
                                     className="absolute inset-0 flex flex-col items-start justify-end p-6"
                                 >
                                     <h3 className="text-xl font-medium text-white">Italia Local 23/24</h3>
+                                    <Link href="/store/3">
+                                        <span
+                                            className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                        >
+                                            Comprar
+                                        </span>
+                                    </Link>
 
-                                    <span
-                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
-                                    >
-                                        Comprar
-                                    </span>
                                 </div>
                             </Link>
                         </motion.li>
@@ -213,6 +215,7 @@ const LandingPage = () => {
                         </h2>
 
                         <div className="mt-4 md:mt-8">
+                            <Link href="/store">
                             <motion.button
                                 initial='hiddenRight'
                                 whileInView={appState.menuIsOpen ? ' ' : 'show'}
@@ -223,6 +226,7 @@ const LandingPage = () => {
                                 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
                                 Ir a la tienda
                             </motion.button>
+                            </Link>
                         </div>
                     </div>
                 </div>
