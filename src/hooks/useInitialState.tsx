@@ -2,6 +2,7 @@
 import { MouseEventHandler, useState } from 'react';
 import { InitialStateModel } from '@/models/InitialState.model';
 import { JerseyModel } from '@/models/jersey.model';
+import useLocalStorage from './useLocalStorage';
 
 const initialState: InitialStateModel = {
     menuIsOpen: false,
@@ -9,7 +10,7 @@ const initialState: InitialStateModel = {
 };
 
 const useInitialState = () => {
-    const [appState, setAppState] = useState(initialState);
+    const [appState, setAppState] = useLocalStorage("Sesion_V1", initialState);
     // const [repeatedProduct , setRepeatedProduct] = useState({});
 
     const toggleMenu = () => {
