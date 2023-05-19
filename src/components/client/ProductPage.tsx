@@ -1,9 +1,9 @@
 'use client'
-import { ChangeEvent, MouseEventHandler, useContext, useEffect, useState } from 'react'
+import { ChangeEvent, useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { JerseyModel } from '@/models/jersey.model'
 import { AppContext } from '@/context/AppContex'
-
+import Link from 'next/link'
 
 const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
 
@@ -49,33 +49,35 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
             <div className="relative mx-auto max-w-screen-xl px-4 py-8 ">
                 <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
                     <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:h-[100vh] overflow-y-scroll">
-                        <Image
-                            alt="Principal product Image"
-                            src={productItem.img[0]}
-                            width={1200}
-                            height={1200}
-                            className="aspect-square w-full rounded-xl object-cover"
-                        />
-
+                        <Link href={productItem.img[0]}>
+                            <Image
+                                alt="Principal product Image"
+                                src={productItem.img[0]}
+                                width={1200}
+                                height={1200}
+                                className={`aspect-square w-full rounded-xl object-cover cursor-zoom-in`}
+                            />
+                        </Link>
                         <div className="grid grid-cols-2 gap-4 lg:mt-4 ">
                             {productItem.img.map((item, index) => {
                                 if (index === 0) {
                                     return;
                                 } else {
                                     return (
-                                        <Image
-                                            key={index}
-                                            alt={item + index}
-                                            src={item ? item : "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="}
-                                            width={1200}
-                                            height={1200}
-                                            className="aspect-square w-full rounded-xl object-cover bg-slate-500"
-                                        />)
+                                        <Link key={index} href={item}>
+                                            <Image
+                                                alt={item + index}
+                                                src={item ? item : "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="}
+                                                width={1200}
+                                                height={1200}
+                                                className="aspect-square w-full rounded-xl object-cover bg-slate-500 cursor-zoom-in"
+                                            />
+                                        </Link>
+                                    )
                                 }
                             })}
                         </div>
                     </div>
-
                     <div className="sticky top-0">
                         {productItem.stock > 0 ? <strong
                             className="rounded-full border border-blue-600 bg-gray-100 
