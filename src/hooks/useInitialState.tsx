@@ -50,6 +50,12 @@ const useInitialState = () => {
             cart: appState.cart.filter((items) => items.id !== payload.id || items.size !== payload.size)
         });
     };
+    const addToFavorite = (payload: JerseyModel) => {
+        setAppState({
+            ...appState,
+            favorites: [...appState.favorites, payload]
+        })
+    }
 
 
 
@@ -58,7 +64,8 @@ const useInitialState = () => {
         toggleMenu,
         addToCart,
         removeFromCart,
-        findIndex
+        findIndex,
+        addToFavorite,
     };
 };
 

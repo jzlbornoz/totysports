@@ -11,7 +11,8 @@ export type AppContextProps = {
   toggleMenu: () => void;
   addToCart: (payload: JerseyModel) => void;
   findIndex: (product: JerseyModel) => number;
-  removeFromCart: (payload: JerseyModel) => void;
+  removeFromCart: (payload: JerseyModel) => void; 
+  addToFavorite: (payload: JerseyModel) => void;
 };
 
 export const AppContext = createContext<AppContextProps>({} as AppContextProps);
