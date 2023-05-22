@@ -1,7 +1,7 @@
 'use client'
 
 import { JerseyModel } from '@/models/jersey.model'
-import React, { useContext } from 'react'
+import React from 'react'
 import { JerseyCard } from './JerseyCard'
 
 import { motion } from 'framer-motion';
