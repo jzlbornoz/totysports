@@ -44,19 +44,38 @@ const useInitialState = () => {
             cart: appState.cart.filter((items) => items.id !== payload.id || items.size !== payload.size)
         });
     };
-    const addToFavorite = (payload: JerseyModel) => {
+
+
+    {/*
+const addToFavorite = (payload: JerseyModel) => {
         const payloadId = appState.favorites.findIndex((item) => item.id === payload.id);
 
         if (payloadId !== -1) {
-            console.log("Ya esta repetido")
+            console.log("Ya esta repetido");
+            
         } else {
             setAppState({
                 ...appState,
                 favorites: [...appState.favorites, payload]
             })
         }
+
+    } */}
+
+    const addToFavorites = (payload: JerseyModel) => {
+        //const payloadId = appState.favorites.findIndex((item) => item.id === payload.id);
+        setAppState({
+            ...appState,
+            favorites: [...appState.favorites, payload]
+        })
     }
 
+    const removeFromFavorites = (payload: JerseyModel) => {
+        setAppState({
+            ...appState,
+            favorites: appState.favorites.filter((items) => items.id !== payload.id)
+        });
+    }
 
 
     return {
@@ -64,7 +83,8 @@ const useInitialState = () => {
         toggleMenu,
         addToCart,
         removeFromCart,
-        addToFavorite,
+        addToFavorites,
+        removeFromFavorites
     };
 };
 

@@ -7,10 +7,20 @@ import { AppContext } from '@/context/AppContex'
 import { LazyImage } from './LazyImage'
 
 const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
-    const { addToCart, appState, addToFavorite } = useContext(AppContext);
+    const { addToCart, appState, addToFavorites, removeFromFavorites } = useContext(AppContext);
     const favoritesItems = appState.favorites;
     const [heartColor, setHeartColor] = useState<number>(-1);
 
+    //LikeHandler
+    const favoriteHandler = (payload: JerseyModel) => {
+        if (heartColor === -1) {
+            addToFavorites(payload);
+            setHeartColor(1);
+        } else {
+            removeFromFavorites(payload);
+            setHeartColor(-1);
+        }
+    };
 
     //Logica para la persistencia del like
     const validatorLiked = (payload: JerseyModel) => {
@@ -28,10 +38,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                         ? " bg-red-500  text-red-800 hover:text-gray-900/75"
                         : " bg-white text-gray-900  hover:text-gray-900/75"}`}
                 type='button'
-                onClick={() => {
-                    addToFavorite(jersey);
-                    setHeartColor(1);
-                }}
+                onClick={() => favoriteHandler(jersey)}
             >
                 <span className="sr-only">Wishlist</span>
 
