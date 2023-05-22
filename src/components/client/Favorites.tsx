@@ -9,10 +9,12 @@ import { Store } from './Store';
 const Favorites = (): JSX.Element => {
     const { appState } = useContext(AppContext);
     const favoritesItems = appState.favorites
-    console.log(favoritesItems);
-    if (favoritesItems.length > 0) {
+    
+    if (appState.favorites.length > 0) {
         return (
-            <Store jerseys={favoritesItems} />
+            <div>
+                <Store jerseys={favoritesItems} />
+            </div>
         )
     } else {
         return (

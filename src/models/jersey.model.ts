@@ -8,7 +8,7 @@ export interface JerseyModel {
   players?: string[];
   season: string | string[];
   stock: number;
-  technology: string;
+  technology: string[];
   link: string;
   img: string[];
   arrive: boolean;
