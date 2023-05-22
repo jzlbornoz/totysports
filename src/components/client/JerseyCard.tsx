@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import React, { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 
@@ -9,19 +8,29 @@ import { LazyImage } from './LazyImage'
 
 const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
     const { addToCart, appState, addToFavorite } = useContext(AppContext);
+    const favoritesItems = appState.favorites;
+    const [heartColor, setHeartColor] = useState<number>(-1);
+
+
+    //Logica para la persistencia del like
+    const validatorLiked = (payload: JerseyModel) => {
+        return appState.favorites.findIndex((item) => item.id === payload.id);
+    };
+    useEffect(() => {
+        setHeartColor(validatorLiked(jersey));
+    }, [])
 
     return (
         <section className="group relative block overflow-hidden">
             <button
                 className={`absolute end-4 top-4 z-10 rounded-full p-1.5 transition 
-                ${(appState.favorites && appState.favorites.includes(jersey))
+                ${(favoritesItems && heartColor !== -1)
                         ? " bg-red-500  text-red-800 hover:text-gray-900/75"
                         : " bg-white text-gray-900  hover:text-gray-900/75"}`}
                 type='button'
                 onClick={() => {
-                    addToFavorite(jersey)
-                    console.log(appState.favorites);
-                    console.log(jersey.id)
+                    addToFavorite(jersey);
+                    setHeartColor(1);
                 }}
             >
                 <span className="sr-only">Wishlist</span>

@@ -21,13 +21,8 @@ const useInitialState = () => {
         });
     };
 
-    const findIndex = (payload: JerseyModel): number => {
-        const res = appState.cart.findIndex((item) => item.id = payload.id);
-        return res;
-    }
-
     const addToCart = (payload: JerseyModel) => {
-        const payloadIndex = findIndex(payload);
+        const payloadIndex = appState.cart.findIndex((item) => item.id = payload.id);
         if (payloadIndex !== -1) {
 
             const newId = Math.floor(Math.random() * 1000000);
@@ -51,10 +46,16 @@ const useInitialState = () => {
         });
     };
     const addToFavorite = (payload: JerseyModel) => {
-        setAppState({
-            ...appState,
-            favorites: [...appState.favorites, payload]
-        })
+        const payloadId = appState.favorites.findIndex((item) => item.id === payload.id);
+
+        if (payloadId !== -1) {
+            console.log("Ya esta repetido")
+        } else {
+            setAppState({
+                ...appState,
+                favorites: [...appState.favorites, payload]
+            })
+        }
     }
 
 
@@ -64,7 +65,6 @@ const useInitialState = () => {
         toggleMenu,
         addToCart,
         removeFromCart,
-        findIndex,
         addToFavorite,
     };
 };

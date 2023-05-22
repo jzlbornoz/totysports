@@ -9,7 +9,7 @@ import { Store } from './Store';
 const Favorites = (): JSX.Element => {
     const { appState } = useContext(AppContext);
     const favoritesItems = appState.favorites
-console.log(favoritesItems);
+    console.log(favoritesItems);
     if (favoritesItems.length > 0) {
         return (
             <Store jerseys={favoritesItems} />
