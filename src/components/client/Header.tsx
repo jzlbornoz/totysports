@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -11,13 +11,37 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Logo from '../../assets/logo.png'
 import styles from '../../styles/components/Header.module.css'
+import Alert from '../Alert'
+import useAlert from '@/hooks/useAlert'
 
 const Header = () => {
   const { appState, toggleMenu } = useContext(AppContext);
+  const [firstRender, setFirstRender] = useState<boolean>(true);
+
+  const { alert, toggleAlert, setAlert } = useAlert({
+    active: false,
+    message: "",
+    type: '',
+    autoClose: true
+  });
+
+  useEffect(() => {
+    if (!firstRender) {
+      setAlert({
+        active: true,
+        message: "Carrito actualizado",
+        type: 'fino',
+        autoClose: true
+      })
+    } else {
+      setFirstRender(false);
+    }
+  }, [appState.cart, setAlert])
 
   return (
     <header className={styles.Header}>
       {appState.menuIsOpen ? <Menu /> : null}
+      <Alert alert={alert} handleClose={toggleAlert} />
       <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} />
       <Link href='/'>
         <Image src={Logo} alt='Logo' width={60} height={60} />

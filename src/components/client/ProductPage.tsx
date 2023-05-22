@@ -26,7 +26,6 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
         setSelectedDorsalOption((prevSize => (prevSize === value ? '' : value)));
     }
 
-
     //Actualiza el producto a agregar
     useEffect(() => {
         setProductToAdd((prev) => ({
@@ -39,7 +38,6 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
             ...prev,
             players: [selectedDorsalOption],
         }));
-        console.log(selectedDorsalOption)
     }, [selectedDorsalOption])
 
 

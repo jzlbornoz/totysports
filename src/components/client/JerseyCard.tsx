@@ -82,7 +82,9 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                 <form className="mt-4">
                     <button
                         className="block w-full rounded bg-primary text-white p-4 text-sm font-medium transition hover:scale-105"
-                        onClick={() => addToCart(jersey)}
+                        onClick={() => {
+                            addToCart(jersey)
+                        }}
                         type='button'
                     >
                         Add to Cart

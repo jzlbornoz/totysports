@@ -6,9 +6,12 @@ import { JerseyCard } from './JerseyCard'
 
 import { motion } from 'framer-motion';
 
+
 const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
 
 
+
+    //framer motion
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -23,6 +26,7 @@ const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
         hidden: { opacity: 0, scale: 0 },
         show: { opacity: 1, scale: 1, },
     }
+
     return (
         <section>
             <div className="max-w-screen-2xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 mt-[11vh] bg-white">
