@@ -33,9 +33,8 @@ const Menu = () => {
 
     // ---
     return (
-
         <motion.div
-            className="flex fixed top-0 left-0 h-screen flex-col justify-between border-e border-zinc-800 bg-white dark:bg-zinc-900 pt-[10vh]"
+            className="flex fixed top-0 left-0 h-screen flex-col justify-between border-e border-zinc-800 bg-white dark:bg-zinc-900 pt-[10vh] overflow-y-scroll"
             initial='hiddenLeft'
             animate='show'
             exit='hiddenLeft'
@@ -121,7 +120,7 @@ const Menu = () => {
                         <span className="text-sm font-medium"> Favoritos </span>
                     </Link>
 
-                    <details className="group [&_summary::-webkit-details-marker]:hidden">
+                    {/*<details className="group [&_summary::-webkit-details-marker]:hidden">
                         <summary
                             className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
@@ -229,7 +228,7 @@ const Menu = () => {
                                 </button>
                             </form>
                         </nav>
-                    </details>
+    </details> */}
                 </nav>
             </div>
         </motion.div>

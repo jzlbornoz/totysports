@@ -17,6 +17,7 @@ import useAlert from '@/hooks/useAlert'
 const Header = () => {
   const { appState, toggleMenu } = useContext(AppContext);
   const [firstRender, setFirstRender] = useState<boolean>(true);
+  const menuRef = useRef<HTMLDivElement>(null)
 
   const { alert, toggleAlert, setAlert } = useAlert({
     active: false,
@@ -38,9 +39,24 @@ const Header = () => {
     }
   }, [appState.cart, setAlert])
 
+  useEffect(() => {
+    const handleClickMenu = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        toggleMenu();
+        console.log("menu effect");
+      }
+    }
+    document.addEventListener('mousedown', handleClickMenu);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickMenu)
+      console.log("removed")
+    }
+  }, [toggleMenu])
+
   return (
     <header className={styles.Header}>
-      {appState.menuIsOpen ? <Menu /> : null}
+      {appState.menuIsOpen ? <div className='fixed' ref={menuRef}><Menu /></div> : null}
       <Alert alert={alert} handleClose={toggleAlert} />
       <FontAwesomeIcon icon={faBars} onClick={() => toggleMenu()} />
       <Link href='/'>
