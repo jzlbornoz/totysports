@@ -45,6 +45,7 @@ const Menu = () => {
             <div className="px-4 py-6">
                 <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
                     <Link
+                        onClick={() => toggleMenu()}
                         href="/store"
                         className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                     >
@@ -81,6 +82,7 @@ const Menu = () => {
 
                         <nav aria-label="Teams Nav" className="mt-2 flex flex-col px-4">
                             <Link
+                                onClick={() => toggleMenu()}
                                 href="#"
                                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                             >
@@ -90,6 +92,7 @@ const Menu = () => {
                             </Link>
 
                             <Link
+                                onClick={() => toggleMenu()}
                                 href="#"
                                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                             >
@@ -102,6 +105,7 @@ const Menu = () => {
                     </details>
 
                     <Link
+                        onClick={() => toggleMenu()}
                         href="/cart"
                         className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                     >
@@ -112,6 +116,7 @@ const Menu = () => {
                     </Link>
 
                     <Link
+                        onClick={() => toggleMenu()}
                         href="favorites"
                         className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                     >

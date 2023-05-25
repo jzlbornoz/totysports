@@ -16,45 +16,6 @@ const Cart = () => {
     const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
     const discount = cartItems.length <= 3 ? cartItems.length * 10 : cartItems.length * 15;
 
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.12,
-            }
-        }
-    }
-
-    const itemMotion = {
-        hidden: { opacity: 0, scale: 0 },
-        show: { opacity: 1, scale: 1, },
-    }
-
-    const buttonMotion = {
-        show: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.5
-            }
-        },
-        hover: {
-            scale: 1.1,
-            transition: {
-                duration: 0.7
-            }
-        },
-        tap: {
-            scale: 1.128,
-            transition: {
-                type: "spring", stiffness: 400, damping: 17,
-            },
-
-            color: "#FFFFFF",
-            backgroundColor: '#468220'
-        },
-    }
 
 
     if (appState.cart.length > 0) {
@@ -66,21 +27,17 @@ const Cart = () => {
                     </header>
 
                     <div className="mt-8">
-                        <motion.ul className="space-y-4"
-                            variants={container}
-                            initial="hidden"
-                            animate="show"
+                        <ul className="space-y-4"
                         >
-                            {cartItems.map(item => <motion.li
-                                variants={itemMotion}
+                            {cartItems.map(item => <li
                                 key={item.id + Math.random()}
                                 className="flex items-center gap-4"
                             >
 
                                 <JerseyMiniCard jersey={item} />
-                            </motion.li>)}
+                            </li>)}
 
-                        </motion.ul>
+                        </ul>
 
                         <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
                             <div className="w-screen max-w-lg space-y-4">
@@ -101,20 +58,15 @@ const Cart = () => {
                                 </dl>
                                 <div className="flex justify-end">
                                     <Link href="/checkout">
-                                    <motion.button
-                                        initial='show'
-                                        whileHover='hover'
-                                        whileTap='tap'
-                                        variants={buttonMotion}
-                                        className="block rounded
+                                        <button className="block rounded
                                          bg-third px-5 py-3 text-sm text-gray-100 
                                          transition hover:bg-gray-600"
-                                         type='button'
-                                    >
-                                        Checkout
-                                    </motion.button>
+                                            type='button'
+                                        >
+                                            Checkout
+                                        </button>
                                     </Link>
-                                   
+
                                 </div>
                             </div>
                         </div>

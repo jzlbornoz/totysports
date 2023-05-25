@@ -18,10 +18,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Dirección</h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-4">
-                                    <Link href="https://flowbite.com" className="hover:underline text-sm">Winter Garden FL. 34787 USA</Link>
+                                    <p className=" text-sm">Winter Garden FL. 34787 USA</p>
                                 </li>
                                 <li>
-                                    <Link href="https://tailwindcss.com/" className="hover:underline text-sm">Av. Las Americas, <br />Merida-Venezuela (5101)</Link>
+                                    <p className=" text-sm">Av. Las Americas, <br />Merida-Venezuela (5101)</p>
                                 </li>
                             </ul>
                         </div>
@@ -29,10 +29,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contacto</h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-4">
-                                    <Link href='https://instagram.com/totysports?igshid=YmMyMTA2M2Y=' className="hover:underline ">Instagram</ Link>
+                                    <Link href='https://instagram.com/totysports?igshid=YmMyMTA2M2Y=' className="hover:underline">Instagram</ Link>
                                 </li>
                                 <li>
-                                    <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Whatsapp</Link>
+                                    <Link href="" className="hover:underline">Whatsapp</Link>
                                 </li>
                             </ul>
                         </div>
@@ -40,10 +40,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-4">
-                                    <Link href="#" className="hover:underline">Privacy Policy</Link>
+                                    <p>Privacy Policy</p>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Terms &amp; Conditions</Link>
+                                    <p>Terms &amp; Conditions</p>
                                 </li>
                             </ul>
                         </div>
