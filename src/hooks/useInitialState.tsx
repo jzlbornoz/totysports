@@ -1,17 +1,18 @@
 'use client'
 import { InitialStateModel } from '@/models/InitialState.model';
 import { JerseyModel } from '@/models/jersey.model';
+import { OrderModel } from '@/models/order.model';
 import useLocalStorage from './useLocalStorage';
 
 const initialState: InitialStateModel = {
     menuIsOpen: false,
     cart: [],
-    favorites: []
+    favorites: [],
+    orders: []
 };
 
 const useInitialState = () => {
     const [appState, setAppState] = useLocalStorage("Sesion_V1", initialState);
-    // const [repeatedProduct , setRepeatedProduct] = useState({});
 
     const toggleMenu = () => {
         setAppState({
@@ -45,23 +46,6 @@ const useInitialState = () => {
         });
     };
 
-
-    {/*
-const addToFavorite = (payload: JerseyModel) => {
-        const payloadId = appState.favorites.findIndex((item) => item.id === payload.id);
-
-        if (payloadId !== -1) {
-            console.log("Ya esta repetido");
-            
-        } else {
-            setAppState({
-                ...appState,
-                favorites: [...appState.favorites, payload]
-            })
-        }
-
-    } */}
-
     const addToFavorites = (payload: JerseyModel) => {
         //const payloadId = appState.favorites.findIndex((item) => item.id === payload.id);
         setAppState({
@@ -77,6 +61,12 @@ const addToFavorite = (payload: JerseyModel) => {
         });
     }
 
+    const createOrder = (payload: OrderModel) => {
+        setAppState({
+            ...appState,
+            orders: [...appState.orders, payload]
+        })
+    }
 
     return {
         appState,
@@ -84,7 +74,8 @@ const addToFavorite = (payload: JerseyModel) => {
         addToCart,
         removeFromCart,
         addToFavorites,
-        removeFromFavorites
+        removeFromFavorites,
+        createOrder
     };
 };
 
