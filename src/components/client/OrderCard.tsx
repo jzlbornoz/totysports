@@ -1,10 +1,11 @@
 import { OrderModel } from '@/models/order.model'
+import Link from 'next/link'
 import React from 'react'
 
 const OrderCard = ({ data }: { data: OrderModel }) => {
     return (
-        <a
-            href="#"
+        <Link
+            href={`/orders/${data.id}`}
             className="group flex flex-col justify-between rounded-sm bg-white p-4 shadow-xl transition-shadow hover:shadow-lg sm:p-6 lg:p-8"
         >
             <div>
@@ -37,7 +38,7 @@ const OrderCard = ({ data }: { data: OrderModel }) => {
                     />
                 </svg>
             </div>
-        </a>
+        </Link>
 
     )
 }
