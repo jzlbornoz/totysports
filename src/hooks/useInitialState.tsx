@@ -64,7 +64,8 @@ const useInitialState = () => {
     const createOrder = (payload: OrderModel) => {
         setAppState({
             ...appState,
-            orders: [...appState.orders, payload]
+            orders: [...appState.orders, payload],
+            cart: []
         })
     }
 

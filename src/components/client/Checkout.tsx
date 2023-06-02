@@ -1,7 +1,7 @@
 'use client'
 import { AppContext } from '@/context/AppContex';
 import { JerseyModel } from '@/models/jersey.model';
-import React, { useContext, useRef, useState } from 'react'
+import React, { MouseEventHandler, useContext, useEffect, useRef, useState } from 'react'
 
 import Link from 'next/link';
 
@@ -49,12 +49,31 @@ const Checkout = () => {
     const stateRef = useRef<HTMLSelectElement>(null);
     const postalCodeRef = useRef<HTMLInputElement>(null);
 
-    /*useEffect(() => {
-        setOrder((prev) => ({
-            ...prev,
-            size: [selectedSizeOption],
-        }));
-    }, [selectedSizeOption])*/
+    const handleSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
+        event.preventDefault();
+
+        const name = firstNameRef.current?.value;
+        const lastName = lastNameRef.current?.value;
+        const phone = phoneRef.current?.value;
+        const address = stateRef.current?.value;
+        const email = emailRef.current?.value;
+
+        if (name && lastName && phone && address && email) {
+            setOrder((prev) => ({
+                ...prev,
+                buyer: {
+                    name: name,
+                    lastName: lastName,
+                    phone: phone,
+                    address: address,
+                    email: email
+                }
+
+            }))
+            createOrder(order);
+        }
+    }
+
 
     return (
 
@@ -211,31 +230,7 @@ const Checkout = () => {
                             <div className="col-span-6">
                                 <button
                                     type='button'
-                                    onClick={() => {
-
-                                        const name = firstNameRef.current?.value;
-                                        const lastName = lastNameRef.current?.value;
-                                        const phone = phoneRef.current?.value;
-                                        const address = stateRef.current?.value;
-                                        const email = emailRef.current?.value;
-
-                                        if (name && lastName && phone && address && email) {
-                                            setOrder((prev) => ({
-                                                ...prev,
-                                                buyer: {
-                                                    name: name,
-                                                    lastName: lastName,
-                                                    phone: phone,
-                                                    address: address,
-                                                    email: email
-                                                }
-
-                                            }))
-                                            console.log("order", order);
-                                        } else {
-                                            console.log("datos incompletos")
-                                        }
-                                    }}
+                                    onClick={handleSubmit}
                                     className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
                                 >
                                     Pay Now
