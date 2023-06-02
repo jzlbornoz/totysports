@@ -11,7 +11,7 @@ const Orders = () => {
 
     return (
         <>
-            <section className="bg-white mt-[10vh]">
+            <section className="bg-white mt-[10vh] min-h-[100vh]">
                 <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                     <h2 className="text-center text-4xl font-bold tracking-tight sm:text-5xl text-third">
                         Tus ordenes de compra
