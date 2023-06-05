@@ -20,11 +20,6 @@ const Checkout = () => {
         "Guárico", "Lara", "Mérida", "Miranda", "Monagas", "Nueva Esparta", "Portuguesa", "Sucre",
         "Táchira", "Trujillo", "Vargas", "Yaracuy", "Zulia"]
 
-    const generateMessage = (): string => {
-        const items = cartItems.map(item => `--${item.name} (${item.size[0]}): ${item.sale}$`).join('%0A');
-        const message = `¡Hola! Toty Sports.%0AA continuación se detallan los productos que hae ordenado y su respectivo precio:%0A${items}.%0ATotal a pagar: ${priceWithDiscount}$.%0AEspero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
-        return message;
-    };
 
     // Orden 
     const [orderToAdd, setOrderToAdd] = useState<OrderModel>({
@@ -68,6 +63,14 @@ const Checkout = () => {
             }
             setOrderToAdd(newOrder)
             createOrder(newOrder);
+            const generateMessage = (): string => {
+                const items = cartItems.map(item => `--${item.name} (${item.size[0]}): ${item.sale}$`).join('%0A');
+                const message = `¡Hola! Toty Sports.%0ALes escribe ${newOrder.buyer.name} ${newOrder.buyer.lastName}, 
+                a continuación se detallan los productos que he ordenado y su respectivo precio:%0A${items}.%0ATotal a pagar: ${newOrder.amount}$.%0AEstoy ubicado en ${newOrder.buyer.address},
+                espero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
+                return message;
+            };
+
             if (typeof window !== 'undefined') {
                 window.location.href = `https://api.whatsapp.com/send?phone=+14079526875&text=${generateMessage()}`;
             }
