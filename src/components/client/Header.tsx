@@ -43,14 +43,12 @@ const Header = () => {
     const handleClickMenu = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         toggleMenu();
-        console.log("menu effect");
       }
     }
     document.addEventListener('mousedown', handleClickMenu);
 
     return () => {
       document.removeEventListener('mousedown', handleClickMenu)
-      console.log("removed")
     }
   }, [toggleMenu])
 
