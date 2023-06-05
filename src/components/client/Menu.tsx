@@ -4,14 +4,19 @@ import { AppContext } from '@/context/AppContex';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseCircleCheck, faStore, faEarthAmerica, faCartShopping, faShieldHalved, faHeartCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import {
+    faHouseCircleCheck,
+    faStore, faEarthAmerica, faCartShopping,
+    faShieldHalved, faHeartCircleCheck,
+    faFolderClosed
+} from '@fortawesome/free-solid-svg-icons';
 
 import { motion } from "framer-motion";
 
 
 const Menu = () => {
 
-    const { appState, toggleMenu } = useContext(AppContext);
+    const { toggleMenu } = useContext(AppContext);
 
     const item = {
         hiddenLeft: {
@@ -34,7 +39,8 @@ const Menu = () => {
     // ---
     return (
         <motion.div
-            className="flex fixed top-0 left-0 h-screen flex-col justify-between border-e border-zinc-800 bg-white dark:bg-zinc-900 pt-[10vh] overflow-y-scroll"
+            className="flex fixed top-0 left-0 h-screen flex-col justify-between border-e border-zinc-800
+             bg-white dark:bg-zinc-900 pt-[10vh] overflow-y-scroll"
             initial='hiddenLeft'
             animate='show'
             exit='hiddenLeft'
@@ -47,7 +53,8 @@ const Menu = () => {
                     <Link
                         onClick={() => toggleMenu()}
                         href="/store"
-                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
+                         hover:bg-gray-100 hover:text-gray-700"
                     >
                         <FontAwesomeIcon icon={faStore} />
 
@@ -56,7 +63,8 @@ const Menu = () => {
 
                     <details className="group [&_summary::-webkit-details-marker]:hidden">
                         <summary
-                            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2
+                             text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                             <div className="flex items-center gap-2">
                                 <FontAwesomeIcon icon={faHouseCircleCheck} />
@@ -73,7 +81,8 @@ const Menu = () => {
                                 >
                                     <path
                                         fillRule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 
+                                        1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clipRule="evenodd"
                                     />
                                 </svg>
@@ -84,7 +93,8 @@ const Menu = () => {
                             <Link
                                 onClick={() => toggleMenu()}
                                 href="#"
-                                className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
+                                 hover:bg-gray-100 hover:text-gray-700"
                             >
                                 <FontAwesomeIcon icon={faEarthAmerica} />
 
@@ -94,7 +104,8 @@ const Menu = () => {
                             <Link
                                 onClick={() => toggleMenu()}
                                 href="#"
-                                className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
+                                 hover:bg-gray-100 hover:text-gray-700"
                             >
                                 <FontAwesomeIcon icon={faShieldHalved} />
 
@@ -107,7 +118,8 @@ const Menu = () => {
                     <Link
                         onClick={() => toggleMenu()}
                         href="/cart"
-                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
+                         hover:bg-gray-100 hover:text-gray-700"
                     >
                         <FontAwesomeIcon icon={faCartShopping} />
 
@@ -118,11 +130,22 @@ const Menu = () => {
                     <Link
                         onClick={() => toggleMenu()}
                         href="favorites"
-                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100
+                         hover:text-gray-700"
                     >
                         <FontAwesomeIcon icon={faHeartCircleCheck} />
 
                         <span className="text-sm font-medium"> Favoritos </span>
+                    </Link>
+                    <Link
+                        onClick={() => toggleMenu()}
+                        href="orders"
+                        className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100
+                         hover:text-gray-700"
+                    >
+                        <FontAwesomeIcon icon={faFolderClosed} />
+
+                        <span className="text-sm font-medium"> Ordenes </span>
                     </Link>
 
                     {/*<details className="group [&_summary::-webkit-details-marker]:hidden">

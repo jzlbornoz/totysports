@@ -29,7 +29,7 @@ const Checkout = () => {
     };
 
     // Orden 
-    const [order, setOrder] = useState<OrderModel>({
+    const [orderToAdd, setOrderToAdd] = useState<OrderModel>({
         id: Math.floor(Math.random() * 1000000),
         amount: priceWithDiscount,
         buyer: {
@@ -49,9 +49,8 @@ const Checkout = () => {
     const stateRef = useRef<HTMLSelectElement>(null);
     const postalCodeRef = useRef<HTMLInputElement>(null);
 
-    const handleSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
         const name = firstNameRef.current?.value;
         const lastName = lastNameRef.current?.value;
         const phone = phoneRef.current?.value;
@@ -59,8 +58,8 @@ const Checkout = () => {
         const email = emailRef.current?.value;
 
         if (name && lastName && phone && address && email) {
-            setOrder((prev) => ({
-                ...prev,
+            const newOrder: OrderModel = {
+                ...orderToAdd,
                 buyer: {
                     name: name,
                     lastName: lastName,
@@ -68,12 +67,15 @@ const Checkout = () => {
                     address: address,
                     email: email
                 }
-
-            }))
-            createOrder(order);
+            }
+            setOrderToAdd(newOrder)
+            createOrder(newOrder);
         }
     }
 
+    useEffect(() => {
+        console.log(appState.orders)
+    }, [appState.orders])
 
     return (
 
@@ -134,7 +136,7 @@ const Checkout = () => {
 
                 <div className="bg-white py-12 md:py-24">
                     <div className="mx-auto max-w-lg px-4 lg:px-8">
-                        <form className="grid grid-cols-6 gap-4">
+                        <form action="/" className="grid grid-cols-6 gap-4" onSubmit={handleSubmit}>
                             <div className="col-span-3">
                                 <label
                                     htmlFor="FirstName"
@@ -229,8 +231,7 @@ const Checkout = () => {
 
                             <div className="col-span-6">
                                 <button
-                                    type='button'
-                                    onClick={handleSubmit}
+                                    type='submit'
                                     className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
                                 >
                                     Pay Now

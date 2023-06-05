@@ -1,6 +1,7 @@
 'use client'
 import { AppContext } from '@/context/AppContex';
 import { OrderModel } from '@/models/order.model';
+import Image from 'next/image';
 import React, { useContext } from 'react'
 
 const OrderPage = ({ orderId }: { orderId: string }) => {
@@ -87,7 +88,8 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                 </div>
                             </div>
                         </div>
-                        <img className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="https://dummyimage.com/1200x500" alt="step" />
+                        <Image className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" 
+                        src={order.items[0].img[0]} width={800} height={800} alt="step" />
                     </div>
                 </div>
             </section>
