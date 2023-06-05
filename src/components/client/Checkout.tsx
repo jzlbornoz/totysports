@@ -1,9 +1,7 @@
 'use client'
 import { AppContext } from '@/context/AppContex';
 import { JerseyModel } from '@/models/jersey.model';
-import React, { MouseEventHandler, useContext, useEffect, useRef, useState } from 'react'
-
-import Link from 'next/link';
+import React, { useContext, useRef, useState } from 'react'
 
 import Logo from '../../assets/logo.png'
 import Image from 'next/image';
@@ -23,10 +21,12 @@ const Checkout = () => {
         "Táchira", "Trujillo", "Vargas", "Yaracuy", "Zulia"]
 
     const generateMessage = (): string => {
-        const items = cartItems.map(item => `${item.name} (Talla: ${item.size}): ${item.sale}$`).join('/');
-        const message = `¡Hola! Gracias por su compra en Toty Sports. A continuación se detallan los productos que ha ordenado y su respectivo precio: ${items}. Total a pagar: ${priceWithDiscount}$. Por favor, realice el pago en la cuenta bancaria siguiente: Banco: "Y", Número de cuenta: XXXXXXXXXXXX, Nombre del titular: "Y", Monto: ${priceWithDiscount}$. Una vez hecho el pago, envíe el comprobante a este número de Whatsapp para procesar su orden. Gracias por su preferencia y quedamos atentos a cualquier consulta.`
+        const items = cartItems.map(item => `--${item.name} (${item.size[0]}): ${item.sale}$`).join('%0A');
+        const message = `¡Hola! Toty Sports.%0AA continuación se detallan los productos que hae ordenado y su respectivo precio:%0A${items}.%0ATotal a pagar: ${priceWithDiscount}$.%0AEspero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
         return message;
     };
+
+
 
     // Orden 
     const [orderToAdd, setOrderToAdd] = useState<OrderModel>({
@@ -70,13 +70,17 @@ const Checkout = () => {
             }
             setOrderToAdd(newOrder)
             createOrder(newOrder);
+           if(typeof window !== 'undefined') {
+            window.location.href = `https://api.whatsapp.com/send?phone=+14079526875&text=${generateMessage()}`;
+           }
         }
     }
 
-    useEffect(() => {
-        console.log(appState.orders)
-    }, [appState.orders])
-
+    if (appState.cart.length < 1) {
+        if(typeof window !== 'undefined') {
+            window.location.href = `orders`;
+           }
+    }
     return (
 
         < section className='mt-[10vh]'>
@@ -234,7 +238,7 @@ const Checkout = () => {
                                     type='submit'
                                     className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
                                 >
-                                    Pay Now
+                                    Pagar ahora
                                 </button>
                             </div>
                         </form>
