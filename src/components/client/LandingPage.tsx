@@ -5,10 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import LFC from '../../assets/liverpool.jpeg';
+import PSG from '../../assets/psg.jpg';
+import Arsenal from '../../assets/arsenal.jpg';
 import Cr7 from '../../assets/cr7.jpg';
 import Juve from '../../assets/juventus.jpg';
 import Modric from '../../assets/modric.jpeg';
 import Italy from '../../assets/italy.webp';
+import City from '../../assets/city.webp';
 import Logo from '../../assets/logo.png'
 
 import { motion } from "framer-motion"
@@ -107,7 +110,7 @@ const LandingPage = () => {
                 </div>
             </section>
             <section>
-                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 bg-third">
+                <div className="max-w-screen-xl px-4 pt-8 mx-auto sm:px-6 sm:pt-12 lg:px-8 bg-third">
                     <header className="text-center">
                         <h2 className="text-3xl sm:text-5xl font-bold text-white">
                             Nueva temporada
@@ -125,10 +128,10 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                         >
-                            <Link href="#" className="relative block group">
+                            <Link href="/store/24" className="relative block group">
                                 <Image
                                     src={LFC}
-                                    alt=""
+                                    alt="Liverpool"
                                     className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
                                 />
 
@@ -151,10 +154,10 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                         >
-                            <Link href="#" className="relative block group">
+                            <Link href="/store/26" className="relative block group">
                                 <Image
                                     src={Juve}
-                                    alt=""
+                                    alt="Juve"
                                     className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
                                 />
 
@@ -177,7 +180,7 @@ const LandingPage = () => {
                             whileInView={appState.menuIsOpen ? ' ' : 'show'}
                             variants={item}
                             className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-                            <Link href="#" className="relative block group">
+                            <Link href="/store/3" className="relative block group">
                                 <Image
                                     src={Italy}
                                     alt="Italy"
@@ -188,6 +191,87 @@ const LandingPage = () => {
                                     className="absolute inset-0 flex flex-col items-start justify-end p-6"
                                 >
                                     <h3 className="text-xl font-medium text-white">Italia Local 23/24</h3>
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Comprar
+                                    </span>
+                                </div>
+                            </Link>
+                        </motion.li>
+                    </ul>
+                </div>
+                <div className="max-w-screen-xl px-4 mx-auto pb-8 sm:px-6 sm:pb-12 lg:px-8 bg-third">
+                    <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+                        <motion.li
+                            initial='hiddenLeft'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                        >
+                            <Link href="/store/29" className="relative block group">
+                                <Image
+                                    src={Arsenal}
+                                    alt="Arsenal"
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Arsenal 23/24</h3>
+
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Comprar
+                                    </span>
+                                </div>
+                            </Link>
+                        </motion.li>
+
+                        <motion.li
+                            initial='hiddenRight'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                        >
+                            <Link href="/store/26" className="relative block group">
+                                <Image
+                                    src={PSG}
+                                    alt="PSG"
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Paris Saint-Germain 2022/23</h3>
+
+
+                                    <span
+                                        className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    >
+                                        Comprar
+                                    </span>
+                                </div>
+                            </Link>
+                        </motion.li>
+
+                        <motion.li
+                            initial='hiddenLeft'
+                            whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                            variants={item}
+                            className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+                            <Link href="/store/28" className="relative block group">
+                                <Image
+                                    src={City}
+                                    alt="City"
+                                    className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                                />
+
+                                <div
+                                    className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                                >
+                                    <h3 className="text-xl font-medium text-white">Manchester City 23/24</h3>
                                     <Link href="/store/3">
                                         <span
                                             className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
@@ -216,16 +300,16 @@ const LandingPage = () => {
 
                         <div className="mt-4 md:mt-8">
                             <Link href="/store">
-                            <motion.button
-                                initial='hiddenRight'
-                                whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                                whileHover='hover'
-                                whileTap='tap'
-                                variants={item}
-                                className="inline-flex text-third bg-original border-0 px-12 py-3 
+                                <motion.button
+                                    initial='hiddenRight'
+                                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                                    whileHover='hover'
+                                    whileTap='tap'
+                                    variants={item}
+                                    className="inline-flex text-third bg-original border-0 px-12 py-3 
                                 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
-                                Ir a la tienda
-                            </motion.button>
+                                    Ir a la tienda
+                                </motion.button>
                             </Link>
                         </div>
                     </div>

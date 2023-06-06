@@ -66,9 +66,9 @@ const Checkout = () => {
             setOrderToAdd(newOrder)
             createOrder(newOrder);
             const generateMessage = (): string => {
-                const items = cartItems.map(item => `--${item.name} (${item.size[0]}): ${item.sale}$`).join('%0A');
-                const message = `¡Hola! Toty Sports.%0ALes escribe ${newOrder.buyer.name}${newOrder.buyer.lastName}, 
-                a continuación se detallan los productos correspondientes a mi orden #${newOrder.id}:%0A${items}.%0ATotal a pagar: ${newOrder.amount}$.%0AEstoy ubicado en ${newOrder.buyer.address},
+                const items = newOrder.items.map(item => `--${item.name} (${item.size[0]}, ${item.season}): ${item.sale}$.%0A`).join('%0A');
+                const message = `¡Hola! Toty Sports.%0ALes escribe ${newOrder.buyer.name} ${newOrder.buyer.lastName}, 
+                a continuación se detallan los productos correspondientes a mi orden ${newOrder.id}:%0A${items}.%0ATotal a pagar: ${newOrder.amount}$.%0AEstoy ubicado en ${newOrder.buyer.address},
                 espero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
                 return message;
             };
