@@ -1,20 +1,17 @@
 'use client'
-import { AppContext } from '@/context/AppContex';
-import { JerseyModel } from '@/models/jersey.model';
 import React, { useContext } from 'react'
-import { JerseyMiniCard } from './JerseyMiniCard';
-import empty from '../../assets/emptyCart.jpg';
-
-import { motion } from 'framer-motion';
-
 import Link from 'next/link';
 import Image from 'next/image';
+import { AppContext } from '@/context/AppContex';
+import { JerseyModel } from '@/models/jersey.model';
+import { JerseyMiniCard } from './JerseyMiniCard';
+import empty from '../../assets/emptyCart.jpg';
 
 const Cart = () => {
     const { appState } = useContext(AppContext);
     const cartItems: (JerseyModel[] | number) = appState.cart;
     const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
-    const discount = cartItems.length <= 3 ? cartItems.length * 10 : cartItems.length * 15;
+    const discount = cartItems.length <= 3 ? cartItems.length * 5 : cartItems.length * 10;
 
 
 

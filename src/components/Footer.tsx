@@ -32,7 +32,7 @@ const Footer = () => {
                                     <Link href='https://instagram.com/totysports?igshid=YmMyMTA2M2Y=' className="hover:underline">Instagram</ Link>
                                 </li>
                                 <li>
-                                    <Link href="" className="hover:underline">Whatsapp</Link>
+                                    <Link href="https://api.whatsapp.com/send?phone=+14079526875&text=!Hola TOTY Sports!" className="hover:underline">Whatsapp</Link>
                                 </li>
                             </ul>
                         </div>
