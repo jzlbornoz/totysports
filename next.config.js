@@ -28,8 +28,12 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'umbro.vtexassets.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'store.acmilan.com',
+      },
     ],
   },
 })
 
-module.exports = nextConfig 
+module.exports = nextConfig  

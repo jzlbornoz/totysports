@@ -1,7 +1,7 @@
 'use client'
 import React, { useContext } from 'react'
-import { AppContext } from '@/context/AppContex';
 import Image from 'next/image';
+import { AppContext } from '@/context/AppContex';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMapLocationDot, faShirt, faCalendarDays, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
@@ -61,7 +61,9 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                                         Articulos
                                     </h2>
-                                    {order.items.map((item, index) => <p className="leading-relaxed" key={index}>{`${item.name} - Talla: ${item.size[0]}`}</p>)}
+                                    {order.items.map((item, index) => <p className="leading-relaxed" key={index}>
+                                        {`${item.name} - Talla: ${item.size[0]}`}
+                                    </p>)}
                                 </div>
                             </div>
                             <div className="flex relative pb-12">
@@ -100,7 +102,9 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
         )
     } else {
         return (
-            <div>nada</div>
+            <div className="grid h-screen px-4 bg-white place-content-center">
+                <h1 className="tracking-widest text-gray-500 uppercase"> 404 | Not Found</h1>
+            </div>
         )
     }
 }
