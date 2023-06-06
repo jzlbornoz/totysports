@@ -78,7 +78,12 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                                         Fecha
                                     </h2>
-                                    <p className="leading-relaxed">{order.id}</p>
+                                    <p className="leading-relaxed">
+                                        {`${order.date.getDate()}/${order.date.getMonth() + 1}/${order.date.getFullYear()}`}
+                                    </p>
+                                    <p className="leading-relaxed">
+                                        {`${order.date.getHours()}:${order.date.getMinutes()}`}
+                                    </p>
                                 </div>
                             </div>
                             <div className="flex relative">

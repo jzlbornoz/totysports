@@ -32,7 +32,8 @@ const Checkout = () => {
             email: "",
             phone: ""
         },
-        items: appState.cart
+        items: appState.cart,
+        date: new Date(),
     })
 
     const firstNameRef = useRef<HTMLInputElement>(null);
@@ -59,7 +60,8 @@ const Checkout = () => {
                     phone: phone,
                     address: address,
                     email: email
-                }
+                },
+                date: new Date()
             }
             setOrderToAdd(newOrder)
             createOrder(newOrder);

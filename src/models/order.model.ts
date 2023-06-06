@@ -5,5 +5,6 @@ export interface OrderModel {
     id: number,
     amount: number,
     buyer: BuyerModel,
-    items: JerseyModel[]
+    items: JerseyModel[],
+    date: Date,
 }
