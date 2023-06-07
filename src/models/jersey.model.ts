@@ -13,4 +13,5 @@ export interface JerseyModel {
   img: string[];
   arrive: boolean;
   brand: string;
+  club: boolean
 }

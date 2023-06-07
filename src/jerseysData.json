@@ -19,6 +19,7 @@
             ],
             "link": "https://www.nike.com/sa/t/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC/DN0618-740",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/af8e82f4-0e52-477d-be0c-5183b448ff7a/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f8b5c02f-ed7d-4f81-8e88-d78ef2469f5e/brazil-2022-23-match-home-dri-fit-adv-football-shirt-dXXjGC.png",
@@ -45,6 +46,7 @@
             ],
             "link": "https://www.nike.com/t/brazil-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-LDSSNq/DN0617-433",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5262d7cb-7eb4-4c9b-aff2-6316e0c5cfc4/brazil-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-LDSSNq.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3bea4e4b-bd11-4e5e-94d4-fb9887e5f726/brazil-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-LDSSNq.png",
@@ -76,6 +78,7 @@
             ],
             "link": "https://www.nike.com/gb/t/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ/DN2709-102#Builder",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/692780be-1eda-4965-922e-b6e14f65139a/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/061dc6dc-78c7-4163-bbdf-9f951666aee1/paris-saint-germain-2022-23-match-third-dri-fit-adv-football-shirt-VPDGLZ.png"
@@ -103,6 +106,7 @@
             ],
             "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
             "brand": "Adidas",
+            "club": false,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d9eda58f85474889d3aefc00a7a8a2_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM30.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aede62a81e474c21816faefc00a7b33c_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM31.jpg",
@@ -132,6 +136,7 @@
             ],
             "link": "https://www.adidas.com/us/argentina-22-away-jersey/HF2159.html",
             "brand": "Adidas",
+            "club": false,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/278a6a0efa974bcbb645ae83010aa966_9366/Argentina_22_Away_Jersey_Blue_HF2159_01_laydown.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f108decdd25f4c8f93d4ae83010aafb2_9366/Argentina_22_Away_Jersey_Blue_HF2159_02_laydown.jpg"
@@ -155,6 +160,7 @@
             ],
             "link": "https://www.adidas.com/us/real-madrid-22-23-home-authentic-jersey/HF0292.html",
             "brand": "Adidas",
+            "club": true,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3ebf275ca30c47709046ae7500e7d371_9366/Real_Madrid_22-23_Home_Authentic_Jersey_White_HF0292_01_laydown.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/76e0e019b387480c89a4ae2700958313_9366/Real_Madrid_22-23_Home_Authentic_Jersey_White_HF0292_41_detail.jpg",
@@ -184,6 +190,7 @@
             ],
             "link": "https://www.adidas.com/us/real-madrid-21-22-home-authentic-jersey/GQ1360.html",
             "brand": "Adidas",
+            "club": true,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8706654fa4c2405f9868acda00f275e5_9366/Real_Madrid_21-22_Home_Authentic_Jersey_White_GQ1360_01_laydown.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4c921b52d6af4b8aafacad2d0113642c_9366/Real_Madrid_21-22_Home_Authentic_Jersey_White_GQ1360_02_laydown_hover.jpg"
@@ -206,6 +213,7 @@
             ],
             "link": "https://www.nike.com/gb/t/inter-milan-2022-23-match-home-dri-fit-adv-football-jersey-1kgVV8/DJ7645-413",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/c458f59f-690d-4524-9993-1dcff1aefc37/inter-milan-2022-23-match-home-dri-fit-adv-football-jersey-1kgVV8.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/b47cc32e-5bb8-4bf1-97fb-fa18f0f5eb27/inter-milan-2022-23-match-home-dri-fit-adv-football-jersey-1kgVV8.png",
@@ -229,6 +237,7 @@
             ],
             "link": "https://www.nike.com/gb/t/inter-milan-2022-23-stadium-away-dri-fit-football-shirt-GJrqgG/DJ7680-102",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/c52ac525-5f9f-4dba-9ae2-898276ba85bf/inter-milan-2022-23-stadium-away-dri-fit-football-shirt-GJrqgG.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/e7083705-96d9-478b-b530-59b7380fa8b9/inter-milan-2022-23-stadium-away-dri-fit-football-shirt-GJrqgG.png"
@@ -253,6 +262,7 @@
             ],
             "link": "https://www.nike.com/gb/t/fc-barcelona-2022-23-match-home-dri-fit-adv-football-shirt-CnmrqH/DJ7643-453",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/cf8d49df-ce3d-4559-bf9c-d1fda5b67126/fc-barcelona-2022-23-match-home-dri-fit-adv-football-shirt-CnmrqH.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/6a642605-4284-4ec7-ac51-ce19b842d8c8/fc-barcelona-2022-23-match-home-dri-fit-adv-football-shirt-CnmrqH.png",
@@ -278,6 +288,7 @@
             ],
             "link": "https://www.nike.com/gb/t/fc-barcelona-2022-23-match-fourth-dri-fit-adv-football-shirt-xzlxv3/DR5077-729",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d467fcd1-bc08-46fe-bfc7-4599e62089c5/fc-barcelona-2022-23-match-fourth-dri-fit-adv-football-shirt-xzlxv3.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e315a9bb-3cd0-4df7-9b4d-d7f37e051299/fc-barcelona-2022-23-match-fourth-dri-fit-adv-football-shirt-xzlxv3.png",
@@ -305,6 +316,7 @@
             ],
             "link": "https://www.nike.com/t/england-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-xPbb23/DN0622-600",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2af63bb8-f594-42cb-a0ed-269ec7d899c3/england-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-xPbb23.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/441dcfdf-8825-4f41-9340-bb8c63ba62a1/england-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-xPbb23.png",
@@ -331,6 +343,7 @@
             ],
             "link": "https://www.nike.com/t/fff-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-0S8S7G/DN0625-410",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c16dc797-3480-43af-a1c6-fbbfa29ad742/fff-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-0S8S7G.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/636c98f8-7cd4-4953-8493-2f9c7f6c2f9b/fff-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-0S8S7G.png",
@@ -358,6 +371,7 @@
             ],
             "link": "https://www.nike.com/t/fff-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-QljbkG/DN0624-100",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0128ef7f-a6f9-4c0d-8e05-c206521735f7/fff-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-QljbkG.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b9d17955-30fb-4c1a-ae09-4d050c515fde/fff-2022-23-match-away-mens-dri-fit-adv-soccer-jersey-QljbkG.png",
@@ -385,6 +399,7 @@
             ],
             "link": "https://www.nike.com/t/portugal-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-s7wxZ2/DN0627-628",
             "brand": "Nike",
+            "club": false,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/047b00ea-d92c-4268-887d-886ec3259c8c/portugal-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-s7wxZ2.png",
                 "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5c7e7e9d-e44e-4588-859c-c9ecc900acb1/portugal-2022-23-match-home-mens-dri-fit-adv-soccer-jersey-s7wxZ2.png",
@@ -413,6 +428,7 @@
             ],
             "link": "https://us.puma.com/us/en/pd/manchester-city-f-c--home-22-23-authentic-mens-jersey/765709?search=true&swatch=01",
             "brand": "Puma",
+            "club": true,
             "img": [
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/765709/01/fnd/PNA/fmt/png/Manchester-City-F.C.-Home-'22/'23-Authentic-Men's-Jersey",
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/765709/01/mod05/fnd/PNA/fmt/png/Manchester-City-F.C.-Home-'22/'23-Authentic-Men's-Jersey",
@@ -440,6 +456,7 @@
             ],
             "link": "https://us.puma.com/us/en/pd/a-c--milan-x-koch%C3%A9-soccer-jersey/773362?swatch=01&searchQuery=%20milan",
             "brand": "Puma",
+            "club": true,
             "img": [
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/773362/01/fnd/PNA/fmt/png/A.C.-MILAN-x-KOCH%C3%89-Soccer-Jersey",
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/773362/01/dt01/fnd/PNA/fmt/png/A.C.-MILAN-x-KOCH%C3%89-Soccer-Jersey"
@@ -468,6 +485,7 @@
             ],
             "link": "https://www.umbro.com.br/camisa-masculina-umbro-santos-of-1-2022--atleta-s-n--1046645/p",
             "brand": "Umbro",
+            "club": true,
             "img": [
                 "https://umbro.vtexassets.com/arquivos/ids/448652-800-auto?v=637922000962270000&width=800&height=auto&aspect=true",
                 "https://umbro.vtexassets.com/arquivos/ids/448653-800-auto?v=637922000983700000&width=800&height=auto&aspect=true",
@@ -497,6 +515,7 @@
             ],
             "link": "https://www.umbro.com.br/camisa-masculina-umbro-santos-of-2-2022--atleta-s-n--1046726/p",
             "brand": "Umbro",
+            "club": true,
             "img": [
                 "https://umbro.vtexassets.com/arquivos/ids/448658-800-auto?v=637922002839670000&width=800&height=auto&aspect=true",
                 "https://umbro.vtexassets.com/arquivos/ids/448659-800-auto?v=637922002864670000&width=800&height=auto&aspect=true",
@@ -523,6 +542,7 @@
             ],
             "link": "https://www.adidas.com/us/juventus-23-24-home-authentic-jersey/HR8248.html?",
             "brand": "Adidas",
+            "club": true,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ae4f49092f6d44488e5f0755a138b2e6_9366/Juventus_23-24_Home_Authentic_Jersey_Black_HR8248_HM30.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/56bf0eb77d4d40599e4a09352fc238d8_9366/Juventus_23-24_Home_Authentic_Jersey_Black_HR8248_HM31.jpg",
@@ -550,6 +570,7 @@
             ],
             "link": "https://www.adidas.com/us/fc-bayern-23-24-home-authentic-jersey/HR3729.html",
             "brand": "Adidas",
+            "club": true,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/718b7536bad4484c918f0d96779e4c23_9366/FC_Bayern_23-24_Home_Authentic_Jersey_White_HR3729_HM30.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/aacfacb6bd9c46b29a228da9b23303a2_9366/FC_Bayern_23-24_Home_Authentic_Jersey_White_HR3729_HM31.jpg",
@@ -578,6 +599,7 @@
             ],
             "link": "https://www.nike.com/gb/t/liverpool-fc-2023-24-match-home-dri-fit-adv-football-shirt-4H2Gr7/DX2618-688",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c36f23b-34ac-40ed-be7b-b4e2cfa43d83/liverpool-fc-2023-24-match-home-dri-fit-adv-football-shirt-4H2Gr7.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c92fc44-bc04-49c1-86d6-48b578555eba/liverpool-fc-2023-24-match-home-dri-fit-adv-football-shirt-4H2Gr7.png",
@@ -607,6 +629,7 @@
             ],
             "link": "https://www.nike.com/gb/t/atletico-madrid-2023-24-match-away-dri-fit-adv-football-shirt-cLLFq2/FJ6810-418",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c1959ff8-3197-490d-8231-223491335bc3/atletico-madrid-2023-24-match-away-dri-fit-adv-football-shirt-cLLFq2.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a9fbe603-6f53-4594-bf9b-938a15eda219/atletico-madrid-2023-24-match-away-dri-fit-adv-football-shirt-cLLFq2.png",
@@ -637,6 +660,7 @@
             ],
             "link": "https://www.nike.com/lu/en/t/paris-saint-germain-2023-24-match-home-dri-fit-adv-football-shirt-6J7VFC",
             "brand": "Nike",
+            "club": true,
             "img": [
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8031439b-3e98-4c8c-9774-54d1ef2f2b3e/paris-saint-germain-2023-24-match-home-dri-fit-adv-football-shirt-6J7VFC.png",
                 "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f6b34676-724c-45c8-85f5-5610e66a9cff/paris-saint-germain-2023-24-match-home-dri-fit-adv-football-shirt-6J7VFC.png",
@@ -668,6 +692,7 @@
             ],
             "link": "https://eu.puma.com/lv/en/pd/ac-milan-23%2F24-home-authentic-jersey/770382.html?dwvar_770382_color=01#",
             "brand": "Puma",
+            "club": true,
             "img": [
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/770382/01/fnd/EEA/fmt/png/AC-Milan-23/24-Home-Authentic-Jersey",
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/770382/01/bv/fnd/EEA/fmt/png/AC-Milan-23/24-Home-Authentic-Jersey",
@@ -699,6 +724,7 @@
             ],
             "link": "https://us.puma.com/us/en/pd/manchester-city-23%2F24-mens-authentic-home-jersey/770437?size=0170&swatch=01",
             "brand": "Puma",
+            "club": true,
             "img": [
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/770437/01/fnd/PNA/fmt/png/Manchester-City-23/24-Men's-Authentic-Home-Jersey",
                 "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/770437/01/mod01/fnd/PNA/fmt/png/Manchester-City-23/24-Men's-Authentic-Home-Jersey",
@@ -727,6 +753,7 @@
             ],
             "link": "https://www.adidas.com/us/arsenal-23-24-home-authentic-jersey/HR6931.html?",
             "brand": "Puma",
+            "club": true,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e2d522207ea34b7284080f0223b7e1b8_9366/Arsenal_23-24_Home_Authentic_Jersey_Red_HR6931_HM30.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e473a5b2d61d4c058023ff48be36c035_9366/Arsenal_23-24_Home_Authentic_Jersey_Red_HR6931_HM31.jpg",
@@ -755,6 +782,7 @@
             ],
             "link": "https://www.adidas.com/us/italy-2023-home-authentic-jersey/HS9891.html",
             "brand": "Adidas",
+            "club": false,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/050a8ad7859946f3ad4eaf1f00f5c50d_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_01_laydown.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/805b3002a2c949688cbbaf8d009d73b1_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_02_laydown.jpg",
@@ -782,6 +810,7 @@
             ],
             "link": "https://www.adidas.com/us/italy-2023-away-authentic-jersey/HS9894.html?pr=product_rr&slot=1&rec=mt",
             "brand": "Adidas",
+            "club": false,
             "img": [
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4a93a6eca9e14343970caf7f0113532f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_01_laydown.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5981eaafea224e0994caaf7f01135a7f_9366/Italy_2023_Away_Authentic_Jersey_White_HS9894_02_laydown.jpg",

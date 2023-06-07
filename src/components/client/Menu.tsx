@@ -69,7 +69,7 @@ const Menu = () => {
                             <div className="flex items-center gap-2">
                                 <FontAwesomeIcon icon={faHouseCircleCheck} />
 
-                                <span className="text-sm font-medium">Stock</span>
+                                <span className="text-sm font-medium">Tipos</span>
                             </div>
 
                             <span className="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -92,7 +92,7 @@ const Menu = () => {
                         <nav aria-label="Teams Nav" className="mt-2 flex flex-col px-4">
                             <Link
                                 onClick={() => toggleMenu()}
-                                href="#"
+                                href="/store/nations"
                                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
                                  hover:bg-gray-100 hover:text-gray-700"
                             >
@@ -103,14 +103,14 @@ const Menu = () => {
 
                             <Link
                                 onClick={() => toggleMenu()}
-                                href="#"
+                                href="/store/clubs"
                                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500
                                  hover:bg-gray-100 hover:text-gray-700"
                             >
                                 <FontAwesomeIcon icon={faShieldHalved} />
 
 
-                                <span className="text-sm font-medium"> Equipos </span>
+                                <span className="text-sm font-medium"> Clubes </span>
                             </Link>
                         </nav>
                     </details>
