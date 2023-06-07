@@ -523,6 +523,40 @@
             ]
         },
         {
+            "id": 30,
+            "name": "Inter Miami CF 23/24 Away Authentic Jersey",
+            "size": [
+                "L",
+                "M",
+                "S"
+            ],
+            "price": 150,
+            "sale": 75,
+            "arrive": false,
+            "team": "Inter Miami CF",
+            "season": "23/24",
+            "stock": 0,
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/inter-miami-cf-23-24-away-authentic-jersey/IC9621.html",
+            "brand": "Adidas",
+            "club": true,
+            "players": [
+                "Messi",
+                "Martinez"
+            ],
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d85e73efd757416ba661af33010efd5a_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/fdbce2f9a54b48df8194af33010f048c_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/1e772cfec18d40cb97caaf33010ee8d9_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_43_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ceac846287a84bb49ddaaf33010ecde3_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/351b3fb5c44b42a9bbcbaf33010ed8b7_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ef821786545b4491a712af33010eaefe_9366/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IC9621_22_model.jpg"
+            ]
+        },
+        {
             "id": 22,
             "name": "Juventus 23/24 Home Authentic Jersey",
             "size": [
@@ -531,7 +565,7 @@
                 "S"
             ],
             "price": 150,
-            "sale": 75,
+            "sale": 95,
             "arrive": false,
             "team": "Juventus",
             "season": "23/24",
