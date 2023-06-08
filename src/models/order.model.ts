@@ -1,4 +1,5 @@
 import { BuyerModel } from "./buyer.model";
+import { DateModel } from "./date.model";
 import { JerseyModel } from "./jersey.model";
 
 export interface OrderModel {
@@ -6,5 +7,5 @@ export interface OrderModel {
     amount: number,
     buyer: BuyerModel,
     items: JerseyModel[],
-    date: Date,
+    date: DateModel,
 }

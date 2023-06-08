@@ -89,10 +89,10 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                         Fecha
                                     </h2>
                                     <p className="leading-relaxed">
-                                        {`${order.date.getDate()}/${order.date.getMonth() + 1}/${order.date.getFullYear()}`}
+                                        {`${order.date.day}/${order.date.month + 1}/${order.date.year}`}
                                     </p>
                                     <p className="leading-relaxed">
-                                        {`${order.date.getHours()}:${order.date.getMinutes()}`}
+                                        {`${order.date.hour}:${order.date.minute}`}
                                     </p>
                                 </div>
                             </div>

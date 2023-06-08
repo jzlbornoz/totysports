@@ -33,7 +33,13 @@ const Checkout = () => {
             phone: ""
         },
         items: appState.cart,
-        date: new Date(),
+        date: {
+            minute: 0,
+            hour: 0,
+            month: 0,
+            day: 0,
+            year: 0
+        },
     })
 
     const firstNameRef = useRef<HTMLInputElement>(null);
@@ -52,6 +58,7 @@ const Checkout = () => {
         const email = emailRef.current?.value;
 
         if (name && lastName && phone && address && email) {
+            const date = new Date();
             const newOrder: OrderModel = {
                 ...orderToAdd,
                 buyer: {
@@ -61,7 +68,13 @@ const Checkout = () => {
                     address: address,
                     email: email
                 },
-                date: new Date()
+                date: {
+                    minute: date.getMinutes(),
+                    month: date.getMonth(),
+                    year: date.getFullYear(),
+                    day: date.getDate(),
+                    hour: date.getHours()
+                }
             }
             setOrderToAdd(newOrder)
             createOrder(newOrder);
