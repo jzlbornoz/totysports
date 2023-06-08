@@ -77,7 +77,7 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
 
                 <h3 className="mt-4 text-lg font-medium text-gray-900 md:truncate">{jersey.name}</h3>
 
-                <p className="mt-1.5 text-sm text-gray-700">{jersey.sale}$</p>
+                <p className="mt-1.5 text-sm text-gray-700">{jersey.sale ? jersey.sale : jersey.price}$</p>
 
                 <form className="mt-4">
                     <button

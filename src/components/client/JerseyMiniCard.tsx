@@ -23,12 +23,12 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
 
                 <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                     <div>
-                        <dt className="inline">Size:</dt>
+                        <dt className="inline">Size: </dt>
                         <dd className="inline text-third">{jersey.size[0]}</dd>
                     </div>
                     {(jersey.players && jersey.players[0] != "S") &&
                         <div>
-                            <dt className="inline">Dorsal:</dt>
+                            <dt className="inline">Dorsal: </dt>
                             <dd className="inline">{jersey.players[0]}</dd>
                         </div>}
 
@@ -36,11 +36,11 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
             </div>
 
             <div className="flex flex-1 items-center justify-end gap-2">
-            <dl className="mt-0.5 space-y-px text-[10px] text-gray-600 mr-3">
-                <div>
-                    <dt className="inline">Precio:</dt>
-                    <dd className="inline text-third">{jersey.sale}$</dd>
-                </div>
+                <dl className="mt-0.5 space-y-px text-[10px] text-gray-600 mr-3">
+                    <div>
+                        <dt className="inline">Precio: </dt>
+                        <dd className="inline text-third">{jersey.sale ? jersey.sale : jersey.price}$</dd>
+                    </div>
                 </dl>
                 <form>
                     <label htmlFor="Line2Qty" className="sr-only"> Quantity </label>

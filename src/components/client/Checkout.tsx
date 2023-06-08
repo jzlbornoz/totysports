@@ -11,7 +11,7 @@ const Checkout = () => {
     const { appState, createOrder } = useContext(AppContext);
     const cartItems: (JerseyModel[] | number) = appState.cart;
 
-    const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
+    const finalPrice = cartItems.reduce((acc, currentValue) => acc + (currentValue.sale || currentValue.price), 0);
     const discount = cartItems.length <= 3 ? cartItems.length * 5 : cartItems.length * 10;
     const priceWithDiscount = finalPrice - discount;
 
@@ -133,14 +133,20 @@ const Checkout = () => {
 
                                                 <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                                                     <div>
-                                                        <dt className="inline">Size:</dt>
+                                                        <dt className="inline">Size: </dt>
                                                         <dd className="inline">{item.size[0]}</dd>
                                                     </div>
 
                                                     {item.players ? <div>
-                                                        <dt className="inline">Dorsal:</dt>
+                                                        <dt className="inline">Dorsal: </dt>
                                                         <dd className="inline">{item.players[0]}</dd>
                                                     </div> : null}
+                                                </dl>
+                                                <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                                                    <div>
+                                                        <dt className="inline">Price: </dt>
+                                                        <dd className="inline">{item.sale || item.price}$</dd>
+                                                    </div>
                                                 </dl>
                                             </div>
                                         </li>

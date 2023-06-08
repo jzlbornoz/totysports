@@ -10,7 +10,7 @@ import empty from '../../assets/emptyCart.jpg';
 const Cart = () => {
     const { appState } = useContext(AppContext);
     const cartItems: (JerseyModel[] | number) = appState.cart;
-    const finalPrice = cartItems.reduce((acc, currentValue) => acc + currentValue.sale, 0);
+    const finalPrice = cartItems.reduce((acc, currentValue) => acc + (currentValue.sale || currentValue.price), 0);
     const discount = cartItems.length <= 3 ? cartItems.length * 5 : cartItems.length * 10;
 
 
