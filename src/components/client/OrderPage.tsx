@@ -12,6 +12,16 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
     const order = appState.orders.find((order) => order.id === parseInt(orderId));
 
     if (order) {
+        const generateMessage = (): string => {
+            const items = order.items.map(item => `--${item.name} (${item.size[0]}, ${item.season}): ${item.sale}$ ${item.stock
+                > 0
+                ? `Disponibilidad Inmediata`
+                : `Pre-Orden`}.%0A`).join('%0A');
+            const message = `¡Hola! Toty Sports.%0ALes escribe ${order.buyer.name} ${order.buyer.lastName}, 
+            a continuación se detallan los productos correspondientes a mi orden ${order.id}:%0A${items}.%0AMonto final: ${order.amount}$.%0AEstoy ubicado en ${order.buyer.address},
+            espero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
+            return message;
+        };
         return (
             <section className="text-gray-600 body-font bg-white">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
@@ -86,7 +96,7 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex relative">
+                            <div className="flex relative items-center">
                                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary inline-flex 
                                 items-center justify-center text-white relative z-10">
                                     <FontAwesomeIcon icon={faMoneyBill} />
@@ -96,6 +106,13 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                         Monto
                                     </h2>
                                     <p className="leading-relaxed">{order.amount}$</p>
+                                </div>
+                                <div className="flex-grow pl-4">
+                                    <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 
+                                    border border-gray-400 rounded shadow"
+                                        onClick={() => generateMessage()}>
+                                        Reenviar Orden
+                                    </button>
                                 </div>
                             </div>
                         </div>
