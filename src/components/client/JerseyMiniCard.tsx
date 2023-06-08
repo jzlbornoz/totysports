@@ -31,10 +31,17 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
                             <dt className="inline">Dorsal:</dt>
                             <dd className="inline">{jersey.players[0]}</dd>
                         </div>}
+
                 </dl>
             </div>
 
             <div className="flex flex-1 items-center justify-end gap-2">
+            <dl className="mt-0.5 space-y-px text-[10px] text-gray-600 mr-3">
+                <div>
+                    <dt className="inline">Precio:</dt>
+                    <dd className="inline text-third">{jersey.sale}$</dd>
+                </div>
+                </dl>
                 <form>
                     <label htmlFor="Line2Qty" className="sr-only"> Quantity </label>
 
