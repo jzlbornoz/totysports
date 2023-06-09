@@ -5,6 +5,7 @@ import { AppContext } from '@/context/AppContex';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMapLocationDot, faShirt, faCalendarDays, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const OrderPage = ({ orderId }: { orderId: string }) => {
 
@@ -25,6 +26,27 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
         return (
             <section className="text-gray-600 body-font bg-white">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
+                    <Link
+                        className="inline-block rounded-full border border-third bg-transparent p-3 text-third hover:text-primary"
+                        href="/orders"
+                    >
+                        <span className="sr-only"> Back </span>
+
+                        <svg
+                            className="h-5 w-5 rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                        </svg>
+                    </ Link>
                     <div className="flex flex-wrap w-full">
                         <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
                             <div className="flex relative pb-12">
@@ -39,8 +61,8 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                                         Comprador
                                     </h2>
-                                    <p className="leading-relaxed">{order.buyer.name}</p>
-                                    <p className="leading-relaxed">{order.buyer.lastName}</p>
+                                    <p className="leading-relaxed">Nombre: {order.buyer.name}</p>
+                                    <p className="leading-relaxed">Apellido: {order.buyer.lastName}</p>
                                 </div>
                             </div>
                             <div className="flex relative pb-12">
@@ -55,8 +77,8 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                                         Direccion
                                     </h2>
-                                    <p className="leading-relaxed">{order.buyer.address}</p>
-                                    <p className="leading-relaxed">{order.buyer.phone}</p>
+                                    <p className="leading-relaxed">Ciudad: {order.buyer.address}</p>
+                                    <p className="leading-relaxed">Telefono: {order.buyer.phone}</p>
                                 </div>
                             </div>
                             <div className="flex relative pb-12">
@@ -89,10 +111,10 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                         Fecha
                                     </h2>
                                     <p className="leading-relaxed">
-                                        {`${order.date.day}/${order.date.month + 1}/${order.date.year}`}
+                                        Dia: {`${order.date.day}/${order.date.month + 1}/${order.date.year}`}
                                     </p>
                                     <p className="leading-relaxed">
-                                        {`${order.date.hour}:${order.date.minute}`}
+                                        Hora: {`${order.date.hour}:${order.date.minute}`}
                                     </p>
                                 </div>
                             </div>

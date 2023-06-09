@@ -5,7 +5,7 @@ const Alert = ({ alert, handleClose }: { alert: AlertState, handleClose: () => v
     if (alert.active && alert.autoClose) {
         setTimeout(() => {
             handleClose();
-        }, 9000)
+        }, 5000)
     }
 
     return (
