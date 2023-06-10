@@ -23,11 +23,12 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
             espero la confirmacion de la disponibilidad de los articulos para realizar el pago.`
             return message;
         };
+        generateMessage();
         return (
             <section className="text-gray-600 body-font bg-white">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
                     <Link
-                        className="inline-block rounded-full border border-third bg-transparent p-3 text-third hover:text-primary"
+                        className="inline-block rounded-full border border-third bg-transparent p-3 mb-6 text-third hover:text-primary"
                         href="/orders"
                     >
                         <span className="sr-only"> Back </span>
@@ -130,11 +131,13 @@ const OrderPage = ({ orderId }: { orderId: string }) => {
                                     <p className="leading-relaxed">{order.amount}$</p>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 
+                                    <Link href={`https://api.whatsapp.com/send?phone=+14079526875&text=${generateMessage()}`}>
+                                        <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 
                                     border border-gray-400 rounded shadow"
-                                        onClick={() => generateMessage()}>
-                                        Reenviar Orden
-                                    </button>
+                                            type='button'>
+                                            Reenviar Orden
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
