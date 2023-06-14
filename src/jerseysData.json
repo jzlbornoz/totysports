@@ -798,6 +798,43 @@
             ]
         },
         {
+            "id": 31,
+            "name": "Real Madrid 23/24 Home Authentic Jersey",
+            "size": [
+                "XL",
+                "L",
+                "M",
+                "S"
+            ],
+            "price": 150,
+            "sale": 95,
+            "arrive": false,
+            "team": "Real Madrid",
+            "season": "23/24",
+            "stock": 0,
+            "players": [
+                "Vinicius Jr",
+                "Bellingham",
+                "Rodrygo",
+                "Modric",
+                "Valverde",
+                "Camavinga"
+            ],
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/real-madrid-23-24-home-authentic-jersey/IA5139.html",
+            "brand": "Adidas",
+            "club": true,
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/5b95dd8b491141d08771335261db609c_9366/Real_Madrid_23-24_Home_Authentic_Jersey_White_IA5139_HM30.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/903fd4e9f8c04345ac0a8db29b177c6c_9366/Real_Madrid_23-24_Home_Authentic_Jersey_White_IA5139_HM31.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/8a46f1fcd09a440cac68ba5cd14d1e7e_9366/Real_Madrid_23-24_Home_Authentic_Jersey_White_IA5139_HM1.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ff4e34ee2fe34ac8860f2d2bd33d4d1f_9366/Real_Madrid_23-24_Home_Authentic_Jersey_White_IA5139_HM4.jpg"
+            ]
+        },
+        {
             "id": 2,
             "name": "ITALY 2023 HOME AUTHENTIC JERSEY",
             "size": [

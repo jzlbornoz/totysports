@@ -32,6 +32,10 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'store.acmilan.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'sportal365images.com',
+      },
     ],
   },
 })

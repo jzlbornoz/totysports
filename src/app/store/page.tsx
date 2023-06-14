@@ -74,9 +74,9 @@ export default function StorePage() {
                         <div className="lg:col-span-2 lg:py-8">
                             <ul className="grid grid-cols-2 gap-4">
                                 <li>
-                                    <Link href={`/store/${sortedData[8].id}`} className="block group">
+                                    <Link href={`/store/${sortedData[9].id}`} className="block group">
                                         <Image
-                                            src={sortedData[8].img[5]}
+                                            src={"https://sportal365images.com/process/smp-images-production/ringier.africa/14062023/90cafd15-c23f-4370-8099-d6bf21a34c30.jpg"}
                                             alt=""
                                             className="object-cover w-full rounded aspect-square"
                                             width={1200}
@@ -87,10 +87,10 @@ export default function StorePage() {
                                             <h3
                                                 className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
                                             >
-                                                {sortedData[8].name}
+                                                {sortedData[9].name}
                                             </h3>
 
-                                            <p className="mt-1 text-sm text-gray-700">{sortedData[8].sale}$</p>
+                                            <p className="mt-1 text-sm text-gray-700">{sortedData[9].sale}$</p>
                                         </div>
                                     </Link>
                                 </li>
