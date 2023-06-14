@@ -9,7 +9,7 @@ const OrderCard = ({ data }: { data: OrderModel }) => {
             className="group flex flex-col justify-between rounded-sm bg-white p-4 shadow-xl transition-shadow hover:shadow-lg sm:p-6 lg:p-8"
         >
             <div>
-                <h3 className="text-2xl font-bold text-secondary sm:text-5xl">#{data.id}</h3>
+                <h3 className="text-xl font-bold text-secondary">Orden #{data.id}</h3>
 
                 <div className="mt-4 border-t-2 border-gray-100 pt-4">
                     <p className="text-sm font-medium  text-third">{`Monto: ${data.amount}`}</p>

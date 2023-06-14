@@ -44,7 +44,7 @@ export default function StorePage() {
                     </li>
 
                     <li>
-                        <Link href="/store/clubs" className="block transition hover:text-gray-700"> Tienda </Link>
+                        <Link href="/store" className="block transition hover:text-gray-700"> Tienda </Link>
                     </li>
                 </ol>
             </nav>

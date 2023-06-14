@@ -11,15 +11,20 @@ const Orders = () => {
 
     return (
         <>
-            <section className="bg-white mt-[10vh] min-h-[100vh]">
-                <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-                    <h2 className="text-center text-4xl font-bold tracking-tight sm:text-5xl text-third">
-                        Tus ordenes de compra
-                    </h2>
+            <section>
+                <header>
+                    <h2 className="text-xl font-bold text-third sm:text-3xl mt-[5vh]">Tus Ordenes de Compra</h2>
 
-                    <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-                        {orders.map((order, index) => <OrderCard data={order} key={index} />)}
-                    </div>
+                    <p className="mt-4 text-gray-500">
+                        Tu registro de las compras realizadas.
+                    </p>
+                    <p className=" text-gray-500">
+                        Total de ordenes: {orders.length}
+                    </p>
+                </header>
+
+                <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+                    {orders.map((order, index) => <OrderCard data={order} key={index} />)}
                 </div>
             </section>
         </>
