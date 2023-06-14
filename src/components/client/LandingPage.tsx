@@ -337,15 +337,19 @@ const LandingPage = () => {
                             con nuestras opciones al por mayor, de alta calidad y precios competitivos.
                         </p>
                         <div className="flex justify-center">
+                            <Link href='/form'>
                             <motion.button
                                 initial='hiddenRight'
                                 whileInView={appState.menuIsOpen ? ' ' : 'show'}
                                 whileHover='hover'
                                 whileTap='tap'
+                                type='button'
                                 variants={item}
                                 className="inline-flex text-white bg-success border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
                                 Contactanos
                             </motion.button>
+                            </Link>
+                          
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
