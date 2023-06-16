@@ -272,11 +272,11 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                             className="peer sr-only"
                                         />
 
-                                        <span
+                                        <Link href={productItem.link}
                                             className="group inline-block rounded-full border px-3 py-1 text-xs font-medium"
                                         >
                                             {productItem.brand}
-                                        </span>
+                                        </Link>
                                     </label>
                                 </div>
                             </fieldset>

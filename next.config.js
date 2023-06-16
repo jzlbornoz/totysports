@@ -36,6 +36,10 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'sportal365images.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
+      },
     ],
   },
 })

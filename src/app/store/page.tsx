@@ -96,9 +96,9 @@ export default function StorePage() {
                                 </li>
 
                                 <li>
-                                    <Link href={`/store/${sortedData[7].id}`} className="block group">
+                                    <Link href={`/store/${sortedData[10].id}`} className="block group">
                                         <Image
-                                            src={sortedData[7].img[1]}
+                                            src="https://cdn.shopify.com/s/files/1/0668/2198/0439/files/GP21574-Mejorado-NR.jpg?v=1686798025"
                                             alt=""
                                             className="object-cover w-full rounded aspect-square"
                                             width={1200}
@@ -109,10 +109,10 @@ export default function StorePage() {
                                             <h3
                                                 className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
                                             >
-                                                {sortedData[7].name}
+                                                {sortedData[10].name}
                                             </h3>
 
-                                            <p className="mt-1 text-sm text-gray-700">{sortedData[7].sale}$</p>
+                                            <p className="mt-1 text-sm text-gray-700">{sortedData[10].sale}$</p>
                                         </div>
                                     </Link>
                                 </li>
