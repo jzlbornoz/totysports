@@ -17,7 +17,7 @@ const Cart = () => {
 
     if (appState.cart.length > 0) {
         return (
-            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 bg-white mt-[11vh]">
+            <div className="mx-auto min-h-[90vh] max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 bg-white mt-[11vh]">
                 <div className="mx-auto max-w-3xl">
                     <header className="text-center">
                         <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">Your Cart</h1>

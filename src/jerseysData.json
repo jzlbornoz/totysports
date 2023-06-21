@@ -91,7 +91,7 @@
                 "M",
                 "L"
             ],
-            "price": 150,
+            "price": 90,
             "sale": 80,
             "arrive": false,
             "team": "Argentina",
@@ -104,14 +104,15 @@
                 "HEAT.RDY",
                 "Slim fit"
             ],
-            "link": "https://www.adidas.com/us/argentina-22-home-authentic-jersey/HF2157.html",
+            "link": "https://www.adidas.com/us/argentina-22-winners-home-jersey/IB3597.html",
             "brand": "Adidas",
             "club": false,
             "img": [
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d9eda58f85474889d3aefc00a7a8a2_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM30.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aede62a81e474c21816faefc00a7b33c_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM31.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7948e85fa74a4850a7e8aefd00e2dd0b_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM8.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bfcdddfa29cc49ee8023aefd00e2e4e7_9366/Argentina_22_Home_Authentic_Jersey_White_HF2157_HM9.jpg"
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/c57bddfd0cb240d8baa2af7001097e68_9366/Argentina_22_Winners_Home_Jersey_White_IB3597_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/c6108d577bd24a308fadaf7200c89c72_9366/Argentina_22_Winners_Home_Jersey_White_IB3597_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b1bf7415379d446c88f5af7200c879f3_9366/Argentina_22_Winners_Home_Jersey_White_IB3597_21_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4b34c44a715347a6bfe0af7100dc76cd_9366/Argentina_22_Winners_Home_Jersey_White_IB3597_HM2.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/31da7da10f3740338e19af7100dc7705_9366/Argentina_22_Winners_Home_Jersey_White_IB3597_HM3.jpg"
             ]
         },
         {
@@ -866,6 +867,35 @@
             ]
         },
         {
+            "id": 33,
+            "name": "Los Angeles FC 23/24 Away Authentic Jersey",
+            "size": [
+                "L",
+                "M",
+                "S"
+            ],
+            "price": 150,
+            "sale": 95,
+            "arrive": false,
+            "team": "Los Angeles FC",
+            "season": "23/24",
+            "stock": 0,
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/los-angeles-fc-23-24-away-authentic-jersey/IN2459.html",
+            "brand": "Adidas",
+            "club": true,
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4ea5ac695529430f948037b646d28a48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9c707a6785d4f808e46263139a06b03_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e6cea70341fe48e9b55729ff1b3e2d48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/7f85c2cfd2d043b09b307027f27ce736_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/2dad2c633a344ee1986846407996731e_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_21_model.jpg"
+            ]
+        },
+        {
             "id": 2,
             "name": "ITALY 2023 HOME AUTHENTIC JERSEY",
             "size": [
@@ -891,6 +921,64 @@
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/15c6ed66f54d44a8ad9daf560100c4d6_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_42_detail.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3d931175001844e7b666af560100d0cc_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_43_detail.jpg",
                 "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5d6c5789140b47918750af8900d54d54_9366/Italy_2023_Home_Authentic_Jersey_Blue_HS9891_HM3.jpg"
+            ]
+        },
+        {
+            "id": 33,
+            "name": "Los Angeles FC 23/24 Away Authentic Jersey",
+            "size": [
+                "L",
+                "M",
+                "S"
+            ],
+            "price": 150,
+            "sale": 95,
+            "arrive": false,
+            "team": "Los Angeles FC",
+            "season": "23/24",
+            "stock": 0,
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/los-angeles-fc-23-24-away-authentic-jersey/IN2459.html",
+            "brand": "Adidas",
+            "club": true,
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4ea5ac695529430f948037b646d28a48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9c707a6785d4f808e46263139a06b03_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e6cea70341fe48e9b55729ff1b3e2d48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/7f85c2cfd2d043b09b307027f27ce736_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/2dad2c633a344ee1986846407996731e_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_21_model.jpg"
+            ]
+        },
+        {
+            "id": 34,
+            "name": "LA Galaxy 23/24 Away Authentic Jersey",
+            "size": [
+                "M",
+                "L",
+                "S"
+            ],
+            "price": 150,
+            "sale": 95,
+            "arrive": false,
+            "team": "LA Galaxy",
+            "season": "23/24",
+            "stock": 0,
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/la-galaxy-23-24-away-authentic-jersey/HI1875.html",
+            "brand": "Adidas",
+            "club": false,
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/f392c3e772fb4208a0f9af5d01400696_9366/LA_Galaxy_23-24_Away_Authentic_Jersey_Green_HI1875_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e2672dd8dc444851a740af5d01400d54_9366/LA_Galaxy_23-24_Away_Authentic_Jersey_Green_HI1875_02_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/dae324d16ae64494b83eaf3a00d83fb1_9366/LA_Galaxy_23-24_Away_Authentic_Jersey_Green_HI1875_41_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/3f598fc5fc2c406ba695af3a00d859d0_9366/LA_Galaxy_23-24_Away_Authentic_Jersey_Green_HI1875_43_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/f075c6a2def24dd8b706af3a00d84c87_9366/LA_Galaxy_23-24_Away_Authentic_Jersey_Green_HI1875_42_detail.jpg"
             ]
         },
         {
