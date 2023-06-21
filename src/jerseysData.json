@@ -867,35 +867,6 @@
             ]
         },
         {
-            "id": 33,
-            "name": "Los Angeles FC 23/24 Away Authentic Jersey",
-            "size": [
-                "L",
-                "M",
-                "S"
-            ],
-            "price": 150,
-            "sale": 95,
-            "arrive": false,
-            "team": "Los Angeles FC",
-            "season": "23/24",
-            "stock": 0,
-            "technology": [
-                "HEAT.RDY",
-                "Slim fit"
-            ],
-            "link": "https://www.adidas.com/us/los-angeles-fc-23-24-away-authentic-jersey/IN2459.html",
-            "brand": "Adidas",
-            "club": true,
-            "img": [
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4ea5ac695529430f948037b646d28a48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_01_laydown.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9c707a6785d4f808e46263139a06b03_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_02_laydown.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e6cea70341fe48e9b55729ff1b3e2d48_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_41_detail.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/7f85c2cfd2d043b09b307027f27ce736_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_42_detail.jpg",
-                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/2dad2c633a344ee1986846407996731e_9366/Los_Angeles_FC_23-24_Away_Authentic_Jersey_Green_IN2459_21_model.jpg"
-            ]
-        },
-        {
             "id": 2,
             "name": "ITALY 2023 HOME AUTHENTIC JERSEY",
             "size": [
