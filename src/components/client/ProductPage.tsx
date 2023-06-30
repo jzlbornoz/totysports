@@ -273,7 +273,7 @@ const ProductPage = ({ productItem }: { productItem: JerseyModel }) => {
                                         />
 
                                         <Link href={productItem.link}
-                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium"
+                                            className="group inline-block rounded-full border px-3 py-1 text-xs font-medium text-white bg-black"
                                         >
                                             {productItem.brand}
                                         </Link>

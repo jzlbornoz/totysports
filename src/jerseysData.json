@@ -953,6 +953,35 @@
             ]
         },
         {
+            "id": 35,
+            "name": "Manchester United 23/24 Home Authentic Jersey",
+            "size": [
+                "M",
+                "L",
+                "S"
+            ],
+            "price": 150,
+            "sale": 95,
+            "arrive": false,
+            "team": "Manchester United",
+            "season": "23/24",
+            "stock": 0,
+            "technology": [
+                "HEAT.RDY",
+                "Slim fit"
+            ],
+            "link": "https://www.adidas.com/us/manchester-united-23-24-home-authentic-jersey/IN3520.html",
+            "brand": "Adidas",
+            "club": false,
+            "img": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/fc3273f7cd9a442694051098a5e1413e_9366/Manchester_United_23-24_Home_Authentic_Jersey_Red_IN3520_HM30.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4693985486a64b0d8f41eb57ffe8b592_9366/Manchester_United_23-24_Home_Authentic_Jersey_Red_IN3520_HM31.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/01d9e44f5e83466d9fa2141de61e6ccf_9366/Manchester_United_23-24_Home_Authentic_Jersey_Red_IN3520_HM4.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/6790f9ba344546e4ab4bae35c67387e1_9366/Manchester_United_23-24_Home_Authentic_Jersey_Red_IN3520_HM7.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/89f7f24abd80467992afeda4a191f577_9366/Manchester_United_23-24_Home_Authentic_Jersey_Red_IN3520_HM6.jpg"
+            ]
+        },
+        {
             "id": 3,
             "name": "ITALY 2023 AWAY AUTHENTIC JERSEY",
             "size": [
