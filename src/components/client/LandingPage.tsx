@@ -55,7 +55,10 @@ const LandingPage = () => {
     //--
     return (
         <>
-            <section className="text-gray-600 body-font mt-[11vh] min-h-[90vh]">
+            <section className="relative text-gray-600 body-font mt-[11vh] min-h-[90vh]
+             bg-[url(https://preview.redd.it/messi-fifa-world-cup-2022-final-wallpaper-dump-v0-fd7a0d6j4x6a1.jpg?width=1890&format=pjpg&auto=webp&s=e427a7063d88561598103708821d6c45517c8711)] 
+             bg-cover bg-center bg-no-repeat lg:bg-[url(https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/12/19/fd6bfb0e-f31a-4bec-adeb-e01e3106f600_a0257a13.jpg)]  "
+            >
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <h2 className="title-font sm:text-6xl text-5xl mb-4 text-original font-extrabold">Siéntete como
@@ -81,7 +84,7 @@ const LandingPage = () => {
                 </div>
             </section>
             <section
-                className="relative bg-[url(https://a.espncdn.com/combiner/i?img=/photo/2022/1221/r1109241_2_1296x729_16-9.jpg)] bg-cover bg-center bg-no-repeat"
+                className="relative bg-[url(https://i.eurosport.com/2023/01/11/3522753-71802228-2560-1440.jpg)] bg-cover bg-center bg-no-repeat"
             >
                 <div
                     className="absolute inset-0 bg-black/75 sm:from-black/95 sm:to-black/25 ltr:sm:bg-gradient-to-r"
@@ -338,18 +341,18 @@ const LandingPage = () => {
                         </p>
                         <div className="flex justify-center">
                             <Link href='/form'>
-                            <motion.button
-                                initial='hiddenRight'
-                                whileInView={appState.menuIsOpen ? ' ' : 'show'}
-                                whileHover='hover'
-                                whileTap='tap'
-                                type='button'
-                                variants={item}
-                                className="inline-flex text-white bg-success border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
-                                Contactanos
-                            </motion.button>
+                                <motion.button
+                                    initial='hiddenRight'
+                                    whileInView={appState.menuIsOpen ? ' ' : 'show'}
+                                    whileHover='hover'
+                                    whileTap='tap'
+                                    type='button'
+                                    variants={item}
+                                    className="inline-flex text-white bg-success border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-xl">
+                                    Contactanos
+                                </motion.button>
                             </Link>
-                          
+
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
