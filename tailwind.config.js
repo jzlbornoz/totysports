@@ -23,6 +23,7 @@ module.exports = {
         'success': '#00a216',
         'danger': '#dc3545',
         'warning': '#ffc107',
+        'pink': '#F17EA6'
       },
     }
   },

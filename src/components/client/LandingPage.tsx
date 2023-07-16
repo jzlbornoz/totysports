@@ -56,25 +56,25 @@ const LandingPage = () => {
     return (
         <>
             <section className="relative text-gray-600 body-font mt-[11vh] min-h-[90vh]
-             bg-[url(https://preview.redd.it/messi-fifa-world-cup-2022-final-wallpaper-dump-v0-fd7a0d6j4x6a1.jpg?width=1890&format=pjpg&auto=webp&s=e427a7063d88561598103708821d6c45517c8711)] 
-             bg-cover bg-center bg-no-repeat lg:bg-[url(https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/12/19/fd6bfb0e-f31a-4bec-adeb-e01e3106f600_a0257a13.jpg)]  "
+             bg-[url(https://i.pinimg.com/originals/d9/b3/71/d9b3711e630e2457d8a4a809f7b5e534.jpg)] 
+             bg-cover bg-center bg-no-repeat lg:bg-[url(https://www.gianlucatamorri.com/files/gimgs/103_neg238152.jpg)]  "
             >
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h2 className="title-font sm:text-6xl text-5xl mb-4 text-original font-extrabold">Siéntete como
+                        <h2 className="title-font sm:text-6xl text-5xl mb-4 text-pink font-extrabold">Siéntete como
                             <br className="hidden lg:inline-block" /> un profesional
                         </h2>
                         <div className="flex justify-center mt-[7vh]">
                             <Link href="/store">
-                                <motion.button
+                                <motion.span
                                     initial='hiddenLeft'
                                     whileInView={appState.menuIsOpen ? ' ' : 'show'}
                                     whileHover='hover'
                                     whileTap='tap'
                                     variants={item}
-                                    className="inline-flex text-third bg-original border-0 w-full px-12 py-3 focus:outline-none hover:bg-primary hover:text-original rounded text-2xl">
+                                    className="inline-flex text-third bg-pink border-0 w-full px-12 py-3 focus:outline-none hover:bg-third rounded text-2xl">
                                     Adquiere tu jersey
-                                </motion.button>
+                                </motion.span>
                             </Link>
                         </div>
                     </div>
