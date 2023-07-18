@@ -40,8 +40,17 @@ const nextConfig = withPWA({
         protocol: 'https',
         hostname: 'cdn.shopify.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.footballfanatics.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'brand.assets.adidas.com',
+      },
     ],
   },
 })
 
 module.exports = nextConfig  
+

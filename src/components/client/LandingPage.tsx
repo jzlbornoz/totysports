@@ -57,11 +57,11 @@ const LandingPage = () => {
         <>
             <main className="relative text-gray-600 body-font mt-[11vh] min-h-[90vh]
              bg-[url(https://pbs.twimg.com/media/F1VeZUUaYAARMTo.jpg)] 
-             bg-cover bg-center bg-no-repeat lg:bg-[url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltff9e2113f491b218/64b69a8de829cf0d3d0e9d55/GOAL_-_Blank_WEB_-_Facebook_-_2023-07-18T145818.645.jpg?auto=webp&format=pjpg&width=3840&quality=60)]  
-             flex items-center justify-center"
-            >
+             bg-cover bg-center bg-no-repeat flex items-center justify-center 
+             lg:bg-[url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltff9e2113f491b218/64b69a8de829cf0d3d0e9d55/GOAL_-_Blank_WEB_-_Facebook_-_2023-07-18T145818.645.jpg?auto=webp&format=pjpg&width=3840&quality=60)]"
+             >
                 <div
-                    className="absolute inset-0 bg-black/75 sm:from-black/95 sm:to-black/25 ltr:sm:bg-gradient-to-r"
+                    className="absolute inset-0 bg-black/60 sm:from-black/95 sm:to-black/25 ltr:sm:bg-gradient-to-r"
                 >
                 </div>
                 <section className="relative container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
