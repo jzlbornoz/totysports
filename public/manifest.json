@@ -1,12 +1,12 @@
 {
-    "theme_color": "#9BFD5C",
+    "theme_color": "#080808",
     "background_color": "#080808",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "TOTY Sports",
-    "short_name": "TOTY",
-    "description": "Sitio Web Oficial de TOTY Sports",
+    "name": "TOTY Sports - Siéntete como un Profesional",
+    "short_name": "TOTY Sports",
+    "description": "Descubre una experiencia deportiva única de la mano de TOTY Sports. Explora nuestra amplia selección de productos deportivos de alta calidad y encuentra las mejores ofertas. ¡Siéntete como un Profesional!",
     "icons": [
         {
             "src": "/icon-192x192.png",

@@ -6,6 +6,8 @@ import JerseysData from '../../jerseysData.json';
 
 export default function StorePage() {
     const data: JerseyModel[] = JerseysData.jerseys;
+    const firstProduct: JerseyModel = JerseysData.jerseys.find(item => item.id == 31) || JerseysData.jerseys[23];
+    const secondProduct: JerseyModel = JerseysData.jerseys.find(item => item.id == 32) || JerseysData.jerseys[25];
 
     const compareFunction = (a: JerseyModel, b: JerseyModel) => {
         if (a.season === "23/24" && b.season !== "23/24") {
@@ -16,8 +18,8 @@ export default function StorePage() {
             return a.season.localeCompare(b.season); // ordenar alfabéticamente si no es "23/24"
         }
     };
+    data.sort(compareFunction);
 
-    const sortedData = data.sort(compareFunction);
     return (
         <main className="max-w-screen-2xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 mt-[11vh] bg-white">
             <nav aria-label="Breadcrumb">
@@ -37,7 +39,8 @@ export default function StorePage() {
                         >
                             <path
                                 fillRule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 
+                                0 01-1.414 0z"
                                 clipRule="evenodd"
                             />
                         </svg>
@@ -64,7 +67,8 @@ export default function StorePage() {
 
                                 <Link
                                     href="/store/clubs"
-                                    className="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-third border border-third rounded hover:shadow focus:outline-none focus:ring"
+                                    className="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition 
+                                    bg-third border border-third rounded hover:shadow focus:outline-none focus:ring"
                                 >
                                     Compra ahora
                                 </Link>
@@ -74,7 +78,7 @@ export default function StorePage() {
                         <div className="lg:col-span-2 lg:py-8">
                             <ul className="grid grid-cols-2 gap-4">
                                 <li>
-                                    <Link href={`/store/${sortedData[9].id}`} className="block group">
+                                    <Link href={`/store/${firstProduct.id}`} className="block group">
                                         <Image
                                             src={"https://sportal365images.com/process/smp-images-production/ringier.africa/14062023/90cafd15-c23f-4370-8099-d6bf21a34c30.jpg"}
                                             alt=""
@@ -85,18 +89,19 @@ export default function StorePage() {
 
                                         <div className="mt-3">
                                             <h3
-                                                className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                                                className="font-medium text-gray-900 group-hover:underline 
+                                                group-hover:underline-offset-4"
                                             >
-                                                {sortedData[9].name}
+                                                {firstProduct.name}
                                             </h3>
 
-                                            <p className="mt-1 text-sm text-gray-700">{sortedData[9].sale}$</p>
+                                            <p className="mt-1 text-sm text-gray-700">{firstProduct.sale}$</p>
                                         </div>
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <Link href={`/store/${sortedData[10].id}`} className="block group">
+                                    <Link href={`/store/${secondProduct.id}`} className="block group">
                                         <Image
                                             src="https://cdn.shopify.com/s/files/1/0668/2198/0439/files/GP21574-Mejorado-NR.jpg?v=1686798025"
                                             alt=""
@@ -107,12 +112,13 @@ export default function StorePage() {
 
                                         <div className="mt-3">
                                             <h3
-                                                className="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
+                                                className="font-medium text-gray-900 group-hover:underline 
+                                                group-hover:underline-offset-4"
                                             >
-                                                {sortedData[10].name}
+                                                {secondProduct.name}
                                             </h3>
 
-                                            <p className="mt-1 text-sm text-gray-700">{sortedData[10].sale}$</p>
+                                            <p className="mt-1 text-sm text-gray-700">{secondProduct.sale}$</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -131,7 +137,7 @@ export default function StorePage() {
                     ¡Aprovecha nuestros descuentos!
                 </p>
             </header>
-            <Store jerseys={sortedData} />
+            <Store jerseys={data} />
         </main>
     )
 }
