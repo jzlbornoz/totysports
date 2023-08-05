@@ -12,9 +12,9 @@ const Alert = ({ alert, handleClose }: { alert: AlertState, handleClose: () => v
         <>
             {alert.active && <div
                 role="alert"
-                className="rounded-xl border border-gray-100 bg-white p-4 shadow-xl fixed mt-[5vh] z-50"
+                className="rounded-xl border border-gray-100 bg-white p-4 shadow-xl fixed left-[2vw] top-[11vh] z-50"
             >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                     <span className="text-green-600">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +33,6 @@ const Alert = ({ alert, handleClose }: { alert: AlertState, handleClose: () => v
                     </span>
 
                     <div className="flex-1">
-                        <strong className="block font-medium text-gray-900"> Changes saved </strong>
-
                         <p className="mt-1 text-sm text-gray-700">
                             {alert.message}
                         </p>

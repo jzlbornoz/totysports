@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '@/context/AppContex';
 
 
-const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
+const ProductListCard = ({ jersey }: { jersey: JerseyModel }) => {
 
     const { removeFromCart } = useContext(AppContext);
 
@@ -81,4 +81,4 @@ const JerseyMiniCard = ({ jersey }: { jersey: JerseyModel }) => {
     )
 }
 
-export { JerseyMiniCard }
+export { ProductListCard }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AppContext } from '@/context/AppContex';
 import { JerseyModel } from '@/models/jersey.model';
-import { JerseyMiniCard } from './JerseyMiniCard';
+import { ProductListCard } from './ProductListCard';
 import empty from '../../assets/emptyCart.jpg';
 
 const Cart = () => {
@@ -31,7 +31,7 @@ const Cart = () => {
                                 className="flex items-center gap-4"
                             >
 
-                                <JerseyMiniCard jersey={item} />
+                                <ProductListCard jersey={item} />
                             </li>)}
 
                         </ul>

@@ -2,7 +2,7 @@
 
 import { JerseyModel } from '@/models/jersey.model'
 import React from 'react'
-import { JerseyCard } from './JerseyCard'
+import { ProductCard } from './ProductCard'
 
 import { motion } from 'framer-motion';
 
@@ -37,7 +37,7 @@ const Store = ({ jerseys }: { jerseys: JerseyModel[] }) => {
                 <motion.li key={item.id}
                     variants={itemMotion}
                 >
-                    <JerseyCard jersey={item} />
+                    <ProductCard jersey={item} />
                 </motion.li>
             ))}
         </motion.ul>

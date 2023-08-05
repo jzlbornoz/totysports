@@ -6,7 +6,7 @@ import { JerseyModel } from '@/models/jersey.model'
 import { AppContext } from '@/context/AppContex'
 import { LazyImage } from './LazyImage'
 
-const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
+const ProductCard = ({ jersey }: { jersey: JerseyModel }) => {
     const { addToCart, appState, addToFavorites, removeFromFavorites } = useContext(AppContext);
     const favoritesItems = appState.favorites;
     const [heartColor, setHeartColor] = useState<number>(-1);
@@ -63,11 +63,10 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
                     alt=""
                     width={1200}
                     height={1200}
-                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96 bg-slate-500"
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-96 
+                    bg-slate-500"
                 />
             </Link>
-
-
             <div className="relative border border-gray-100 bg-white p-6">
                 <span
                     className="whitespace-nowrap bg-primary px-3 py-1.5 text-xs font-medium text-white"
@@ -81,7 +80,8 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
 
                 <form className="mt-4">
                     <button
-                        className="block w-full rounded bg-primary text-white p-4 text-sm font-medium transition hover:scale-105"
+                        className="block w-full rounded bg-primary text-white p-4 text-sm font-medium transition 
+                        hover:scale-105"
                         onClick={() => {
                             addToCart(jersey)
                         }}
@@ -96,4 +96,4 @@ const JerseyCard = ({ jersey }: { jersey: JerseyModel }) => {
     )
 }
 
-export { JerseyCard }
+export { ProductCard }
